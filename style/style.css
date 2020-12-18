@@ -2,3 +2,20 @@
   padding: 0px;
   margin: 0px;
 }
+
+.guitar-cover{ 
+  background-image: url(../resources/guitar_cover.jpg);
+  background-size: cover;
+  width: 1920px;
+  height: 120px;
+}
+
+.cover{
+  z-index: 0;
+}
+.text-over-img{
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  font-size: 48px;
+  z-index: 1;
+  margin-top: -80px;
+}
