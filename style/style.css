@@ -4,18 +4,16 @@
 }
 
 .guitar-cover{ 
-  background-image: url(../resources/guitar_cover.jpg);
-  background-size: cover;
-  width: 1920px;
-  height: 120px;
+  width: 100%;
+  height: auto;
 }
 
-.cover{
-  z-index: 0;
-}
-.text-over-img{
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 48px;
+.text-over-img{ 
   z-index: 1;
-  margin-top: -100px;
+  margin-top: -90px;
+  padding-bottom: 30px;
+}
+
+.article-img{
+  width: 80%;
 }
