@@ -3,12 +3,12 @@
   margin: 0px;
 }
 
-.guitar-cover{ 
+.guitar-cover{
   width: 100%;
   height: auto;
 }
 
-.text-over-img{ 
+.text-over-img{
   z-index: 1;
   margin-top: -90px;
   padding-bottom: 30px;
@@ -16,4 +16,8 @@
 
 .article-img{
   width: 50%;
+}
+
+.nodot{
+  list-style-type: none;
 }
