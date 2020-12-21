@@ -4,15 +4,29 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Guitar Benter</title>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="../style/style.css">
-    <title>Guitar Benter</title>
+    
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
   </head>
   <body class="bg-light">
-    <!-- Option 1: Bootstrap Bundle with Popper
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script> -->
+    <script>
+      $(document).ready(function(){
+        console.log("JS works");
+    });
+
+    </script>
     <div class="container-fluid">
       <div class="row">
           <div class="col-12 p-0">
@@ -22,18 +36,47 @@
           </div>   
       </div>
       <div class="row">
-        <div class="col-md-4 text-center">
-          <img class="img-fluid py-3 w-25" src="../resources/img/Les Paul/front.jpg" alt="">
+        <div class="col-md-4 col-12 text-center bg-dark my-5">
+          <div id="articleCarousel" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-bs-target="#articleCarousel" data-bs-slide-to="0" class="active"></li>
+              <li data-bs-target="#articleCarousel" data-bs-slide-to="1"></li>
+              <li data-bs-target="#articleCarousel" data-bs-slide-to="2"></li>
+              <li data-bs-target="#articleCarousel" data-bs-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../resources/img/Les Paul/front.jpg" class="w-50" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img src="../resources/img/Les Paul/back.jpg" class="w-50" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img src="../resources/img/Les Paul/zoom.jpg" class="w-75" alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                <img src="../resources/img/Les Paul/head.jpg" class="w-75" alt="Fourth slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#articleCarousel" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#articleCarousel" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </a>
+          </div>
         </div>
-        <div class="col-md-4 py-5 px-0">
+        <div class="col-md-4 col-12 my-5 p-5">
           <h3>Gibson Les Paul Standard</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
             Quo omnis tempora ipsa, labore magnam obcaecati recusandae, 
             harum ipsam ducimus dolore animi adipisci reiciendis suscipit 
             exercitationem aspernatur consequuntur aliquid, similique quam!</p>
         </div>
-        <div class="col-md-1 p-0"></div>
-        <div class="col-md-3 py-4 px-0">
+        <div class="col-md-1 col-0 p-0"></div>
+        <div class="col-md-3 col-12 my-3 py-4 px-3">
           <div class="border h-100">
             <div class="m-3 py-5 text-center border">
               <h2>
@@ -54,6 +97,7 @@
         </div>
       </div>
   </div>
+
 
   </body>
 </html>
