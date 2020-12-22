@@ -12,3 +12,8 @@
 .nodot{
   list-style-type: none;
 }
+
+.carousel-img{
+  height: fit-content;
+
+}
