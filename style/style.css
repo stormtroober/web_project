@@ -18,6 +18,11 @@
 
 }
 
+.footer {
+  position: relative;
+  clear:both;
+}
+
 header a {
   color:white;
   text-decoration: none;
