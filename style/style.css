@@ -59,9 +59,10 @@ header a:hover {
   width: 25%;
 }
 
-@media only screen and (max-width: 400px) {
-  .img_list {width: 25%;}
-}              
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 768px) {
+  .img_list {width: 40%;}
+}
+
+@media only screen and (min-width: 1080px) {
   .img_list {width: 30%;}
 }
