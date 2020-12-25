@@ -43,8 +43,8 @@ header a:hover {
 }
 
 @media only screen and (max-width: 400px) {
-  .img_list {width: 50%;}
+  .img_list {width: 25%;}
 }              
 @media only screen and (min-width: 400px) {
-  .img_list {width: 25%;}
+  .img_list {width: 50%;}
 }
