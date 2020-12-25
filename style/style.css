@@ -45,3 +45,7 @@ header a:hover {
 @media only screen and (min-width: 768px) {
   .img_list {width: 40%;}
 }
+
+@media only screen and (min-width: 1080px) {
+  .img_list {width: 30%;}
+}
