@@ -49,3 +49,7 @@ header a:hover {
 @media only screen and (min-width: 1080px) {
   .img_list {width: 30%;}
 }
+
+.bg-light-gray {
+  background-color:#e8e8e8 !important;
+}
