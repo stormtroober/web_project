@@ -64,18 +64,22 @@
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-              <input type="radio" id="consumer" name="account_type" value="consumer">
-              <label for="consumer">Consumer</label>
-              <input type="radio" id="seller" name="account_type" value="seller">
-              <label for="seller">Seller</label>
+              <input type="password" class="form-control" id="password" placeholder="Password">
             </div>
             <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Mostra password</label>
+              <input type="checkbox" class="form-check-input" id="show_password">
+              <label class="form-check-label" for="show_password">Show password</label>
             </div>
-            <button type="submit" class="btn btn-dark float-end m-1">Accedi</button>
-            <button type="submit" class="btn btn-dark float-end m-1">Registrati</button>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="account_type" id="consumer" value="consumer">
+              <label class="form-check-label" for="consumer">Consumer</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="account_type" id="seller" value="seller">
+              <label class="form-check-label" for="seller">Seller</label>
+            </div>
+            <button type="submit" class="btn btn-dark float-end m-1">Login</button>
+            <button type="submit" class="btn btn-dark float-end m-1">Register</button>
           </form>
         </div>
         <div class="col-1 col-md-2 col-lg-3"></div>
@@ -84,19 +88,19 @@
         <footer class="py-3 text-white small bg-dark text-center">
           <div class="row">
             <div class="col-md-3 col-6">
-              <h6 class="text-monospace text-center">Dove Siamo</h6>
+              <h6 class="text-monospace text-center">Where we are</h6>
               <p>Vivamus neque purus, euismod tristique interdum sed, volutpat ut lectus. </p>
             </div>
             <div class="col-md-3 col-6">
-              <h6 class="text-monospace text-center">Contatti</h6>
+              <h6 class="text-monospace text-center">Contacts</h6>
               <p>Vivamus neque purus, euismod tristique interdum sed, volutpat ut lectus.</p>
             </div>
             <div class="col-md-3 col-6">
-              <h6 class="text-monospace text-center">Informazioni</h6>
+              <h6 class="text-monospace text-center">Infos</h6>
               <p>Vivamus neque purus, euismod tristique interdum sed, volutpat ut lectus.</p>
             </div>
             <div class="col-md-3 col-6">
-              <h6 class="text-monospace text-center">Dove Siamo</h6>
+              <h6 class="text-monospace text-center">How we work</h6>
               <p>Vivamus neque purus, euismod tristique interdum sed, volutpat ut lectus. </p>
             </div>
           </div>
