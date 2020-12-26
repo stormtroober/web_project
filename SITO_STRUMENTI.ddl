@@ -46,7 +46,9 @@ create table PRODOTTI (
      ID int(10) not null AUTO_INCREMENT,
      Nome char(40) not null,
      Tipo char(20) not null,
+     Marca char(20) not null,
      Foto char(20) not null,
+     Descrizione char(200) not null,
      Prezzo int(10) not null,
      Quantità int(10) not null,
      constraint IDPRODOTTI primary key (ID));
