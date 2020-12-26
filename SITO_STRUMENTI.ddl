@@ -59,6 +59,7 @@ create table UTENTI (
      Cognome char(20) not null,
      Email char(40) not null,
      Password char(20) not null,
+     Tipo char(20) not null,
      Indirizzo char(30) not null,
      constraint IDUTENTI_ID primary key (ID));
 
