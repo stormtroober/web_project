@@ -1,6 +1,5 @@
-.nopadding{
-  padding: 0px;
-  margin: 0px;
+.body {
+  height: 100%;
 }
 
 .text-over-img{
@@ -61,4 +60,9 @@ header a:hover {
 
 .bg-light-gray {
   background-color:#e8e8e8 !important;
+}
+
+.footer {
+  bottom: 0px;
+  position: absolute;
 }
