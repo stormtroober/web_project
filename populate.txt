@@ -30,8 +30,9 @@ The 85/15 pickups were designed by Paul Reed Smith himself for the 30th Annivers
 A rounded profile mahogany neck, bound rosewood fingerboard, long tenon 19th fret neck joint, and a solid mahogany body provide the backbone for singing sustain. 
 The 490R and 490T Alnico II pickups provide the power to drive. A black, 5-ply, full-face pickguard set this SG Standard apart from others... a truly versatile classic.
 ", 1390, 1),
-("Guild Starfire V", "Guitar", "Guild", "StarfireV", "Semi-hollow body. A deluxe double cutaway loaded with features that give a fully expressive voice to your individual playing style. The classic Guild Starfire V is a semi-hollow beauty with a graceful 16 3/8" thinline body and twin Guild LB-1 "Little Bucker" pickups that make it an outstanding choice with an authentic Guild voice perfect for rock, blues, roots and more. 
-The Starfire V's all-mahogany body features an arched top and back, with dual f holes, elegant ivory white body binding, black/white purfling and center-block construction. Other premium features include bound three-piece mahogany/maple/mahogany neck with vintage-style "soft U" profile, 22-fret rosewood fingerboard with 9 1/2" radius and pearloid block inlays, three-way pickup selector switch, individual volume and tone controls for each pickup and master volume, Tune-O-Matic bridge with rosewood base, Guild vibrato tailpiece, Grover Sta-Tite tuning machines, nickel hardware and a gorgeous Cherry Red finish. Includes plush-lined hardshell case.
+("Guild Starfire V", "Guitar", "Guild", "StarfireV", "Semi-hollow body. A deluxe double cutaway loaded with features that give a fully expressive voice to your individual playing style. The classic Guild Starfire V is a semi-hollow beauty with a graceful 16 3/8inches thinline body and twin Guild LB-1 -Little Bucker- pickups that make it an outstanding choice with an authentic Guild voice perfect for rock, blues, roots and more. 
+The Starfire V his all-mahogany body features an arched top and back, with dual f holes, elegant ivory white body binding, black/white purfling and center-block construction. Other premium features include bound three-piece mahogany/maple/mahogany neck with vintage-style -soft U- profile, 22-fret rosewood fingerboard with 9 1/2inches radius and pearloid block inlays, 
+three-way pickup selector switch, individual volume and tone controls for each pickup and master volume, Tune-O-Matic bridge with rosewood base, Guild vibrato tailpiece, Grover Sta-Tite tuning machines, nickel hardware and a gorgeous Cherry Red finish. Includes plush-lined hardshell case.
 ", 1159, 1),
 ("Fender Clapton Strat Signature BLK", "Guitar", "Fender", "Fender_StratBLK", "Built to Clapton’s specs, the Custom Shop Eric Clapton Signature Stratocaster® guitar features an alder body, special soft V-shaped maple neck, 
 three Vintage Noiseless™ pickups, blocked tremolo and Clapton’s signature on the headstock.
@@ -40,6 +41,5 @@ three Vintage Noiseless™ pickups, blocked tremolo and Clapton’s signature on
 The bridge is fixed, with the strings inserted under it. 
 The neck, usually maple with a maple or rosewood fingerboard, is screwed to the body.
 The Telecaster is a versatile guitar: it can go from the sounds of a steel guitar to the warm tones of a blues guitar, while maintaining its own, recognizable sound that sets it apart in every situation. Even today the simplicity of the instrument makes it a preference for many country, blues and rock musicians.
-", 3990, 1),
-
+", 3990, 1)
 ;
