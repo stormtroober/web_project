@@ -1,0 +1,12 @@
+INSERT INTO `PRODOTTI` 
+(`Nome`, `Tipo`, `Marca`, `Foto`, `Descrizione`, `Prezzo`, `Quantità`)
+VALUES
+("Gretsch G6620TFM", "Guitar", "Gretsch", "Gretsch_G6620TFM", "For full-throttle Nashville class, the double-cutaway G6620TFM Players Edition Nashville® Center Block Double-Cut with String-Thru Bigsby® and Flame Maple nails it with the time-honored Gretsch model’s classic style. That would include a beautiful tiger flame maple top, body and headstock finished in orange stain, with a chambered spruce center block that enhances body resonance for more organic tone and comfortably lighter weight.
+
+Built to perform, its elegant features also include gold hardware, an ebony fingerboard and the classic Gretsch horseshoe headstock inlay. For the sonic muscle and finesse, two High-Sensitive Filter’Tron™ pickups deliver authentic Gretsch power and articulation.",
+2500, 1
+),
+("Strandberg BODEN 7", "Guitar", "Strandberg", "Strandberg", "This is the Boden model that started it all. Featuring Swamp Ash body mated with 4A Flame Maple top and roasted Maple neck with roasted Birdseye Maple fretboard, the acoustic character is lively and balanced with superb articulation for both rhythm and lead playing. The Original models feature the highly-touted Suhr passive pickups and Fishman active pickups to faithfully transfer the natural sound of the woods and the unique .strandberg* hardware to your amplification systems.",
+2300, 1
+)
+;
