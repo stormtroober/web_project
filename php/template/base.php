@@ -13,7 +13,7 @@
   </head>
   <body class="bg-light">
     <div class="container-fluid">
-        <?php require("header.php") ?>
+        <?php require("./header.php") ?>
         <div class="row">
           <div class="text-center bg-dark nopadding">
             <div id="articleCarousel" class="carousel slide overflow-hidden" data-bs-ride="carousel">
@@ -71,7 +71,7 @@
           </div>
           <div class="col-md-2"></div>
         </div>
-        <?php require("footer.php") ?>
+        <?php require("./footer.php") ?>
     </div>
   </body>
 </html>
