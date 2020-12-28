@@ -12,8 +12,8 @@
 -- Database Section
 -- ________________
 
-create database SITO_STRUMENTI_LOGICO;
-use SITO_STRUMENTI_LOGICO;
+create database guitar_benter;
+use guitar_benter;
 
 
 -- Tables Section
