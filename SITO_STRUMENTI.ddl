@@ -48,7 +48,7 @@ create table PRODOTTI (
      Tipo char(20) not null,
      Marca char(20) not null,
      Foto char(20) not null,
-     Descrizione char(200) not null,
+     Descrizione mediumtext,
      Prezzo int(10) not null,
      Quantità int(10) not null,
      constraint IDPRODOTTI primary key (ID));
