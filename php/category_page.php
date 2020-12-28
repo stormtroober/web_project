@@ -23,28 +23,6 @@
     <body class="bg-light">
       <div class="container-fluid">
           <?php require("header.php") ?>
-          <div class="row">
-              <nav class="navbar navbar-light bg-secondary">
-                  <form action="" method="">
-                      <input type="search" placeholder="Search" aria-label="Search">
-                      <button class="btn" type="submit"><img src="../resources/icons/lente.png" height="30" length="30"></button>
-                  </form>
-                  <div class="float-right">
-                      <ul class="d-flex flex-wrap nodot">
-                          <li class="nav-item">
-                              <a class="nav-link" href="#"><img src="../resources/icons/notifica.png" height="30" length="30"></a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="#"><img src="../resources/icons/profilo.png" height="30" length="30"></a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="#"><img src="../resources/icons/carrello.png" height="30" length="30"></a>
-                          </li>
-                      </ul>
-                  </div>
-              </nav>
-        </div>
-        
         <div class = "col-12">
             <div class ="row m-5" style = "border-radius: 30px; background-color: #e8e8e8">
                 <div class = "col-12 col-md-5 col-lg-4 col-xl-3 col-xxl-2 text-center">         
