@@ -1,12 +1,45 @@
 INSERT INTO `PRODOTTI` 
 (`Nome`, `Tipo`, `Marca`, `Foto`, `Descrizione`, `Prezzo`, `Quantità`)
 VALUES
-("Gretsch G6620TFM", "Guitar", "Gretsch", "Gretsch_G6620TFM", "For full-throttle Nashville class, the double-cutaway G6620TFM Players Edition Nashville® Center Block Double-Cut with String-Thru Bigsby® and Flame Maple nails it with the time-honored Gretsch model’s classic style. That would include a beautiful tiger flame maple top, body and headstock finished in orange stain, with a chambered spruce center block that enhances body resonance for more organic tone and comfortably lighter weight.
+("Gretsch G6620TFM", "Guitar", "Gretsch", "Gretsch_G6620TFM", "For full-throttle Nashville class, the double-cutaway G6620TFM Players Edition Nashville® Center Block Double-Cut with String-Thru Bigsby® and Flame Maple nails it with the time-honored Gretsch model’s classic style. 
+That would include a beautiful tiger flame maple top, body and headstock finished in orange stain, with a chambered spruce center block that enhances body resonance for more organic tone and comfortably lighter weight.
 
 Built to perform, its elegant features also include gold hardware, an ebony fingerboard and the classic Gretsch horseshoe headstock inlay. For the sonic muscle and finesse, two High-Sensitive Filter’Tron™ pickups deliver authentic Gretsch power and articulation.",
 2500, 1
 ),
-("Strandberg BODEN 7", "Guitar", "Strandberg", "Strandberg", "This is the Boden model that started it all. Featuring Swamp Ash body mated with 4A Flame Maple top and roasted Maple neck with roasted Birdseye Maple fretboard, the acoustic character is lively and balanced with superb articulation for both rhythm and lead playing. The Original models feature the highly-touted Suhr passive pickups and Fishman active pickups to faithfully transfer the natural sound of the woods and the unique .strandberg* hardware to your amplification systems.",
+("Strandberg BODEN 7", "Guitar", "Strandberg", "Strandberg_BODEN_7", "This is the Boden model that started it all. Featuring Swamp Ash body mated with 4A Flame Maple top and roasted Maple neck with roasted Birdseye Maple fretboard, the acoustic character is lively and balanced with superb articulation for both rhythm and lead playing. 
+The Original models feature the highly-touted Suhr passive pickups and Fishman active pickups to faithfully transfer the natural sound of the woods and the unique .strandberg* hardware to your amplification systems.",
 2300, 1
-)
+),
+("Jackson King V", "Guitar", "Jackson", "Jackson-KingV", "From bridge to headstock, USA Select Series represent Jackson’s top-line best. Nowhere else will you find U.S.-built production-model shred machines of such stellar design, peerless performance and superior craftsmanship, brought to life by the best luthiers and builders in the business. 
+Of all Jackson’s most acclaimed and beloved instrument families, the USA Select Series puts the best of Jackson’s best in your hands.
+Premium features include an alder body, quartersawn eastern hard rock maple neck-thru-body, compound-radius ebony fingerboard, Seymour Duncan® humbucking pickups and Floyd Rose Original tremolo.
+", 1200, 1),
+("Ibanez JSM20-BKL", "Guitar", "Ibanez", "JSM20-BKL", "The JSM20 is a hollow body electric guitar model introduced by Ibanez in 2018. It is a signature model for American jazz-rock guitarist John Scofield. It was initially made in China, but production moved to Indonesia in mid-2018.
+The JSM20 features a thin, double cutaway, semi-hollow body design with a maple top with ƒ holes and multi-layer binding and maple back and sides mated to a set-in sapele neck with a 22-fret ebony fingerboard with binding and aged white acrylic and abalone split block position markers. 
+Components include dual Ibanez Super 58 humbucking pickups with gold covers and individual volume and tone controls and a tri-sound switch for the neck pickup, a Tune-o-matic style bridge with Quik Change III tailpiece, a bone nut and a black pickguard.
+", 1090, 1),
+("Gibson Les Paul Classic HCS", "Guitar", "Gibson", "Les Paul_HCS", "The Gibson Les Paul™ Classic combines the early 60's style Les Paul model with some functional and time-tested modifications. 
+As expected, the LP Classic is crafted with a mahogany back and maple top coupled with a slim taper mahogany neck and bound, rosewood fingerboard. BurstBucker™ 61R & 61T zebra, open-coil pickups provide classic Gibson tones from the era with a bit of extra punch thanks to the open coils. 
+The control assembly features 4 push-pull pots which provide choices of coil tapping, phase switching, and pure bypassing for functional and versatile sonic variety.
+", 1829, 1),
+("PRS Custom 24", "Guitar", "PRS", "PRS_Custom24", "The 2016 Custom 24 model is equipped with a PRS Tremolo bridge, 85/15 pickup and Volume and Tone configuration with 5-position Blade switch. 
+The 85/15 pickups were designed by Paul Reed Smith himself for the 30th Anniversary model and are characterized by remarkable clarity, with exceptional high-end and low-end, perfect for more modern styles.
+", 4299, 1),
+("Gibson S Standard HC", "Guitar", "Gibson", "Gibson_S_Standard_HC", "The Gibson SG Standard rocks the classic looks and features associated with the late 60's style SG models sought after by many. 
+A rounded profile mahogany neck, bound rosewood fingerboard, long tenon 19th fret neck joint, and a solid mahogany body provide the backbone for singing sustain. 
+The 490R and 490T Alnico II pickups provide the power to drive. A black, 5-ply, full-face pickguard set this SG Standard apart from others... a truly versatile classic.
+", 1390, 1),
+("Guild Starfire V", "Guitar", "Guild", "StarfireV", "Semi-hollow body. A deluxe double cutaway loaded with features that give a fully expressive voice to your individual playing style. The classic Guild Starfire V is a semi-hollow beauty with a graceful 16 3/8" thinline body and twin Guild LB-1 "Little Bucker" pickups that make it an outstanding choice with an authentic Guild voice perfect for rock, blues, roots and more. 
+The Starfire V's all-mahogany body features an arched top and back, with dual f holes, elegant ivory white body binding, black/white purfling and center-block construction. Other premium features include bound three-piece mahogany/maple/mahogany neck with vintage-style "soft U" profile, 22-fret rosewood fingerboard with 9 1/2" radius and pearloid block inlays, three-way pickup selector switch, individual volume and tone controls for each pickup and master volume, Tune-O-Matic bridge with rosewood base, Guild vibrato tailpiece, Grover Sta-Tite tuning machines, nickel hardware and a gorgeous Cherry Red finish. Includes plush-lined hardshell case.
+", 1159, 1),
+("Fender Clapton Strat Signature BLK", "Guitar", "Fender", "Fender_StratBLK", "Built to Clapton’s specs, the Custom Shop Eric Clapton Signature Stratocaster® guitar features an alder body, special soft V-shaped maple neck, 
+three Vintage Noiseless™ pickups, blocked tremolo and Clapton’s signature on the headstock.
+", 2199, 1),
+("Fender 61 Telecaster AAG Relic", "Guitar", "Fender", "Fender_61_Telecaster", "Fender Telecaster is a guitar with two single coil pickups controlled by a 3-position switch, a volume pot and a tone control. The body, in solid wood without a soundbox (solid body), completely cancels unwanted resonances and increases the sustain of the strings. 
+The bridge is fixed, with the strings inserted under it. 
+The neck, usually maple with a maple or rosewood fingerboard, is screwed to the body.
+The Telecaster is a versatile guitar: it can go from the sounds of a steel guitar to the warm tones of a blues guitar, while maintaining its own, recognizable sound that sets it apart in every situation. Even today the simplicity of the instrument makes it a preference for many country, blues and rock musicians.
+", 3990, 1),
+
 ;
