@@ -24,9 +24,9 @@
     <div class="container-fluid">
       <div class="row">
           <div class="col-12 p-0">
-                  <header class="py-3 text-white bg-dark">
-                      <h1 class="text-monospace text-center"><a href="index.html">Guitar Benter</a></h1>
-                  </header>   
+              <header class="py-3 text-white bg-dark">
+                  <h1 class="text-monospace text-center"><a href="index.html">Guitar Benter</a></h1>
+              </header>
           </div>   
       </div>
       <div class="row">
