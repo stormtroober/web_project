@@ -47,7 +47,7 @@ create table PRODOTTI (
      Nome char(40) not null,
      Tipo char(20) not null,
      Marca char(20) not null,
-     Foto char(20) not null,
+     Foto char(40) not null,
      Descrizione mediumtext,
      Prezzo int(10) not null,
      Quantità int(10) not null,
