@@ -6,12 +6,13 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
     if(count($login_result)==0){
         echo "Errore! Email o password non corretti";
         $templateParams["nome"] = "user_login.php";
-    }
-    else{
+    }else{
         //registerLoggedUser($login_result[0]);
-        if($dbh->getUserType($_POST["email"]) == "consumer") {
+        $type = $dbh->getUserType($_POST["email"]);
+        $type = $type[0]["Tipo"];
+        if($type == "consumer") {
             $templateParams["nome"] = "user_page.php";
-        } else if ($dbh->getUserType($_POST["email"]) == "seller") {
+        } else if ($type == "seller") {
             echo "seller";
         }
     }
