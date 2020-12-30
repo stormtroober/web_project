@@ -12,7 +12,7 @@ class DatabaseHelper{
     }
 
     public function getArticleById($id){
-        $stmt = $this->db->prepare("SELECT nome, tipo, marca, foto, descrizione, prezzo, quantità FROM prodotti WHERE id = ?");
+        $stmt = $this->db->prepare("SELECT Nome, Tipo, Marca, Foto, Descrizione, Prezzo, Quantità FROM PRODOTTI WHERE id = ?");
         $stmt->bind_param('i', $id);
         $stmt->execute();
         $result = $stmt->get_result();

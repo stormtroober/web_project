@@ -1,4 +1,4 @@
-<div class="row">
+<div class="mt-auto row">
     <footer class="pt-3 text-white small bg-dark">
         <div class="row">
             <div class="col-md-3 col-6">
