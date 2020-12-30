@@ -6,7 +6,7 @@
                         <img src="<?php echo UPLOAD_DIR."img/Guitars/".$articolo["Foto"]."/front.png"; ?>" class = "img-fluid p-3 w-50" style = "border-radius: 30px" alt="porcodio">
                     </div>
                     <div class = "col-12 col-md-5 pt-3">
-                        <span class="fs-4 fs-md-3 fs-lg-2 fs-xl-1 px-2"><?php echo $articolo["Nome"]; ?></span>
+                        <a href="article_page.php?id=<?php echo $articolo["ID"]; ?>" class="fs-4 fs-md-3 fs-lg-2 fs-xl-1 px-2"><?php echo $articolo["Nome"]; ?></a>
                         <div class="my-3 my-lg-4">
                             <div class = "d-flex flex-column">
                                 <div class = "d-flex">
