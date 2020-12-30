@@ -20,7 +20,17 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
     
-    
+    public function getPostByCategory($idcategory){
+        /*$query = "SELECT idarticolo, titoloarticolo, imgarticolo, anteprimaarticolo, dataarticolo, nome FROM articolo, autore, articolo_ha_categoria WHERE categoria=? AND autore=idautore AND idarticolo=articolo";*/
+        $query = "SELECT ID, Nome, Marca, Foto, Prezzo, Quantità FROM prodotti WHERE Tipo = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i',$idcategory);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
 }
 
 ?>
