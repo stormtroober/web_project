@@ -16,12 +16,12 @@
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item dropdown">
                   <div class="container-fluid text-center px-0">
-                    <a class="nav-link" href="#"><img src="../resources/icons/profilo.png" height="30" length="30"></a>
+                    <a class="nav-link" href="./login.php"><img src="../resources/icons/profilo.png" height="30" length="30"></a>
                     <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Area Utente
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Profilo</a></li>
+                      <li><a class="dropdown-item" href="./login.php">Profilo</a></li>
                       <li><a class="dropdown-item" href="#">Cronologia ordini</a></li>
                       <li><a class="dropdown-item" href="#">Metodi di pagamento</a></li>
                     </ul>

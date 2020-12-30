@@ -30,8 +30,17 @@ class DatabaseHelper{
     }
 
     public function checkLogin($username, $password){
-        $stmt = $this->db->prepare("SELECT idautore, username, nome FROM autore WHERE username = ? AND password = ?");
+        $stmt = $this->db->prepare("SELECT ID FROM utenti WHERE Email = ? AND Password = ?");
         $stmt->bind_param("ss", $username, $password);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function getUserType($email){
+        $stmt = $this->db->prepare("SELECT Tipo FROM utenti WHERE Email = ?");
+        $stmt->bind_param('s', $email);
         $stmt->execute();
         $result = $stmt->get_result();
 
