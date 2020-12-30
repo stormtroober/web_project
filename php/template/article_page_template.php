@@ -10,16 +10,16 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="<?php echo UPLOAD_DIR."img/Guitars/".$articolo["Foto"]."/front.png"; ?>" class="h-100" alt="First slide">
+          <img src="<?php echo UPLOAD_DIR."img/Guitar/".$articolo["Foto"]."/front.png"; ?>" class="h-100" alt="First slide">
         </div>
         <div class="carousel-item">
-          <img src="<?php echo UPLOAD_DIR."img/Guitars/".$articolo["Foto"]."/back.png"; ?>" class="h-100" alt="Second slide">
+          <img src="<?php echo UPLOAD_DIR."img/Guitar/".$articolo["Foto"]."/back.png"; ?>" class="h-100" alt="Second slide">
         </div>
         <div class="carousel-item">
-          <img src="<?php echo UPLOAD_DIR."img/Guitars/".$articolo["Foto"]."/zoom.png"; ?>" class="h-100" alt="Third slide">
+          <img src="<?php echo UPLOAD_DIR."img/Guitar/".$articolo["Foto"]."/zoom.png"; ?>" class="h-100" alt="Third slide">
         </div>
         <div class="carousel-item">
-          <img src="<?php echo UPLOAD_DIR."img/Guitars/".$articolo["Foto"]."/head.png"; ?>" class="h-100" alt="Fourth slide">
+          <img src="<?php echo UPLOAD_DIR."img/Guitar/".$articolo["Foto"]."/head.png"; ?>" class="h-100" alt="Fourth slide">
         </div>
       </div>
       <a class="carousel-control-prev" href="#articleCarousel" role="button" data-bs-slide="prev">
