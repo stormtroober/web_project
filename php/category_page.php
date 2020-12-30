@@ -11,6 +11,7 @@ if(isset($_GET["type"])){
     $idcategoria = $_GET["type"];
 }
 $templateParams["articoli"] = $dbh->getPostByCategory($idcategoria);
+$templateParams["categoria"] = $idcategoria;
 
 require("template/base.php");
 ?>

@@ -2,8 +2,8 @@
     <main>
         <div class = "col-12">
                 <div class ="row m-5" style = "border-radius: 30px; background-color: #e8e8e8">
-                    <div class = "col-12 col-md-5 col-lg-4 col-xl-3 col-xxl-2 text-center">         
-                        <img src="<?php echo UPLOAD_DIR."img/Guitars/".$articolo["Foto"]."/front.png"; ?>" class = "img-fluid p-3 w-50" style = "border-radius: 30px" alt="porcodio">
+                    <div class = "col-12 col-md-5 col-lg-4 col-xl-3 col-xxl-2 text-center">       
+                        <img src="<?php echo UPLOAD_DIR."img/".$templateParams["categoria"]."/".$articolo["Foto"]."/front.png"; ?>" class = "img-fluid p-3 w-50" style = "border-radius: 30px" alt="porcodio">
                     </div>
                     <div class = "col-12 col-md-5 pt-3">
                         <a href="article_page.php?id=<?php echo $articolo["ID"]; ?>" class="fs-4 fs-md-3 fs-lg-2 fs-xl-1 px-2"><?php echo $articolo["Nome"]; ?></a>
