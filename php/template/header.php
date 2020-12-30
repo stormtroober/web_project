@@ -10,7 +10,7 @@
     <div class="col-md-3 col-12">
       <ul class="d-flex justify-content-center pt-3 nodot">
         <li class="nav-item">
-            <a class="nav-link" href="#"><img src="../resources/icons/profilo.png" height="30" length="30"></a>
+            <a class="nav-link" href="./user_page.php"><img src="../resources/icons/profilo.png" height="30" length="30"></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#"><img src="../resources/icons/desideri.png" height="30" length="30"></a>
