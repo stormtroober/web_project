@@ -17,16 +17,9 @@
           <input type="checkbox" class="form-check-input" id="show_password">
           <label class="form-check-label" for="show_password">Show password</label>
         </div>
-        <!--
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="account_type" id="consumer" value="consumer">
-          <label class="form-check-label" for="consumer">Consumer</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="account_type" id="seller" value="seller">
-          <label class="form-check-label" for="seller">Seller</label>
-        </div>
-        -->
+        <?php if(isset($templateParams["errore"])) {
+          echo $templateParams["errore"];
+        } ?>
         <button type="submit" class="btn btn-dark float-end m-1">Login</button>
       </form>
     </div>
