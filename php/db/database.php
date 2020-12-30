@@ -24,6 +24,7 @@ class DatabaseHelper{
         /*$query = "SELECT idarticolo, titoloarticolo, imgarticolo, anteprimaarticolo, dataarticolo, nome FROM articolo, autore, articolo_ha_categoria WHERE categoria=? AND autore=idautore AND idarticolo=articolo";*/
         $query = "SELECT ID, Nome, Marca, Foto, Prezzo, Quantità FROM prodotti WHERE Tipo = ?";
         $stmt = $this->db->prepare($query);
+        print_r($this->db->error_list);
         $stmt->bind_param('i',$idcategory);
         $stmt->execute();
         $result = $stmt->get_result();
