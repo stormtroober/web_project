@@ -22,7 +22,7 @@
                                     <span class = "text_list">tommy gay</span>
                                 </div>
                                 <div class = "d-flex my-4">
-                                    <span class = "text_list text-danger">Disponibile</span>
+                                    <span id="available" class = "text_list"><?php echo $articolo["Quantità"] ?></span>
                                 </div>
                             </div>  
                         </div>  
