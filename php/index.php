@@ -1,7 +1,7 @@
 <?php
 require_once("db/include.php");
 
-$templateParams["nome"] = "slide-show.php";
+$templateParams["nome"] = "article_page.php";
 
 require("template/base.php");
 ?>
