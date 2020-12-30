@@ -40,7 +40,7 @@ class DatabaseHelper{
 
     public function getUserID($email) {
         $stmt = $this->db->prepare("SELECT ID FROM utenti WHERE Email = ?");
-        $stmt->bind_param('i', $email);
+        $stmt->bind_param('s', $email);
         $stmt->execute();
         $result = $stmt->get_result();
 
