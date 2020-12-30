@@ -8,7 +8,9 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
         $templateParams["nome"] = "user_login.php";
     }else{
         //registerLoggedUser($login_result[0]);
-        $type = $dbh->getUserType($_POST["email"]);
+        $id = $dbh->getUserID($_POST["email"]);
+        $templateParams["utente"] = $dbh->getUser($id)
+        $type = $dbh->getUserType($id);
         $type = $type[0]["Tipo"];
         if($type == "consumer") {
             $templateParams["nome"] = "user_page.php";
@@ -19,6 +21,9 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
 } else {
     $templateParams["nome"] = "user_login.php";
 }
+
+
+
 /*
 if(isUserLoggedIn()){
     if($_POST["type"] == "Consumer") {

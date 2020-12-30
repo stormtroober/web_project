@@ -71,32 +71,6 @@
             </div>
           </div>
         </nav>
-        <!-- <nav class="navbar navbar-light">
-          <div class="col-12 col-md-5 col-lg-4 text-center">
-            <form action="" method="">
-              <input type="search" placeholder="Search" aria-label="Search">
-              <button class="btn" type="submit"><img src="../resources/icons/lente.png" height="30" length="30"></button>
-            </form>  
-          </div>
-          <div class="col-0 col-md-1 col-lg-2 "></div>
-          <div class="col-0 col-md-1 col-lg-2 "></div>
-          <div class="col-12  col-md-5 col-lg-4 navbar-expand float-right">
-              <ul class="navbar-nav nodot">
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><img src="../resources/icons/profilo.png" height="30" length="30"></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><img src="../resources/icons/desideri.png" height="30" length="30"></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><img src="../resources/icons/notifica.png" height="30" length="30"></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><img src="../resources/icons/carrello.png" height="30" length="30"></a>
-                </li>
-              </ul>
-          </div>
-        </nav>  -->
       </div>
       <div class="row py-4">
         <div class="col-md-1"></div>

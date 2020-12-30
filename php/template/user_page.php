@@ -18,17 +18,14 @@
         <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="Nome" aria-label="Recipient's username"
             aria-describedby="basic-addon2">
-          <button class="btn btn-dark" type="button" id="name">Modifica</button>
         </div>
         <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="Cognome" aria-label="Recipient's username"
             aria-describedby="basic-addon2">
-          <button class="btn btn-dark" type="button" id="surname">Modifica</button>
         </div>
         <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="Email" aria-label="Recipient's username"
             aria-describedby="basic-addon2">
-          <button class="btn btn-dark" type="button" id="email">Modifica</button>
         </div>
         <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="Password" aria-label="Recipient's username"

@@ -38,9 +38,27 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    public function getUserType($email){
-        $stmt = $this->db->prepare("SELECT Tipo FROM utenti WHERE Email = ?");
-        $stmt->bind_param('s', $email);
+    public function getUserID($email) {
+        $stmt = $this->db->prepare("SELECT ID FROM utenti WHERE Email = ?");
+        $stmt->bind_param('i', $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function getUserType($id){
+        $stmt = $this->db->prepare("SELECT Tipo FROM utenti WHERE ID = ?");
+        $stmt->bind_param('i', $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function getUser($id) {
+        $stmt = $this->db->prepare("SELECT * FROM utenti WHERE ID = ?");
+        $stmt->bind_param('i', $id);
         $stmt->execute();
         $result = $stmt->get_result();
 
