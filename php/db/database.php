@@ -64,6 +64,15 @@ class DatabaseHelper{
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+
+    public function getQuantity($id) {
+        $stmt = $this->db->prepare("SELECT quantità FROM PRODOTTI WHERE ID = ?");
+        $stmt->bind_param('i', $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 }
 
 ?>

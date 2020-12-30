@@ -21,6 +21,9 @@
                                     <img src="../resources/icons/tick.png" height="35px" width="25px" class = "me-2" alt="tick verify">
                                     <span class = "text_list">tommy gay</span>
                                 </div>
+                                <div class = "d-flex my-4">
+                                    <span class = "text_list text-danger">Disponibile</span>
+                                </div>
                             </div>  
                         </div>  
                     </div>
