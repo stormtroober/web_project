@@ -1,0 +1,7 @@
+21 Segment LED meter
+Tuning range: C0 (16.35 Hz) up to C8 (4.186 Hz)
+Accu-Pitch
+
+75
+
+BOSS TU-3
