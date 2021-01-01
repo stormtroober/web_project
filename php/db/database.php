@@ -21,7 +21,7 @@ class DatabaseHelper{
     }
     
     public function getPostByCategory($idcategory){
-        $query = "SELECT ID, Nome, Marca, Foto, Prezzo, Quantità FROM PRODOTTI WHERE Tipo = ?";
+        $query = "SELECT ID, Nome, Marca, Foto, Caratteristiche, Prezzo, Quantità FROM PRODOTTI WHERE Tipo = ?";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('s',$idcategory);
         $stmt->execute();
