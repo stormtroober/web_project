@@ -1,9 +1,9 @@
-<main>
 <?php foreach($templateParams["articoli"] as $articolo): ?>
+    <main>
         <div class = "col-12">
                 <div class ="row m-5" style = "border-radius: 30px; background-color: #e8e8e8">
                     <div class = "col-12 col-md-5 col-lg-4 col-xl-3 col-xxl-2 text-center">       
-                        <img src="<?php echo UPLOAD_DIR."img/".$templateParams["categoria"]."/".$articolo["Foto"]."/front.png"; ?>" class = "img-fluid p-3 w-50" style = "border-radius: 30px" alt="porcodio">
+                        <img src="<?php echo UPLOAD_DIR."img/".$templateParams["categoria"]."/".$articolo["Foto"]."/front.png"; ?>" class = "img-fluid p-3 w-75" style = "border-radius: 30px; max-width: 175px; min-width:125px;" alt="porcodio">
                     </div>
                     <div class = "col-12 col-md-7 col-lg-5 pt-3">
                         <a  class = "text-decoration-none text-dark h3" 
@@ -30,14 +30,16 @@
                             </div>  
                         </div>  
                     </div>
-                    <div class = "col-md-12 col-lg-3 col-xl-4 col-xxl-5 text-center px-4 py-3">
-                        <div class="mt-md-3 mt-lg-5">
+                    <div class = "col-md-12 col-lg-3 col-xl-4 col-xxl-5 text-center px-4 py-3 pt-md-0">
+                        <div class="mt-lg-5">
                             <span class="fs-4 fs-xl-3"> Price </span>
                         </div>
-                        <span class="fs-3 fs-xl-2"><?php echo $articolo["Prezzo"]."$"; ?></span>
+                        <span class="fs-3 fs-xl-2"><?php echo $articolo["Prezzo"]." $"; ?></span>
                     </div>
                     <div class = "col-md-1"></div>
                 </div>
             </div>
+    </main>
+    
+    
 <?php endforeach; ?>
-</main>
