@@ -14,15 +14,15 @@
                             <div class = "d-flex flex-column">
                                 <div class = "d-flex">
                                     <img src="../resources/icons/tick.png" height="35px" width="25px" class="me-2" alt="tick verify">
-                                    <span class = "fs-5 fs-xl-3">tommy gay</span>
+                                    <span class = "fs-5 fs-xl-3"><?php echo explode("-", $articolo["Caratteristiche"])[0]; ?></span>
                                 </div>
                                 <div class = "d-flex">
                                     <img src="../resources/icons/tick.png" height="35px" width="25px" class = "me-2" alt="tick verify">
-                                    <span class = "text_list">tommi gay</span>
+                                    <span class = "text_list"><?php echo explode("-", $articolo["Caratteristiche"])[1]; ?></span>
                                 </div>
                                 <div class = "d-flex">
                                     <img src="../resources/icons/tick.png" height="35px" width="25px" class = "me-2" alt="tick verify">
-                                    <span class = "text_list">tommy gay</span>
+                                    <span class = "text_list"><?php echo explode("-", $articolo["Caratteristiche"])[2]; ?></span>
                                 </div>
                                 <div class = "d-flex my-4">
                                     <span id="available" class = "text_list"><?php echo $articolo["Quantità"] ?></span>
