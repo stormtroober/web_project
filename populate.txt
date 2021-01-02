@@ -85,10 +85,10 @@ You can improve your jamming skill along with built-in drums and metronome as we
 ("Dunlop CryBaby GCB95", "Accessories", "Dunlop", "Pedal", "This Cry Baby Wah features the legendary Fasel® inductor, a focused high end, and an aggressive wah sound.
 This pedal can be powered by a Dunlop ECB003 9-volt adapter, or the DC Brick™, Iso-Brick™, and Mini Iso-Brick™ power supplies",
 "Equipped with the legendary red Fasel inductor-100 kOhm Hot Potz potentiometer guarantees fast response to the wah effect-Hardwire bypass", 95, 5),
-("Seymour Duncan SH-6", "Accessories", "Seymour Duncan", "Pickups", "Our original high-output passive humbucker pickup, the Duncan Distortion (SH-6) delivers tight and mean lows with searing top end—ideal for a wide variety of rock and metal styles."
+("Seymour Duncan SH-6", "Accessories", "Seymour Duncan", "Pickups", "Our original high-output passive humbucker pickup, the Duncan Distortion (SH-6) delivers tight and mean lows with searing top end—ideal for a wide variety of rock and metal styles.",
 "Comprising two SH-6 Distortion humbuckers-For neck and bridge positions-For aggressive and modern playing", 177, 3),
 ("Thomastik JS 111", "Accessories", "Thomastik", "Strings", "Mellow timbre, good power.
 Thomastik-Infeld Light Flatwound Jazz Swing Electric Guitar Strings are designed specifically for semi-acoustic and acoustic jazz guitars.",
-"Gauges from 011 to 047-Flatwound-High resistance and great tone", 15,90, 6),
+"Gauges from 011 to 047-Flatwound-High resistance and great tone", 15.90, 6),
 ("BOSS TU-3", "Accessories", "BOSS", "Tuner", "The world’s top-selling stage tuner, the BOSS TU-2, evolves and improves with the debut of the new TU-3. Housed in a tank-tough BOSS stompbox body, the TU-3 features a smooth 21-segment LED meter with a High-Brightness mode that cuts through the harshest outdoor glare. Choose between Chromatic or Guitar/Bass tuning modes, and enjoy visual pinpoint tuning verification with the Accu-Pitch Sign function. The TU-3 incorporates a convenient Note Name Indicator that can display notes of 7-string guitars and 6-string basses, while the Flat-Tuning mode can support up to six half-steps. It’s the new-standard tuner that no guitarist or bass player should be without!",
 "21 Segment LED meter-Tuning range: C0 (16.35 Hz) up to C8 (4.186 Hz)-AccuPitch", 75, 3);
