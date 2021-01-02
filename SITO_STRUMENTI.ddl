@@ -59,10 +59,16 @@ create table UTENTI (
      Nome char(20) not null,
      Cognome char(20) not null,
      Email char(40) not null,
-     Password char(20) not null,
+     Password char(128) not null,
+     Salt char(128) not null, 
      Tipo char(20) not null,
      Indirizzo char(30) not null,
      constraint IDUTENTI_ID primary key (ID));
+
+create table LOGIN_ATTEMPTS (
+     id int(10) not null,
+     time varchar(30) not null
+);
 
 
 -- Constraints Section
