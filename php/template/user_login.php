@@ -2,7 +2,7 @@
   <div class="row p-5">
     <div class="col-1 col-md-2 col-lg-3"></div>
     <div class="col-10 col-md-8 col-lg-6">
-      <form action="login.php" method="post">
+      <form action="login.php" method="post" name="login_form">
         <div class="form-group">
           <label for="email">Email address</label>
           <input type="email" class="form-control" name="email" aria-describedby="email"
@@ -20,8 +20,8 @@
         <?php if(isset($templateParams["errore"])) {
           echo $templateParams["errore"];
         } ?>
-        <button type="submit" class="btn btn-dark float-end m-1">Login</button>
-      <button class="btn btn-dark float-end m-1"><a class="text-decoration-none text-white" href="./registation.php">Register</a></button>
+        <input type="button" value="Login" class="btn btn-dark float-end m-1" onclick="formhash(this.form, this.form.password);">
+      <button class="btn btn-dark float-end m-1"><a class="text-decoration-none text-white" href="./registration.php">Register</a></button>
       </form>
     </div>
     <div class="col-1 col-md-2 col-lg-3"></div>

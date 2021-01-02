@@ -11,6 +11,12 @@ class DatabaseHelper{
         }
     }
 
+    public function getDb() {
+        if ($this->db instanceof PDO) {
+             return $this->db;
+        }
+    }
+
     public function getArticleById($id){
         $stmt = $this->db->prepare("SELECT Nome, Tipo, Marca, Foto, Descrizione, Prezzo, Quantità FROM PRODOTTI WHERE id = ?");
         $stmt->bind_param('i', $id);

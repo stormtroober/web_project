@@ -1,6 +1,21 @@
 <?php
 require_once("db/include.php");
+require("utils/functions.php");
 
+sec_session_start();
+if(isset($_POST['email'], $_POST['password'])) { 
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    if(login($email, $password, $dbh) == true) {
+       echo 'You have been logged in!';
+    } else {
+       header('Location: ./login.php?error=1');
+    }
+ } else {
+    //echo 'Invalid Request';
+    $templateParams["nome"] = "user_login.php";
+ }
+/*
 if(isset($_COOKIE["login"])) {
     $templateParams["utente"] = $dbh->getUser($_COOKIE["login"]);
     if($templateParams["utente"][0]["Tipo"] == "consumer") {
@@ -26,6 +41,7 @@ if(isset($_COOKIE["login"])) {
 } else {
     $templateParams["nome"] = "user_login.php";
 }
+*/
 
 require("template/base.php");
 ?>
