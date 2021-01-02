@@ -6,7 +6,7 @@ sec_session_start();
 if(isset($_POST['email'], $_POST['password'])) { 
     $email = $_POST['email'];
     $password = $_POST['password'];
-    if(login($email, $password, $dbh) == true) {
+    if(login($email, $password, $dbh->getDb()) == true) {
        echo 'You have been logged in!';
     } else {
        header('Location: ./login.php?error=1');

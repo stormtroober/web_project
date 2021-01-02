@@ -12,7 +12,7 @@ class DatabaseHelper{
     }
 
     public function getDb() {
-        if ($this->db instanceof PDO) {
+        if ($this->db instanceof mysqli) {
              return $this->db;
         }
     }
