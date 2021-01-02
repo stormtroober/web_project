@@ -21,8 +21,8 @@
           echo $templateParams["errore"];
         } ?>
         <button type="submit" class="btn btn-dark float-end m-1">Login</button>
+      <button class="btn btn-dark float-end m-1"><a class="text-decoration-none text-white" href="./registation.php">Register</a></button>
       </form>
-      <button type="submit" class="btn btn-dark float-end m-1"><a class="text-decoration-none text-white" href="./registation.php">Register</a></button>
     </div>
     <div class="col-1 col-md-2 col-lg-3"></div>
   </div>
