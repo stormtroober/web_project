@@ -13,15 +13,6 @@
 
 }
 
-header a {
-  color:white;
-  text-decoration: none;
-}
-
-header a:hover {
-  color: white;
-}
-
 .carousel-width {
   width: 75%;
 }

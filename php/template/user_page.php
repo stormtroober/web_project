@@ -34,7 +34,9 @@
         </div>
       </div>
     </div>
-    <div class="col-md-1"></div>
+    <div class="col-md-1">
+      <button type="submit" class="btn btn-dark float-end m-1">Logout</button>
+    </div>
   </div>
   <div class="row">
     <div class="col-12 container "></div>

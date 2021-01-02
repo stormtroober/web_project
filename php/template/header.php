@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-12 p-0">
         <header class="py-3 text-white bg-dark">
-            <h1 class="text-monospace text-center"><a href="index.php">Guitar Benter</a></h1>
+            <h1 class="text-monospace text-center"><a class="text-decoration-none text-white" href="index.php">Guitar Benter</a></h1>
         </header>
     </div>
 </div>
