@@ -10,16 +10,16 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="<?php echo UPLOAD_DIR."img/$articleType/".$articolo["Foto"]."/front.png"; ?>" class="h-100" alt="First slide">
+          <img src="<?php echo UPLOAD_DIR."img/$articleType/".$articolo["Foto"]."/front.png"; ?>" class="h-100 mw-100" alt="First slide">
         </div>
         <div class="carousel-item">
-          <img src="<?php echo UPLOAD_DIR."img/$articleType/".$articolo["Foto"]."/back.png"; ?>" class="h-100" alt="Second slide">
+          <img src="<?php echo UPLOAD_DIR."img/$articleType/".$articolo["Foto"]."/back.png"; ?>" class="h-100 mw-100" alt="Second slide">
         </div>
         <div class="carousel-item">
-          <img src="<?php echo UPLOAD_DIR."img/$articleType/".$articolo["Foto"]."/zoom.png"; ?>" class="h-100" alt="Third slide">
+          <img src="<?php echo UPLOAD_DIR."img/$articleType/".$articolo["Foto"]."/zoom.png"; ?>" class="h-100 mw-100" alt="Third slide">
         </div>
         <div class="carousel-item">
-          <img src="<?php echo UPLOAD_DIR."img/$articleType/".$articolo["Foto"]."/head.png"; ?>" class="h-100" alt="Fourth slide">
+          <img src="<?php echo UPLOAD_DIR."img/$articleType/".$articolo["Foto"]."/head.png"; ?>" class="h-100 mw-100" alt="Fourth slide">
         </div>
       </div>
       <a class="carousel-control-prev" href="#articleCarousel" role="button" data-bs-slide="prev">
@@ -32,25 +32,25 @@
       </a>
     </div>
   </div>
-  <div class="col-lg-4 col-12 col-md-6 my-3 p-5">
+  <div class="col-lg-5 col-12 col-md-6 my-3 p-5">
     <h3><?php echo $articolo["Nome"]; ?></h3>
     <p><?php echo $articolo["Descrizione"]; ?></p>
   </div>
-  <div class="col-lg-1 col-0 p-0"></div>
   <div class="col-lg-3 col-12 col-md-12 my-3 py-4 px-3">
     <div class="border h-100">
       <div class="m-3 py-3 text-center border">
         <h2><?php echo $articolo["Prezzo"]?>$</h2>
       </div>
       <div class="py-3 text-center">
-        <button>Add to cart</button>
+        <form method="post" action="add_to_cart.php?id=<?php echo $articolo["Id"]?>">
+          <button type="submit">Add to cart</button>
+          </form>
       </div>
       <div class="py-3 text-center">
         <button>Add to WhishList</button>
       </div>
-      <div class="text-left p-4">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Voluptates ad quae aliquam quia harum veritatis quis labore.</p>
+      <div class="text-center fs-4 p-4">
+      <p>Items available: <?php echo $articolo["Quantità"]; ?></p>
       </div>
     </div>
   </div>
