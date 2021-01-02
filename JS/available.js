@@ -2,11 +2,24 @@ $(document).ready(function() {
     let spans = jQuery("[id=available]");
     spans.each(function() {
         if(parseInt($(this).text()) > 0){
-            $(this).text("Disponibile");
-            $(this).css("color", "green");  
+            if(parseInt($(this).text()) == 1){
+                $(this).text("Only 1 left!");
+                $(this).css("color", "green");
+            }
+            else{
+                if(parseInt($(this).text()) == 2){
+                    $(this).text("Only 2 left!");
+                    $(this).css("color", "green");
+                }
+                else{
+                    $(this).text("Available");
+                    $(this).css("color", "green"); 
+                }
+            }
+             
         }
         else{
-            $(this).text("Non Disponibile");
+            $(this).text("Not Available");
             $(this).css("color", "red");
         }
     })
