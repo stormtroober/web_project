@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    let text = $("#available").text();
+    let text = this.querySelectorAll('#available').text();
     if(parseInt(text) == 0){
         $("#available").text("Disponibile");
         $("#available").css("color", "green");  
