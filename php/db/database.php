@@ -30,7 +30,7 @@ class DatabaseHelper{
     }
 
     public function checkLogin($username, $password){
-        $stmt = $this->db->prepare("SELECT ID FROM utenti WHERE Email = ? AND Password = ?");
+        $stmt = $this->db->prepare("SELECT ID FROM UTENTI WHERE Email = ? AND Password = ?");
         $stmt->bind_param("ss", $username, $password);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -39,7 +39,7 @@ class DatabaseHelper{
     }
 
     public function getUserID($email) {
-        $stmt = $this->db->prepare("SELECT ID FROM utenti WHERE Email = ?");
+        $stmt = $this->db->prepare("SELECT ID FROM UTENTI WHERE Email = ?");
         $stmt->bind_param('s', $email);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -48,7 +48,7 @@ class DatabaseHelper{
     }
 
     public function getUser($id) {
-        $stmt = $this->db->prepare("SELECT * FROM utenti WHERE ID = ?");
+        $stmt = $this->db->prepare("SELECT * FROM UTENTI WHERE ID = ?");
         $stmt->bind_param('i', $id);
         $stmt->execute();
         $result = $stmt->get_result();
