@@ -8,7 +8,7 @@ if(isset($_GET["id"])){
     $articleID = $_GET["id"];
 }
 
-$templateParams["articolo"] = $dbh->getArticleById($articleID);
+$dbh->addToCart($userId, $articleID, 1);
 
 require("template/base.php");
 ?>
