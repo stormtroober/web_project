@@ -66,7 +66,6 @@ class DatabaseHelper{
         $stmtInsert = $this->db->prepare("INSERT INTO CARRELLO (Utente, Prodotto, Quantità) VALUES (?,?,?)");
         $stmtInsert->bind_param('iii', $userId, $productId, $Quantità);
         $stmtInsert->execute();
-
         $stmtUpdate = $this->db->prepare("UPDATE PRODOTTI SET Quantità=Quantità-? WHERE id=?");
         $stmtUpdate->bind_param('ii', $Quantità, $productId);
         $stmtUpdate->execute();

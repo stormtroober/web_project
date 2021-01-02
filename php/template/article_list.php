@@ -9,7 +9,7 @@
             </div>
             <div class="col-12 col-md-7 col-lg-5 pt-3">
                 <a class="text-decoration-none text-dark h3"
-                    href="article_page.php?id=<?php echo $articolo["ID"]."&type=".$templateParams["categoria"]; ?>"
+                    href="article_page.php?add=false&id=<?php echo $articolo["ID"]."&type=".$templateParams["categoria"]; ?>"
                     class="fs-4 fs-md-3 fs-lg-2 fs-xl-1 px-2">
                     <?php echo $articolo["Nome"]; ?>
                 </a>

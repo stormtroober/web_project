@@ -42,16 +42,16 @@
         <h2><?php echo $articolo["Prezzo"]?>$</h2>
       </div>
       <div class="py-3 text-center">
-        <form method="post" action="add_to_cart.php?id=<?php echo $articolo["Id"]?>">
+        <form method="post" action="article_page.php?add=true&id=<?php echo $articolo["Id"]?>&type=<?php echo $articleType?>">
           <button type="submit">Add to cart</button>
-          </form>
+        </form>
       </div>
       <div class="py-3 text-center">
         <button>Add to WhishList</button>
       </div>
       <div class="text-center fs-4 p-4">
-      <p>Items available: <?php echo $articolo["Quantità"]; ?></p>
+        <p>Items available: <?php echo $articolo["Quantità"]; ?></p>
       </div>
     </div>
   </div>
-</div>
+</div>                                                              

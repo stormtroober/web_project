@@ -12,6 +12,14 @@ if(isset($_GET["type"])){
     $articleType = $_GET["type"];
 }
 $templateParams["articolo"] = $dbh->getArticleById($articleID);
-
+$addToCart=false;
+if(isset($_GET["add"])){
+    $addToCart = $_GET["add"];
+}
+$userId = 1;
+$Quantità = 1;
+if($addToCart == true){
+    $dbh->addToCart($userId, $articleID, $Quantità);
+}
 require("template/base.php");
 ?>
