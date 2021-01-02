@@ -32,7 +32,7 @@
                     <a class="nav-link active xs-text" aria-current="page" href="#">Notifiche</a>
                   </li>
                 <li class="nav-item text-center">
-                  <a class="nav-link" href="#"><img src="../resources/icons/carrello.png" height="30" length="30"></a>
+                  <a class="nav-link" href="cart.php"><img src="../resources/icons/carrello.png" height="30" length="30"></a>
                   <a class="nav-link active xs-text" aria-current="page" href="#">Carrello</a>
                 </li>
                 <li class="nav-item text-center">
