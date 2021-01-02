@@ -16,10 +16,13 @@
         </div>
       </div>
     </div>
-    <div class="col-12 col-md-6 p-5 py-md-1">
+    <div class="col-md-1"></div>
+    <div class="col-12 col-md-5 p-5 py-md-1">
       <h3>Carrello</h3>
+      <div class="list-group-item">
+        <a href="" class="list-group-item list-group-item-action bg-dark text-white">Prodotti</a>
 
-    </div>
+      </div>
     <div class="col-md-1"></div>
   </div>
 </main>
