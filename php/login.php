@@ -1,5 +1,5 @@
 <?php
-require_once("./db/include.php");
+require_once("db/include.php");
 
 if(isset($_POST["email"]) && isset($_POST["password"])){
     $login_result = $dbh->checkLogin($_POST["email"], $_POST["password"]);
@@ -9,10 +9,8 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
     }else{
         //registerLoggedUser($login_result[0]);
         $id = $dbh->getUserID($_POST["email"]);
-        $templateParams["utente"] = $dbh->getUser($id)
-        $type = $dbh->getUserType($id);
-        $type = $type[0]["Tipo"];
-        if($type == "consumer") {
+        $templateParams["utente"] = $dbh->getUser($id);
+        if($templateParams["utente"][0]["Tipo"] == "consumer") {
             $templateParams["nome"] = "user_page.php";
         } else if ($type == "seller") {
             echo "seller";

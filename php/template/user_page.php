@@ -16,26 +16,21 @@
       <h3>Informazioni Account</h3>
       <div class="container px-0 py-3">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Nome" aria-label="Recipient's username"
-            aria-describedby="basic-addon2">
+          <label for="nome" class="form-control" ><?php echo $templateParams["utente"][0]["Nome"] ?></label>
         </div>
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Cognome" aria-label="Recipient's username"
-            aria-describedby="basic-addon2">
+          <label for="cognome" class="form-control"><?php echo $templateParams["utente"][0]["Cognome"] ?></label>
         </div>
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Email" aria-label="Recipient's username"
-            aria-describedby="basic-addon2">
+        <label for="email" class="form-control"><?php echo $templateParams["utente"][0]["Email"] ?></label>
         </div>
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Password" aria-label="Recipient's username"
-            aria-describedby="basic-addon2">
-          <button class="btn btn-dark" type="button" id="password">Modifica</button>
-        </div>
-        <div class="input-group mb-3">
+          <!--
           <input type="text" class="form-control" placeholder="Indirizzo di spedizione"
             aria-label="Recipient's username" aria-describedby="basic-addon2">
-          <button class="btn btn-dark" type="button" id="shipping_address">Modifica</button>
+          -->
+          <label for="indirizzo" class="form-control"><?php echo $templateParams["utente"][0]["Indirizzo"] ?></label>
+          <!-- <button class="btn btn-dark" type="button" id="shipping_address">Modifica</button> -->
         </div>
       </div>
     </div>
