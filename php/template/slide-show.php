@@ -22,13 +22,13 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <a href="category_page.php?type=Amplifier"><img src="../resources/ampsindex.jpg" class="carousel-width" alt="Third slide"></a>
+                <a href="category_page.php?type=Amp"><img src="../resources/ampsindex.jpg" class="carousel-width" alt="Third slide"></a>
                 <div class="carousel-caption d-md-block">
                 <h2>Amplifiers</h2>
                 </div>
             </div>
             <div class="carousel-item">
-                <a href="category_page.php?type=Accessory"><img src="../resources/accessoriesindex.jpg" class="carousel-width" alt="Fourth slide"></a>
+                <a href="category_page.php?type=Accessories"><img src="../resources/accessoriesindex.jpg" class="carousel-width" alt="Fourth slide"></a>
                 <div class="carousel-caption d-md-block">
                 <h2>Accessories</h2>
                 </div>
