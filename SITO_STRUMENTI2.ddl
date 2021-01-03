@@ -12,8 +12,8 @@
 -- Database Section
 -- ________________ 
 
-create database LOGICO3;
-use LOGICO3;
+create database guitar_benter;
+use guitar_benter;
 
 
 -- Tables Section
