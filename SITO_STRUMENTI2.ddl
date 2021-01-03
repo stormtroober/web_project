@@ -3,7 +3,7 @@
 -- *--------------------------------------------
 -- * DB-MAIN version: 11.0.1              
 -- * Generator date: Dec  4 2018              
--- * Generation date: Sun Jan  3 16:49:59 2021 
+-- * Generation date: Sun Jan  3 17:23:55 2021 
 -- * LUN file: C:\Users\Thomas\Desktop\TecnologieWeb\SITO_STRUMENTI - Copia.lun 
 -- * Schema: LOGICO3/1 
 -- ********************************************* 
@@ -22,17 +22,16 @@ use LOGICO3;
 create table CARRELLO (
      IdCarrello char(1) not null,
      Utente char(1) not null,
-     constraint IDCARRELLO primary key (IdCarrello),
-     constraint FKPossiede_ID unique (Utente));
+     constraint FKPossiede_ID unique (Utente),
+     constraint IDCARRELLO primary key (IdCarrello, Utente));
 
 create table ORDINE (
-     Utente char(1) not null,
      Data char(1) not null,
      IdCarrello char(1) not null,
      Prodotto char(1) not null,
      Quantità char(1) not null,
-     constraint IDORDINE primary key (Utente, Data),
-     constraint FKGenera_ID unique (IdCarrello));
+     constraint FKGenera_ID unique (IdCarrello),
+     constraint IDORDINE primary key (Data, IdCarrello));
 
 create table PRODOTTI (
      ID char(1) not null,
@@ -88,7 +87,7 @@ alter table PRODOTTI add constraint FKInserisce
 
 alter table PRODOTTI_CARRELLO add constraint FKInserimento_FK
      foreign key (IdCarrello)
-     references CARRELLO (IdCarrello);
+     references CARRELLO (IdCarrello, Utente);
 
 alter table PRODOTTI_CARRELLO add constraint FKInserito_FK
      foreign key (Prodotto)
