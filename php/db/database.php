@@ -62,7 +62,13 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    public function addToCart($userId, $productId, $Quantità){
+    public function addCartToUser($userEmail){
+        $stmt = $this->db->prepare("INSERT INTO CARRELLO (Utente) VALUE (?)");
+        $stmt->bind_param('s', $userEmail);
+        $stmt->execute();
+    }
+
+    public function addToCart($userEmail, $articleId, $Quantità){
         $stmtInsert = $this->db->prepare("INSERT INTO CARRELLO (Utente, Prodotto, Quantità) VALUES (?,?,?)");
         $stmtInsert->bind_param('iii', $userId, $productId, $Quantità);
         $stmtInsert->execute();

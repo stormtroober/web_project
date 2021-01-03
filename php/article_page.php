@@ -16,10 +16,10 @@ $addToCart=false;
 if(isset($_GET["add"])){
     $addToCart = $_GET["add"];
 }
-$userId = 1;
+$userEmail = "prova@example.com";
 $Quantità = 1;
 if($addToCart == true){
-    $dbh->addToCart($userId, $articleID, $Quantità);
+    $dbh->addToCart($userEmail, $articleID, $Quantità);
 }
 require("template/base.php");
 ?>
