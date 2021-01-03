@@ -51,7 +51,7 @@ create table PRODOTTI_CARRELLO (
      IdCarrello int(11) not null,
      Prodotto int(11) not null,
      Quantità int(10) not null,
-     constraint FKInserimento_ID primary key (IdCarrello),
+     constraint FKInserimento_ID primary key (IdCarrello,Prodotto),
      constraint FKInserito_ID unique (Prodotto));
 
 create table PRODOTTI_LISTA_DESIDERI (
