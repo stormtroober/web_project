@@ -20,49 +20,60 @@ use LOGICO3;
 -- _____________ 
 
 create table CARRELLO (
-     IdCarrello char(1) not null,
-     Utente char(1) not null,
+     IdCarrello int(11) not null AUTO_INCREMENT,
+     Utente char(40) not null,
      constraint FKPossiede_ID unique (Utente),
-     constraint IDCARRELLO primary key (IdCarrello, Utente));
+     constraint IDCARRELLO primary key (IdCarrello));
 
 create table ORDINE (
-     Data char(1) not null,
-     IdCarrello char(1) not null,
-     Prodotto char(1) not null,
-     Quantità char(1) not null,
-     constraint FKGenera_ID unique (IdCarrello),
-     constraint IDORDINE primary key (Data, IdCarrello));
+     Utente char(40) not null,
+     Data datetime not null,
+     IdCarrello int(11) not null,
+     Prodotto int(11) not null,
+     Quantità int(10) not null,
+     constraint IDORDINE primary key (Utente, Data),
+     constraint FKGenera_ID unique (IdCarrello));
 
 create table PRODOTTI (
-     ID char(1) not null,
-     Nome char(1) not null,
-     Tipo char(1) not null,
-     Foto char(1) not null,
-     Prezzo char(1) not null,
-     Quantità char(1) not null,
-     Utente char(1) not null,
+     ID int(11) not null AUTO_INCREMENT,
+     Nome char(40) not null,
+     Tipo char(20) not null,
+     Marca char(20) not null,
+     Foto char(40) not null,
+     Descrizione mediumtext,
+     Caratteristiche varchar(150),
+     Prezzo int(10) not null,
+     Quantità int(10) not null,
+     Utente char(40) not null,
      constraint IDPRODOTTI primary key (ID));
 
 create table PRODOTTI_CARRELLO (
-     IdCarrello char(1) not null,
-     Prodotto char(1) not null,
-     Quantità char(1) not null,
+     IdCarrello int(11) not null,
+     Prodotto int(11) not null,
+     Quantità int(10) not null,
      constraint FKInserimento_ID primary key (IdCarrello),
      constraint FKInserito_ID unique (Prodotto));
 
 create table PRODOTTI_LISTA_DESIDERI (
-     Prodotto char(1) not null,
-     Utente char(1) not null,
+     Prodotto int(11) not null,
+     Utente char(40) not null,
      constraint FKAggiunge_ID unique (Utente),
      constraint FKAggiunto_ID primary key (Prodotto));
 
 create table UTENTI (
-     Nome char(1) not null,
-     Cognome char(1) not null,
-     Email char(1) not null,
-     Password char(1) not null,
-     Indirizzo char(1) not null,
+     Nome char(20) not null,
+     Cognome char(20) not null,
+     Email char(40) not null,
+     Password char(128) not null,
+     Salt char(128) not null,
+     Tipo char(20) not null,
+     Indirizzo char(30) not null,
      constraint IDUTENTI_ID primary key (Email));
+     
+create table LOGIN_ATTEMPTS (
+     id int(11) not null,
+     time varchar(30) not null
+);
 
 
 -- Constraints Section
@@ -87,7 +98,7 @@ alter table PRODOTTI add constraint FKInserisce
 
 alter table PRODOTTI_CARRELLO add constraint FKInserimento_FK
      foreign key (IdCarrello)
-     references CARRELLO (IdCarrello, Utente);
+     references CARRELLO (IdCarrello);
 
 alter table PRODOTTI_CARRELLO add constraint FKInserito_FK
      foreign key (Prodotto)
