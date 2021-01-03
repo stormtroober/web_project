@@ -53,3 +53,11 @@
 .bg-light-gray {
   background-color:#e8e8e8 !important;
 }
+
+.itemInList {
+  border-radius: 25px;
+}
+
+.itemInList:hover {
+  background-color:#f0f0f0 !important;
+}

@@ -47,7 +47,7 @@
     </div>
     <?php foreach($templateParams["articoli"] as $articolo): ?>
     <div class="col-12">
-        <div class="row m-2 m-md-5" style="border-radius: 25px; background-color: #e8e8e8">
+        <div class="row m-2 m-md-5 bg-light-gray" style="border-radius:25px">
             <div class="col-12 col-md-5 col-lg-4 col-xl-3 col-xxl-2 text-center">
                 <img src="<?php echo UPLOAD_DIR."img/".$templateParams["categoria"]."/".$articolo["Foto"]."/front.png"; ?>"
                     class="img-fluid p-3 w-50" style="border-radius: 30px; max-width:225px; min-width: 175px;"

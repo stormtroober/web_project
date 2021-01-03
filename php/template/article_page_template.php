@@ -38,7 +38,7 @@
   </div>
   <div class="col-lg-3 col-12 col-md-12 my-3 py-4 px-3">
     <div class="border border-2 rounded-3">
-      <div class="m-3 py-3 text-center border bg-light-gray rounded-pill">
+      <div class="m-3 py-3 text-center border bg-light-gray rounded-3">
         <h2><?php echo $articolo["Prezzo"]?>$</h2>
       </div>
       <div class="py-3 text-center">

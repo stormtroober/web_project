@@ -33,11 +33,11 @@
                   </li>
                 <li class="nav-item text-center">
                   <a class="nav-link" href="cart.php"><img src="../resources/icons/carrello.png" height="30" length="30"></a>
-                  <a class="nav-link active xs-text" aria-current="page" href="#">Carrello</a>
+                  <a class="nav-link active xs-text" aria-current="page" href="cart.php">Carrello</a>
                 </li>
                 <li class="nav-item text-center">
-                  <a class="nav-link" href="#"><img src="../resources/icons/desideri.png" height="30" length="30"></a>
-                  <a class="nav-link active xs-text" aria-current="page" href="#">Lista Desideri</a>
+                  <a class="nav-link" href="whishlist.php"><img src="../resources/icons/desideri.png" height="30" length="30"></a>
+                  <a class="nav-link active xs-text" aria-current="page" href="whishlist.php">Lista Desideri</a>
                 </li>
               </ul>
               <form class="d-flex px-3 px-sm-5 px-lg-0">
