@@ -58,7 +58,7 @@ create table PRODOTTI_LISTA_DESIDERI (
      Prodotto int(11) not null,
      Utente char(40) not null,
      constraint FKAggiunge_ID unique (Utente),
-     constraint FKAggiunto_ID primary key (Prodotto));
+     constraint FKAggiunto_ID primary key (Utente, Prodotto));
 
 create table UTENTI (
      Nome char(20) not null,
@@ -91,6 +91,7 @@ alter table PRODOTTI add constraint FKInserisce
      foreign key (Utente)
      references UTENTI (Email);
 
+
 -- Not implemented
 -- alter table PRODOTTI_CARRELLO add constraint FKInserimento_CHK
 --     check(exists(select * from ORDINE
@@ -111,6 +112,9 @@ alter table PRODOTTI_LISTA_DESIDERI add constraint FKAggiunge_FK
 alter table PRODOTTI_LISTA_DESIDERI add constraint FKAggiunto_FK
      foreign key (Prodotto)
      references PRODOTTI (ID);
+
+ALTER TABLE PRODOTTI_LISTA_DESIDERI
+DROP INDEX FKAggiunge_ID;
 
 -- Not implemented
 -- alter table UTENTI add constraint IDUTENTI_CHK
