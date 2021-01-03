@@ -3,17 +3,17 @@
 -- *--------------------------------------------
 -- * DB-MAIN version: 11.0.1              
 -- * Generator date: Dec  4 2018              
--- * Generation date: Sun Jan  3 16:30:16 2021 
+-- * Generation date: Sun Jan  3 16:49:59 2021 
 -- * LUN file: C:\Users\Thomas\Desktop\TecnologieWeb\SITO_STRUMENTI - Copia.lun 
--- * Schema: LOGICO2/1 
+-- * Schema: LOGICO3/1 
 -- ********************************************* 
 
 
 -- Database Section
 -- ________________ 
 
-create database LOGICO2;
-use LOGICO2;
+create database LOGICO3;
+use LOGICO3;
 
 
 -- Tables Section
@@ -28,11 +28,11 @@ create table CARRELLO (
 create table ORDINE (
      Utente char(1) not null,
      Data char(1) not null,
-     Ins_IdCarrello char(1) not null,
+     IdCarrello char(1) not null,
      Prodotto char(1) not null,
      Quantità char(1) not null,
      constraint IDORDINE primary key (Utente, Data),
-     constraint FKGenera_ID unique (Ins_IdCarrello));
+     constraint FKGenera_ID unique (IdCarrello));
 
 create table PRODOTTI (
      ID char(1) not null,
@@ -45,28 +45,22 @@ create table PRODOTTI (
      constraint IDPRODOTTI primary key (ID));
 
 create table PRODOTTI_CARRELLO (
-     Ins_IdCarrello char(1) not null,
      IdCarrello char(1) not null,
      Prodotto char(1) not null,
-     ID char(1) not null,
      Quantità char(1) not null,
-     constraint IDPRODOTTI_CARRELLO_ID primary key (Ins_IdCarrello, IdCarrello),
-     constraint IDPRODOTTI_CARRELLO_1 unique (ID, Prodotto));
+     constraint FKInserimento_ID primary key (IdCarrello),
+     constraint FKInserito_ID unique (Prodotto));
 
 create table PRODOTTI_LISTA_DESIDERI (
-     ID char(1) not null,
-     IdListaDesideri char(1) not null,
      Prodotto char(1) not null,
-     Email char(1) not null,
-     constraint IDPRODOTTI_LISTA_DESIDERI primary key (ID, Prodotto),
-     constraint IDPRODOTTI_LISTA_DESIDERI_1 unique (Email, IdListaDesideri));
+     Utente char(1) not null,
+     constraint FKAggiunge_ID unique (Utente),
+     constraint FKAggiunto_ID primary key (Prodotto));
 
 create table UTENTI (
      Nome char(1) not null,
      Cognome char(1) not null,
      Email char(1) not null,
-     IdCarrello char(1) not null,
-     Utente char(1) not null,
      Password char(1) not null,
      Indirizzo char(1) not null,
      constraint IDUTENTI_ID primary key (Email));
@@ -80,32 +74,32 @@ alter table CARRELLO add constraint FKPossiede_FK
      references UTENTI (Email);
 
 alter table ORDINE add constraint FKGenera_FK
-     foreign key (Ins_IdCarrello)
-     references PRODOTTI_CARRELLO (Ins_IdCarrello, IdCarrello);
+     foreign key (IdCarrello)
+     references PRODOTTI_CARRELLO (IdCarrello);
 
 alter table PRODOTTI add constraint FKInserisce
      foreign key (Utente)
      references UTENTI (Email);
 
 -- Not implemented
--- alter table PRODOTTI_CARRELLO add constraint IDPRODOTTI_CARRELLO_CHK
+-- alter table PRODOTTI_CARRELLO add constraint FKInserimento_CHK
 --     check(exists(select * from ORDINE
---                  where ORDINE.Ins_IdCarrello = Ins_IdCarrello)); 
+--                  where ORDINE.IdCarrello = IdCarrello)); 
 
-alter table PRODOTTI_CARRELLO add constraint FKInserimento
-     foreign key (Ins_IdCarrello)
+alter table PRODOTTI_CARRELLO add constraint FKInserimento_FK
+     foreign key (IdCarrello)
      references CARRELLO (IdCarrello);
 
-alter table PRODOTTI_CARRELLO add constraint FKInserito
-     foreign key (ID)
+alter table PRODOTTI_CARRELLO add constraint FKInserito_FK
+     foreign key (Prodotto)
      references PRODOTTI (ID);
 
-alter table PRODOTTI_LISTA_DESIDERI add constraint FKAggiunge
-     foreign key (Email)
+alter table PRODOTTI_LISTA_DESIDERI add constraint FKAggiunge_FK
+     foreign key (Utente)
      references UTENTI (Email);
 
-alter table PRODOTTI_LISTA_DESIDERI add constraint FKAggiunto
-     foreign key (ID)
+alter table PRODOTTI_LISTA_DESIDERI add constraint FKAggiunto_FK
+     foreign key (Prodotto)
      references PRODOTTI (ID);
 
 -- Not implemented
