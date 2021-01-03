@@ -2,7 +2,7 @@
   <div class="row p-5">
     <div class="col-1 col-md-2 col-lg-3"></div>
     <div class="col-10 col-md-8 col-lg-6">
-      <form action="registration.php" method="post">
+      <form action="./registration.php" method="post">
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" class="form-control" name="name" aria-describedby="name"
@@ -39,6 +39,9 @@
           <input class="form-check-input" type="radio" name="account_type" id="seller" value="seller">
           <label class="form-check-label" for="seller">Seller</label>
         </div>
+        <?php if(isset($templateParams["errore"])) {
+          echo $templateParams["errore"];
+        } ?>
         <button type="submit" class="btn btn-dark float-end m-1">Register</button>
       </form>
     </div>

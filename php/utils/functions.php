@@ -12,36 +12,41 @@ function sec_session_start() {
 }
 
 function login($email, $password, $mysqli) {
-    if ($stmt = $mysqli->prepare("SELECT ID, Email, Password, Salt FROM UTENTI WHERE Email = ? LIMIT 1")) { 
-       $stmt->bind_param('s', $email);
-       $stmt->execute();
-       $stmt->store_result();
-       $stmt->bind_result($user_id, $username, $db_password, $salt);
-       $stmt->fetch();
-       $password = hash('sha512', $password.$salt);
-       if($stmt->num_rows == 1) {
-          if(checkbrute($user_id, $mysqli) == true) { 
-             // Account disabilitato
-             // Invia un e-mail all'utente avvisandolo che il suo account è stato disabilitato.
-             return false;
-          } else {
-          if($db_password == $password) {
-            $user_browser = $_SERVER['HTTP_USER_AGENT'];
+    if ($stmt = $mysqli->prepare("SELECT ID, Email, Password, Salt FROM UTENTI WHERE Email = ? LIMIT 1")) {
+        $stmt->bind_param('s', $email);
+        $stmt->execute();
+        $stmt->store_result();
+        $stmt->bind_result($user_id, $username, $db_password, $salt);
+        $stmt->fetch();
+        $password = hash('sha512', $password.$salt);
+        echo $password."<br>";
+        echo $db_password;
+        if($stmt->num_rows == 1) {
+            if(checkbrute($user_id, $mysqli) == true) { 
+                // Account disabilitato
+                // Invia un e-mail all'utente avvisandolo che il suo account è stato disabilitato.
+                return false;
+            } else {
+            if($db_password == $password) {
+               echo "esisti";
+                $user_browser = $_SERVER['HTTP_USER_AGENT'];
 
-            $user_id = preg_replace("/[^0-9]+/", "", $user_id);
-            $_SESSION['user_id'] = $user_id; 
-            $username = preg_replace("/[^a-zA-Z0-9_\-]+/", "", $username);
-            $_SESSION['username'] = $username;
-            $_SESSION['login_string'] = hash('sha512', $password.$user_browser);
-            return true;    
-          } else {
-            $now = time();
-            $mysqli->query("INSERT INTO LOGIN_ATTEMPTS (id, time) VALUES ('$user_id', '$now')");
-            return false;
-          }
-       }
+                $user_id = preg_replace("/[^0-9]+/", "", $user_id);
+                $_SESSION['user_id'] = $user_id; 
+                $username = preg_replace("/[^a-zA-Z0-9_\-]+/", "", $username);
+                $_SESSION['username'] = $username;
+                $_SESSION['login_string'] = hash('sha512', $password.$user_browser);
+                return true;    
+            } else {
+                echo "porcodio";
+                $now = time();
+                $mysqli->query("INSERT INTO LOGIN_ATTEMPTS (id, time) VALUES ('$user_id', '$now')");
+                return false;
+            }
+            }
        } else {
           // L'utente inserito non esiste.
+          echo "non esisti";
           return false;
        }
     }

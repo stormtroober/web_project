@@ -7,9 +7,11 @@ if(isset($_POST['email'], $_POST['password'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
     if(login($email, $password, $dbh->getDb()) == true) {
-       echo 'You have been logged in!';
+        $templateParams["nome"] = "user_page.php";
+        echo 'You have been logged in!';
     } else {
-       header('Location: ./login.php?error=1');
+        $templateParams["errore"] = "Errore! Email o password non corretti";
+        $templateParams["nome"] = "user_login.php";
     }
  } else {
     //echo 'Invalid Request';
