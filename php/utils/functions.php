@@ -12,7 +12,7 @@ function sec_session_start() {
 }
 
 function login($email, $password, $mysqli) {
-    if ($stmt = $mysqli->prepare("SELECT ID, Email, Password, Salt FROM UTENTI WHERE Email = ? LIMIT 1")) {
+    if ($stmt = $mysqli->prepare("SELECT Email, Nome, Password, Salt FROM UTENTI WHERE Email = ? LIMIT 1")) {
         $stmt->bind_param('s', $email);
         $stmt->execute();
         $stmt->store_result();
@@ -28,7 +28,6 @@ function login($email, $password, $mysqli) {
                 return false;
             } else {
             if($db_password == $password) {
-               echo "esisti";
                 $user_browser = $_SERVER['HTTP_USER_AGENT'];
 
                 $user_id = preg_replace("/[^0-9]+/", "", $user_id);
@@ -38,7 +37,6 @@ function login($email, $password, $mysqli) {
                 $_SESSION['login_string'] = hash('sha512', $password.$user_browser);
                 return true;    
             } else {
-                echo "porcodio";
                 $now = time();
                 $mysqli->query("INSERT INTO LOGIN_ATTEMPTS (id, time) VALUES ('$user_id', '$now')");
                 return false;
@@ -46,7 +44,6 @@ function login($email, $password, $mysqli) {
             }
        } else {
           // L'utente inserito non esiste.
-          echo "non esisti";
           return false;
        }
     }
@@ -55,7 +52,7 @@ function login($email, $password, $mysqli) {
  function checkbrute($user_id, $mysqli) {
     $now = time();
     $valid_attempts = $now - (2 * 60 * 60); 
-    if ($stmt = $mysqli->prepare("SELECT time FROM LOGIN_ATTEMPTS WHERE id = ? AND time > '$valid_attempts'")) { 
+    if ($stmt = $mysqli->prepare("SELECT time FROM LOGIN_ATTEMPTS WHERE Email = ? AND time > '$valid_attempts'")) { 
        $stmt->bind_param('i', $user_id); 
        $stmt->execute();
        $stmt->store_result();

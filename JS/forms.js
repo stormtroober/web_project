@@ -1,4 +1,7 @@
 function formhash(form, password) {
+    console.log("ph");
+    console.log("form: " + form);
+    console.log("pw: " + password);
     // Crea un elemento di input che verrà usato come campo di output per la password criptata.
     var p = document.createElement("input");
     // Aggiungi un nuovo elemento al tuo form.

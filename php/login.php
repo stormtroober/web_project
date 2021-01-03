@@ -6,8 +6,11 @@ sec_session_start();
 if(isset($_POST['email'], $_POST['password'])) { 
     $email = $_POST['email'];
     $password = $_POST['password'];
+    echo $email."<br/>";
+    echo $password."<br/>";
     if(login($email, $password, $dbh->getDb()) == true) {
         $templateParams["nome"] = "user_page.php";
+        $templateParams["utente"] = $dbh->getUserByEmail($email);
         echo 'You have been logged in!';
     } else {
         $templateParams["errore"] = "Errore! Email o password non corretti";
