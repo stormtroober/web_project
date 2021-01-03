@@ -71,7 +71,7 @@ create table UTENTI (
      constraint IDUTENTI_ID primary key (Email));
      
 create table LOGIN_ATTEMPTS (
-     id int(11) not null,
+     Email char(40) not null,
      time varchar(30) not null
 );
 
