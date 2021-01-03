@@ -43,7 +43,7 @@
       </div>
       <div class="py-3 text-center">
         <form method="post" action="article_page.php?add=true&id=<?php echo $articolo["ID"]?>&type=<?php echo $articleType?>">
-          <button type="submit" data-toggle="collapse" data-target="#added">Add to cart</button>
+          <button id="addToCart" type="submit" data-toggle="collapse" data-target="#added">Add to cart</button>
         </form>
       </div>
       <div class="collapse" id="added">

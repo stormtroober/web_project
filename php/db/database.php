@@ -18,7 +18,7 @@ class DatabaseHelper{
     }
 
     public function getArticleById($id){
-        $stmt = $this->db->prepare("SELECT Nome, Tipo, Marca, Foto, Descrizione, Prezzo, Quantità FROM PRODOTTI WHERE id = ?");
+        $stmt = $this->db->prepare("SELECT * FROM PRODOTTI WHERE id = ?");
         $stmt->bind_param('i', $id);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -59,14 +59,22 @@ class DatabaseHelper{
         $stmt->execute();
     }
 
+    private function getCartFromUser($userEmail){
+        $stmt = $this->db->prepare("SELECT IdCarrello FROM CARRELLO WHERE Utente = ?");
+        $stmt->bind_param('s', $userEmail);
+        $stmt->execute();
+
+        return $result = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+    }
+
     public function addToCart($userEmail, $articleId, $Quantità){
-        $stmtInsert = $this->db->prepare("INSERT INTO CARRELLO (Utente, Prodotto, Quantità) VALUES (?,?,?)");
-        $stmtInsert->bind_param('iii', $userId, $productId, $Quantità);
+        $cartId = $this->getCartFromUser($userEmail);
+        $stmtInsert = $this->db->prepare("INSERT INTO PRODOTTI_CARRELLO (IdCarrello, Prodotto, Quantità) VALUES (?,?,?)");
+        $stmtInsert->bind_param('iii', $cartId[0]["IdCarrello"], $articleId, $Quantità);
         $stmtInsert->execute();
         $stmtUpdate = $this->db->prepare("UPDATE PRODOTTI SET Quantità=Quantità-? WHERE id=?");
-        $stmtUpdate->bind_param('ii', $Quantità, $productId);
+        $stmtUpdate->bind_param('ii', $Quantità, $articleId);
         $stmtUpdate->execute();
-
     }
 
     public function getArticlesFromCart($userId){

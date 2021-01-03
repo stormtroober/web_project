@@ -1,5 +1,6 @@
 $(document).ready(function() {
     let spans = jQuery("[id=available]");
+    let notAvailable = false;
     spans.each(function() {
         if(parseInt($(this).text()) > 0){
             if(parseInt($(this).text()) == 1){
@@ -21,6 +22,10 @@ $(document).ready(function() {
         else{
             $(this).text("Not Available");
             $(this).css("color", "red");
+            notAvailable = true;
         }
     })
+    if(notAvailable){
+        $("#addToCart").prop( "disabled", false );
+    }
 });
