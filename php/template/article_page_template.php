@@ -1,7 +1,7 @@
 <?php $articolo = $templateParams["articolo"][0]; ?>
 <div class="row">
-  <div class="col-lg-4 col-12 col-md-6 pb-1 text-center bg-dark">
-    <div id="articleCarousel" class="carousel slide overflow-hidden" data-bs-ride="carousel">
+  <div class="col-lg-4 col-12 col-md-6 pb-1 text-center p-4">
+    <div id="articleCarousel" class="carousel slide overflow-hidden bg-dark rounded-3" data-bs-ride="carousel">
       <ol class="carousel-indicators">
         <li data-bs-target="#articleCarousel" data-bs-slide-to="0" class="active"></li>
         <li data-bs-target="#articleCarousel" data-bs-slide-to="1"></li>
@@ -37,12 +37,12 @@
     <p><?php echo $articolo["Descrizione"]; ?></p>
   </div>
   <div class="col-lg-3 col-12 col-md-12 my-3 py-4 px-3">
-    <div class="border h-100">
-      <div class="m-3 py-3 text-center border">
+    <div class="border border-2 rounded-3">
+      <div class="m-3 py-3 text-center border bg-light-gray rounded-pill">
         <h2><?php echo $articolo["Prezzo"]?>$</h2>
       </div>
       <div class="py-3 text-center">
-        <form method="post" action="article_page.php?add=true&id=<?php echo $articolo["Id"]?>&type=<?php echo $articleType?>">
+        <form method="post" action="article_page.php?add=true&id=<?php echo $articolo["ID"]?>&type=<?php echo $articleType?>">
           <button type="submit" data-toggle="collapse" data-target="#added">Add to cart</button>
         </form>
       </div>
@@ -52,7 +52,7 @@
       <div class="py-3 text-center">
         <button>Add to WhishList</button>
       </div>
-      <div class="text-center fs-4 p-4">
+      <div class="text-center fs-5 p-4">
         <p>Items available: <?php echo $articolo["Quantità"]; ?></p>
       </div>
     </div>
