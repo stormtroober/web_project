@@ -10,19 +10,18 @@ $articleID = 1;
 if(isset($_GET["id"])){
     $articleID = $_GET["id"];
 }
-$articleType = "Guitar";
-if(isset($_GET["type"])){
-    $articleType = $_GET["type"];
-}
+
 $templateParams["articolo"] = $dbh->getArticleById($articleID);
 $addToCart = false;
 if(isset($_GET["add"])){
     $addToCart = $_GET["add"];
 }
+
 $addToWishList = false;
 if(isset($_GET["addWishList"])){
     $addToWishList = $_GET["addWishList"];
 }
+
 $userEmail = "prova@example.com";
 $Quantità = 1;
 if($addToCart == true){
