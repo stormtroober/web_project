@@ -96,11 +96,11 @@ class DatabaseHelper{
 
     public function addToCart($userEmail, $articleId, $Quantità){
         if($this->getAmountFromProduct($articleId) - $Quantità >= 0){
+
             $cartId = $this->getCartFromUser($userEmail);
             if(!$this->itemInCartExist($articleId, $cartId)){
-                echo "creating";
+
                 $stmtInsert = $this->db->prepare("INSERT INTO PRODOTTI_CARRELLO (IdCarrello, Prodotto, Quantità) VALUES (?,?,?)");
-                //print_r($this->db->error_list);
                 var_dump($cartId[0]["IdCarrello"], $articleId, $Quantità);
                 $stmtInsert->bind_param('iii', $cartId[0]["IdCarrello"], $articleId, $Quantità);
                 $stmtInsert->execute();
@@ -110,6 +110,7 @@ class DatabaseHelper{
                 $stmtUpdate->execute();
             }
             else{
+
                 $stmtUpdate = $this->db->prepare("UPDATE PRODOTTI_CARRELLO SET Quantità=Quantità+1 WHERE (IdCarrello = ? && Prodotto = ?)");
                 $stmtUpdate->bind_param('ii', $cartId[0]["IdCarrello"], $articleId);
                 $stmtUpdate->execute();
