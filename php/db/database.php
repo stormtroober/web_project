@@ -77,6 +77,12 @@ class DatabaseHelper{
         $stmtUpdate->execute();
     }
 
+    public function addToWishList($userEmail, $articleId){
+        $stmtInsert = $this->db->prepare("INSERT INTO PRODOTTI_LISTA_DESIDERI (Prodotto, Utente) VALUES (?,?)");
+        $stmtInsert->bind_param('si', $userEmail, $articleId);
+        $stmtInsert->execute();
+    }
+
     public function getArticlesFromCart($userEmail){
         $cartId = $this->getCartFromUser($userEmail);
         $stmt = $this->db->prepare("SELECT Prodotto,Quantità FROM PRODOTTI_CARRELLO WHERE IdCarrello = ?");

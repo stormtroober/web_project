@@ -15,13 +15,20 @@ if(isset($_GET["type"])){
     $articleType = $_GET["type"];
 }
 $templateParams["articolo"] = $dbh->getArticleById($articleID);
-$addToCart=false;
+$addToCart = false;
 if(isset($_GET["add"])){
     $addToCart = $_GET["add"];
+}
+$addToWishList = false;
+if(isset($_GET["addWishList"])){
+    $addToWishList = $_GET["addWishList"];
 }
 $userEmail = "prova@example.com";
 $Quantità = 1;
 if($addToCart == true){
+    $dbh->addToCart($userEmail, $articleID, $Quantità);
+}
+if($addToWishList == true){
     $dbh->addToCart($userEmail, $articleID, $Quantità);
 }
 require("template/base.php");

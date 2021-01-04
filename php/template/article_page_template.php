@@ -50,7 +50,12 @@
         <p>Added to cart</p>
       </div>
       <div class="py-3 text-center">
-        <button>Add to WhishList</button>
+        <form method="post" action="article_page.php?add=false&addWishList=true&id=<?php echo $articolo["ID"]?>&type=<?php echo $articleType?>">
+          <button id="addToWishList" type="submit" data-toggle="collapse" data-target="#addedWishList">Add to WishList</button>
+        </form>
+      </div>
+      <div class="collapse" id="addedWishList">
+        <p>Added to cart</p>
       </div>
       <div class="text-center fs-5 p-4">
         <p>Items available: <?php echo $articolo["Quantità"]; ?></p>

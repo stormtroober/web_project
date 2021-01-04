@@ -1,18 +1,21 @@
 <?php
 require_once("db/include.php");
 
-$templateParams["nome"] = "wishlist_template.php";
 $userId = 1;
 if(isset($_GET["id"])){
   $userId = $_GET["id"];
 }
-$itemsInCart = $dbh->getArticlesFromCart($userId);
+//TEST
+$userEmail = "admin@admin.com";
+$itemsInWishList = $dbh->getItemsFromWish($userEmail);
+
 $items = array();
-foreach($itemsInCart as $item){
+foreach($itemsInWishList as $item){
   $items = $dbh->getArticleById($item["Prodotto"]);
 }
-//var_dump($items);
+var_dump($itemsInWishList);
 
+$templateParams["nome"] = "wishlist_template.php";
 
 require("template/base.php");
 ?>
