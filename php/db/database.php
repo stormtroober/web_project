@@ -77,12 +77,12 @@ class DatabaseHelper{
         $stmtUpdate->execute();
     }
 
-    public function getArticlesFromCart($userId){
-        $stmt = $this->db->prepare("SELECT * FROM CARRELLO WHERE Utente = ?");
-        $stmt->bind_param('i', $userId);
+    public function getArticlesFromCart($userEmail){
+        $cartId = $this->getCartFromUser($userEmail);
+        $stmt = $this->db->prepare("SELECT Prodotto,Quantità FROM PRODOTTI_CARRELLO WHERE IdCarrello = ?");
+        $stmt->bind_param('i', $cartId[0]["IdCarrello"]);
         $stmt->execute();
         $result = $stmt->get_result();
-
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 

@@ -5,13 +5,11 @@ $userId = 1;
 if(isset($_GET["id"])){
   $userId = $_GET["id"];
 }
-$itemsInCart = $dbh->getArticlesFromCart($userId);
-$items = array();
-foreach($itemsInCart as $item){
-  $items = $dbh->getArticleById($item["Prodotto"]);
-}
-//var_dump($items);
-var_dump($itemsInCart);
+//TEST
+$userEmail = "admin@admin.com";
+$templateParams["itemsInCart"] = $dbh->getArticlesFromCart($userEmail);
+
+var_dump($templateParams);
 $templateParams["nome"] = "cart_template.php";
 
 require("template/base.php");

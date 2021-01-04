@@ -31,6 +31,7 @@ create table ORDINE (
      IdCarrello int(11) not null,
      Prodotto int(11) not null,
      Quantità int(10) not null,
+     Prezzo int(10) not null,
      constraint IDORDINE primary key (Utente, Data),
      constraint FKGenera_ID unique (IdCarrello));
 
