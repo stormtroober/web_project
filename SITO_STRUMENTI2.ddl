@@ -22,18 +22,15 @@ use guitar_benter;
 create table CARRELLO (
      IdCarrello int(11) not null AUTO_INCREMENT,
      Utente char(40) not null,
-     constraint FKPossiede_ID unique (Utente),
-     constraint IDCARRELLO primary key (IdCarrello));
+     constraint FKPossiede_ID unique (Utente, IdCarrello),
+     constraint IDCARRELLO primary key (IdCarrello, Utente));
 
 create table ORDINE (
      Utente char(40) not null,
      Data datetime not null,
      IdCarrello int(11) not null,
-     Prodotto int(11) not null,
-     Quantità int(10) not null,
-     Prezzo int(10) not null,
      constraint IDORDINE primary key (Utente, Data),
-     constraint FKGenera_ID unique (IdCarrello));
+     constraint FKGenera_ID unique (IdCarrello,Utente));
 
 create table PRODOTTI (
      ID int(11) not null AUTO_INCREMENT,
@@ -84,6 +81,10 @@ alter table CARRELLO add constraint FKPossiede_FK
      foreign key (Utente)
      references UTENTI (Email);
 
+alter table ORDINE add constraint FKGenerato_FK
+     foreign key (Utente)
+     references UTENTI (Email);
+
 alter table ORDINE add constraint FKGenera_FK
      foreign key (IdCarrello)
      references PRODOTTI_CARRELLO (IdCarrello);
@@ -130,4 +131,3 @@ DROP INDEX FKAggiunge_ID;
 
 -- Index Section
 -- _____________ 
-
