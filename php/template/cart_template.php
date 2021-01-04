@@ -35,7 +35,7 @@
             <tr>
               <td><?php echo $articolo["Nome"]; ?></td>
               <td>x<?php echo $articolo["Quantità"]; ?></td>
-              <td><?php echo $articolo["Prezzo"]; ?>$</td>
+              <td><?php echo ($articolo["Quantità"] * $articolo["Prezzo"]) ?>$</td>
             </tr>
           <?php endforeach; ?>
         </tbody>
