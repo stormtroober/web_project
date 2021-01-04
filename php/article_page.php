@@ -3,6 +3,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 require_once("db/include.php");
+require_once("utils/functions.php");
 
 $templateParams["nome"] = "article_page_template.php";
 
@@ -17,15 +18,21 @@ if(isset($_GET["add"])){
     $add = $_GET["add"];
 }
 
-$userEmail = "admin@admin.com";
 $Quantità = 1;
-var_dump($add);
-if($add == "cart"){
+
+sec_session_start();
+if(login_check($dbh->getDb()) == true){
+  $userEmail = $_SESSION['user_id'];
+  if($add == "cart"){
     $dbh->addToCart($userEmail, $articleID, $Quantità);
 } else if($add == "wish"){
     var_dump($userEmail);
     var_dump($articleID);
     $dbh->addToWishList($userEmail, $articleID);
-}
+    }
+}   
+
+//$userEmail = "admin@admin.com";
+
 require("template/base.php");
 ?>
