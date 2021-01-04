@@ -7,9 +7,13 @@ if(isset($_GET["id"])){
 }
 //TEST
 $userEmail = "admin@admin.com";
-$templateParams["itemsInCart"] = $dbh->getArticlesFromCart($userEmail);
+$itemsInCart = $dbh->getArticlesFromCart($userEmail);
 
-var_dump($templateParams);
+$items = array();
+foreach($itemsInCart as $item){
+  $items = $dbh->getArticleById($item["Prodotto"]);
+}
+var_dump($itemsInCart);
 $templateParams["nome"] = "cart_template.php";
 
 require("template/base.php");

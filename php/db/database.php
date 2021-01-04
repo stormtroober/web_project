@@ -85,7 +85,14 @@ class DatabaseHelper{
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
     }
-
+    
+    public function getItemsFromWish($userEmail){
+        $stmt = $this->db->prepare("SELECT Prodotto FROM PRODOTTI_LISTA_DESIDERI WHERE Utente = ?");
+        $stmt->bind_param('i', $userEmail);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 }
 
 ?>
