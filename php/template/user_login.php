@@ -20,10 +20,9 @@
         <?php if(isset($templateParams["errore"])) {
           echo $templateParams["errore"];
         } ?>
-        <input type="button" value="Login" class="btn btn-dark float-end m-1" onclick="formhash(this.form, this.form.password);">
+        <input type="submit" value="Login" class="btn btn-dark float-end m-1">
       <button class="btn btn-dark float-end m-1"><a class="text-decoration-none text-white" href="./registration.php">Register</a></button>
       </form>
-    <p id="porcodio"></p>
     </div>
     <div class="col-1 col-md-2 col-lg-3"></div>
   </div>
