@@ -14,38 +14,38 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown px-2">
             <div class="container-fluid text-center px-0">
               <a class="nav-link" href="./login.php"><img src="../resources/icons/profilo.png" height="30" length="30"></a>
               <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Area Utente
+                User Page
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="./login.php">Profilo</a></li>
-                <li><a class="dropdown-item" href="#">Cronologia ordini</a></li>
+                <li><a class="dropdown-item" href="./login.php">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Order History</a></li>
               </ul>
             </div>
             </li>
-            <li class="nav-item text-center">
+            <li class="nav-item text-center px-2">
               <a class="nav-link" href="#"><img src="../resources/icons/notifica.png" height="30" length="30"></a>
-              <a class="nav-link active xs-text" aria-current="page" href="#">Notifiche</a>
+              <a class="nav-link active xs-text" aria-current="page" href="#">Notifications</a>
             </li>
-          <li class="nav-item text-center">
+          <li class="nav-item text-center px-2">
             <a class="nav-link" href="cart.php"><img src="../resources/icons/carrello.png" height="30" length="30"></a>
-            <a class="nav-link active xs-text" aria-current="page" href="cart.php">Carrello</a>
+            <a class="nav-link active xs-text" aria-current="page" href="cart.php">Shoppping Cart</a>
           </li>
-          <li class="nav-item text-center">
+          <li class="nav-item text-center px-2">
             <a class="nav-link" href="whishlist.php"><img src="../resources/icons/desideri.png" height="30" length="30"></a>
-            <a class="nav-link active xs-text" aria-current="page" href="whishlist.php">Lista Desideri</a>
+            <a class="nav-link active xs-text" aria-current="page" href="whishlist.php">WhishList</a>
           </li>
         </ul>
         <div id="order" class="dropdown">
             <button class="btn btn-secondary dropdown-toggle m-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Ordina per:
+              Order by:
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="./category_page.php?type=<?php echo $idcategoria?>&order=asc">Nome [A-Z]</a>
-              <a class="dropdown-item" href="./category_page.php?type=<?php echo $idcategoria?>&order=desc">Nome [Z-A]</a>
+              <a class="dropdown-item" href="./category_page.php?type=<?php echo $idcategoria?>&order=asc">Name [A-Z]</a>
+              <a class="dropdown-item" href="./category_page.php?type=<?php echo $idcategoria?>&order=desc">Name [Z-A]</a>
             </div>
           </div>
         <form action="./category_page.php?type=<?php echo $idcategoria?>&search=y" method="post" id="search" class="d-flex px-3 px-sm-5 px-lg-0 i">

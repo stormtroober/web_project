@@ -54,12 +54,12 @@
             <label class="form-label" for="customFile">Photo Zoom</label>
             <input type="file" class="form-control form-control-sm" id="customFile" />
           </div>
-          <div class="form-group mb-5">
+          <div class="form-group mb-3">
             <label class="form-label" for="customFile">Photo Head</label>
             <input type="file" class="form-control form-control-sm" id="customFile" />
           </div>
           <div class="form-group p4 float-end">
-            <button type="submit" class="btn btn-dark">Update</button>
+            <button type="submit" class="btn btn-dark btn-lg">Update</button>
           </div>
         </form>
       </div>

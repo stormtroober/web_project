@@ -2,8 +2,8 @@
   <div class="row py-4">
     <div class="col-lg-1"></div>
     <div class="col-12 col-lg-5 px-3 px-lg-0">
-      <div class="list-group pe-lg-2 pe-xl-5">
-        <a href="user_page.html" class="list-group-item list-group-item-action bg-dark text-white">Lista prodotti</a>
+      <div class="list-group pe-lg-3 pe-xl-5">
+        <a href="user_page.html" class="list-group-item list-group-item-action bg-dark text-white">Product List</a>
         <?php foreach($items as $art_array): 
           $articolo = $art_array[0];
           ?>
@@ -11,21 +11,22 @@
             <img src="<?php echo UPLOAD_DIR."img/".$articolo["Tipo"]."/".$articolo["Foto"]."/front.png"?>"
             class="float-start m-2" width="75px">
             <a href="article_page.php?add=false&id=<?php echo $articolo["ID"]."&type=".$articolo["Tipo"]; ?>" 
-            class="fs-4 text-dark px-4"><?php echo $articolo["Nome"]; ?></a>
-            <p class="fs-3 text-decoration-none p-4 float-end"><?php echo $articolo["Prezzo"]; ?></a>
-            <p class="float-end position-absolute bottom-0 end-0 p-4"><?php echo $articolo["Quantità"]; ?></a>
+            class="text-dark"><?php echo $articolo["Nome"]; ?></a>
+            <p class="fs-4 text-decoration-none p-4 float-end"><?php echo $articolo["Prezzo"]; ?>$</a>
+            <p class="float-end position-absolute bottom-0 end-0 p-4">x<?php echo $articolo["Quantità"]; ?></a>
           </div>
         <?php endforeach; ?>
       </div>
     </div>
-    <div class="col-12 col-lg-5 px-3 py-2 bg-light-gray rounded-3 img-fluid">
-      <h3 class="text-center">Carrello</h3>
+    <div class="col-12 col-lg-5 p-3 bg-light-gray h-100" style="border: 20px solid #f8f9fa; border-radius: 25px;">
+      <h3 class="text-center p-2">Shopping Cart</h3>
       <table class="table table-striped table-hover pt-4">
         <thead>
           <tr>
             <th scope="col">Name</th>
             <th scope="col">Quantity</th>
             <th scope="col">Price</th>
+            <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
@@ -41,7 +42,14 @@
                   $subtot = $articolo["Quantità"] * $articolo["Prezzo"];
                   echo $subtot;
                   $totale = $subtot + $totale;
-                ?>$
+                  ?>$
+              </td>
+              <td>
+              <form method="post" action="cart.php?remove=true&id=<?php echo $articolo["ID"]?>">
+                <input type="image" src="../resources/icons/remove.png" height="30" width="25"></>
+
+                <!-- <button class="btn btn-dark btn-sm"type="submit">Remove</button> -->
+              </form>
               </td>
             </tr>
           <?php endforeach; ?>
@@ -55,7 +63,7 @@
         </tfoot>
       </table>
       <div class="container-fluid">
-        <button type="button" class="btn btn-dark float-end mt-4">Buy now</button>
+        <button type="button" class="btn btn-dark float-end mt-4 mb-2">Buy now</button>
       </div>
     </div>
     <div class="col-lg-1"></div>

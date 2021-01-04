@@ -26,6 +26,18 @@ if(login_check($dbh->getDb()) == true){
     $items[$i][0]["Quantità"] = $itemsInCart[$i]["Quantità"];
   }
 
+  $remove = false;
+  $articleToRemove = -1;
+  if(isset($_GET["remove"])){
+    $remove = $_GET["remove"];
+  }
+  if(isset($_GET["id"])){
+    $articleToRemove = $_GET["id"];
+  }
+  if($remove == true){
+    $dbh->removeItemFromCart($userEmail, $articleToRemove);
+  }
+  
   $templateParams["nome"] = "cart_template.php";
 }
 else{

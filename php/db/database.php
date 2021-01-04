@@ -145,6 +145,13 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
         
+    public function removeItemFromCart($userEmail, $articleId){
+        $cartId = $this->getCartFromUser($userEmail);
+        $stmt = $this->db->prepare("DELETE FROM PRODOTTI_CARRELLO WHERE IdCarrello = ? AND Prodotto = ?");
+        $stmt->bind_param('ii', $cartId[0]["IdCarrello"], $articleId);
+        $stmt->execute();
+    }
+
     public function removeItemFromWish($userEmail, $articleId){
         $stmt = $this->db->prepare("DELETE FROM PRODOTTI_LISTA_DESIDERI WHERE Utente = ? AND Prodotto = ?");
         $stmt->bind_param('si', $userEmail, $articleId);

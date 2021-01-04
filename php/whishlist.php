@@ -26,7 +26,7 @@ if(login_check($dbh->getDb()) == true){
   }
 }
 else{
-  $templateParams["nome"] = "wishlist_template.php";  
+  $templateParams["nome"] = "slide-show.php";  
 }
 
 
