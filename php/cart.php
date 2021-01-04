@@ -9,7 +9,7 @@ if(isset($_GET["id"])){
   $userId = $_GET["id"];
 }
 //TEST
-$userEmail = "prova@example.com";
+$userEmail = "admin@admin.com";
 $itemsInCart = $dbh->getArticlesFromCart($userEmail);
 
 $items = array();
