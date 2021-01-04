@@ -98,7 +98,7 @@ class DatabaseHelper{
 
     public function addToWishList($userEmail, $articleId){
         $stmtInsert = $this->db->prepare("INSERT INTO PRODOTTI_LISTA_DESIDERI (Prodotto, Utente) VALUES (?,?)");
-        $stmtInsert->bind_param('si', $userEmail, $articleId);
+        $stmtInsert->bind_param('is', $articleId, $userEmail);
         $stmtInsert->execute();
     }
 
@@ -119,12 +119,10 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
         
-    public function removeItemsFromWish($userEmail, $articleId){
-        $stmt = $this->db->prepare("DELETE Prodotto FROM PRODOTTI_LISTA_DESIDERI WHERE Utente = ? AND Prodotto = ?");
-        $stmt->bind_param('ii', $userEmail, $articleId);
+    public function removeItemFromWish($userEmail, $articleId){
+        $stmt = $this->db->prepare("DELETE FROM PRODOTTI_LISTA_DESIDERI WHERE Utente = ? AND Prodotto = ?");
+        $stmt->bind_param('si', $userEmail, $articleId);
         $stmt->execute();
-        $result = $stmt->get_result();
-        return $result->fetch_all(MYSQLI_ASSOC);
     }
 }
 

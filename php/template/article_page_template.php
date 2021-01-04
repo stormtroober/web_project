@@ -42,7 +42,7 @@
         <h2><?php echo $articolo["Prezzo"]?>$</h2>
       </div>
       <div class="py-3 text-center">
-        <form method="post" action="article_page.php?add=true&id=<?php echo $articolo["ID"]?>">
+        <form method="post" action="article_page.php?add=cart&id=<?php echo $articolo["ID"]?>">
           <button id="addToCart" type="submit" data-toggle="collapse" data-target="#added">Add to cart</button>
         </form>
       </div>
@@ -50,7 +50,7 @@
         <p>Added to cart</p>
       </div>
       <div class="py-3 text-center">
-        <form method="post" action="article_page.php?add=false&addWishList=true&id=<?php echo $articolo["ID"]?>">
+        <form method="post" action="article_page.php?add=wish&id=<?php echo $articolo["ID"]?>">
           <button id="addToWishList" type="submit" data-toggle="collapse" data-target="#addedWishList">Add to WishList</button>
         </form>
       </div>

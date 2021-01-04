@@ -6,9 +6,10 @@
         <table class="table table-sm table-striped table-hover mt-4">
           <thead class="bg-dark text-white">
             <tr>
-              <th scope="col" class="rounded-left m-1">Photo</th>
-              <th scope="col" class="">Name</th>
-              <th scope="col" class="rounded-right">Price</th>
+              <th scope="col">Photo</th>
+              <th scope="col">Name</th>
+              <th scope="col">Price</th>
+              <th scope="col"></th>
             </tr>
           </thead>
           <tbody>
@@ -16,8 +17,13 @@
                     $articolo = $artArray[0]; ?>
               <tr>
                 <td class="text-center"><img src="<?php echo UPLOAD_DIR."img/".$articolo["Tipo"]."/".$articolo["Foto"]."/front.png" ?>" class="h-25" style="max-width:150px"></td>
-                <td><?php echo $articolo["Nome"]; ?></td>
-                <td><?php echo $articolo["Prezzo"]; ?>$</td>
+                <td class="align-middle"><?php echo $articolo["Nome"]; ?></td>
+                <td class="align-middle"><?php echo $articolo["Prezzo"]; ?>$</td>
+                <td class="align-middle">
+                  <form method="post" action="whishlist.php?remove=true&id=<?php echo $articolo["ID"]?>">
+                    <button class="btn btn-dark btn-sm"type="submit">Remove</button>
+                  </form>
+                </td>
               </tr>
             <?php endforeach; ?>
           </tbody>
