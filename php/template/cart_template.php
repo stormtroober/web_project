@@ -35,7 +35,14 @@
             <tr>
               <td><?php echo $articolo["Nome"]; ?></td>
               <td>x<?php echo $articolo["Quantità"]; ?></td>
-              <td><?php echo ($articolo["Quantità"] * $articolo["Prezzo"]) ?>$</td>
+              <td>
+                <?php 
+                  global $totale;
+                  $subtot = $articolo["Quantità"] * $articolo["Prezzo"];
+                  echo $subtot;
+                  $totale = $subtot + $totale;
+                ?>$
+              </td>
             </tr>
           <?php endforeach; ?>
         </tbody>
@@ -43,7 +50,7 @@
           <tr>
             <td>Total</td>
             <td></td>
-            <td>999$</td>
+            <td><?php echo $totale; ?>$</td>
           </tr>
         </tfoot>
       </table>
