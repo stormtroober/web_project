@@ -13,7 +13,6 @@ $items = array();
 foreach($itemsInWishList as $item){
   array_push($items, $dbh->getArticleById($item["Prodotto"]));
 }
-var_dump($items);
 
 $templateParams["nome"] = "wishlist_template.php";
 
