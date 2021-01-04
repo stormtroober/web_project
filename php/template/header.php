@@ -23,7 +23,6 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <li><a class="dropdown-item" href="./login.php">Profilo</a></li>
                       <li><a class="dropdown-item" href="#">Cronologia ordini</a></li>
-                      <li><a class="dropdown-item" href="#">Metodi di pagamento</a></li>
                     </ul>
                   </div>
                   </li>

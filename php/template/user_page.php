@@ -3,13 +3,8 @@
     <div class="col-md-1"></div>
     <div class="col-12 col-md-4 col-lg-3">
       <div class="list-group px-5 px-md-0">
-        <a href="user_page.html" class="list-group-item list-group-item-action bg-dark text-white">UserName</a>
-        <a href="user_page.html" class="list-group-item list-group-item-action">Account</a>
-        <a href="order_history.html" class="list-group-item list-group-item-action">Cronologia ordini</a>
-        <a href="payment_methods.html" class="list-group-item list-group-item-action">Metodi di pagamento</a>
-        <a href="policy.html" class="list-group-item list-group-item-action">Politiche di Reso e Rimborso</a>
-        <a href="contact_us.html" class="list-group-item list-group-item-action">Contattaci</a>
-        <a href="user_settings.html" class="list-group-item list-group-item-action">Impostazioni</a>
+        <a href="./login.php?info=account" class="list-group-item list-group-item-action bg-dark text-white">Account</a>
+        <a href="./login.php?info=ordini" class="list-group-item list-group-item-action">Cronologia ordini</a>
       </div>
     </div>
     <div class="col-12 col-md-6 col-lg-7 p-5 py-md-1">
