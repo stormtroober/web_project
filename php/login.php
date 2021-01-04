@@ -32,7 +32,7 @@ if(login_check($dbh->getDb()) == true) {
             $templateParams["nome"] = "user_page.php";
             $templateParams["utente"] = $dbh->getUserByEmail($email);
         } else {
-            $templateParams["errore"] = "Errore! Email o password non corretti";
+            $templateParams["errore_login"] = "Error! Email or password are incorrect!";
             $templateParams["nome"] = "user_login.php";
         }
      } else {

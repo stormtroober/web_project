@@ -13,7 +13,9 @@ if(isset($_POST["name"], $_POST["surname"], $_POST["email"], $_POST["password"],
     $templateParams["nome"] = "slide-show.php";
     }
 } else {
-    $templateParams["errore"] = "Insert all parameters!";
+    if(isset($_GET["prova"])) {
+        $templateParams["errore_reg"] = "Error! Insert all parameters!";
+    }
     $templateParams["nome"] = "user_registration.php";
 }
 
