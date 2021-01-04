@@ -40,15 +40,15 @@
           </li>
         </ul>
         <div id="order" class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle m-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Ordina per:
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Nome [A-Z]</a>
-            <a class="dropdown-item" href="#">Nome [Z-A]</a>
+            <button class="btn btn-secondary dropdown-toggle m-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Ordina per:
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="./category_page.php?type=<?php echo $idcategoria?>&order=asc">Nome [A-Z]</a>
+              <a class="dropdown-item" href="./category_page.php?type=<?php echo $idcategoria?>&order=desc">Nome [Z-A]</a>
+            </div>
           </div>
-        </div>
-        <form action="./category_page.php?type=<?php echo $idcategoria?>&search=yes" method="post" id="search" class="d-flex px-3 px-sm-5 px-lg-0 i">
+        <form action="./category_page.php?type=<?php echo $idcategoria?>&search=y" method="post" id="search" class="d-flex px-3 px-sm-5 px-lg-0 i">
           <input class="form-control me-2" type="search" name="user_search" placeholder="Search" aria-label="Search">
           <button class="btn" type="submit"><img src="../resources/icons/lente.png" height="30" length="30"></button>
         </form>

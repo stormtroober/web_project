@@ -10,20 +10,22 @@ $idcategoria = -1;
 if(isset($_GET["type"])){
     $idcategoria = $_GET["type"];
 }
-$search = -2;
-if(isset($_GET["search"])) {
-    $search = $_GET["search"];
-}
-$user_search = -3;
 if(isset($_POST["user_search"])) {
     $user_search = $_POST["user_search"];
 }
-if($search == "no") {
-    $templateParams["articoli"] = $dbh->getPostByCategory($idcategoria);
-    $templateParams["categoria"] = $idcategoria;
-} else if($search == "yes") {
+$templateParams["categoria"] = $idcategoria;
+if(isset($_GET["search"])) {
     $templateParams["articoli"] = $dbh->getPostByCategorySearch($idcategoria, $user_search);
-    $templateParams["categoria"] = $idcategoria;
+} else {
+    $templateParams["articoli"] = $dbh->getPostByCategory($idcategoria);
 }
+if(isset($_GET["order"])) {
+    if($_GET["order"] == "asc") {
+        
+    } else if($_GET["order"] == "desc") {
+        
+    }
+}
+
 require("template/base.php");
 ?>
