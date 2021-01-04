@@ -21,23 +21,22 @@ function login($email, $password, $mysqli) {
         $password = hash('sha512', $password.$salt);
         if($stmt->num_rows == 1) {
             if(checkbrute($user_id, $mysqli) == true) { 
-                // Account disabilitato
-                // Invia un e-mail all'utente avvisandolo che il suo account è stato disabilitato.
-                return false;
+               // Account disabilitato
+               // Invia un e-mail all'utente avvisandolo che il suo account è stato disabilitato.
+               return false;
             } else {
             if($db_password == $password) {
-                $user_browser = $_SERVER['HTTP_USER_AGENT'];
-
-                $user_id = preg_replace("/[^0-9]+/", "", $user_id);
-                $_SESSION['user_id'] = $user_id; 
-                $username = preg_replace("/[^a-zA-Z0-9_\-]+/", "", $username);
-                $_SESSION['username'] = $username;
-                $_SESSION['login_string'] = hash('sha512', $password.$user_browser);
-                return true;    
+               $user_browser = $_SERVER['HTTP_USER_AGENT'];
+               //$user_id = preg_replace("/[^0-9]+/", "", $user_id);
+               $_SESSION['user_id'] = $user_id; 
+               //$username = preg_replace("/[^a-zA-Z0-9_\-]+/", "", $username);
+               $_SESSION['username'] = $username;
+               $_SESSION['login_string'] = hash('sha512', $password.$user_browser);
+               return true;    
             } else {
-                $now = time();
-                $mysqli->query("INSERT INTO LOGIN_ATTEMPTS (id, time) VALUES ('$user_id', '$now')");
-                return false;
+               $now = time();
+               $mysqli->query("INSERT INTO LOGIN_ATTEMPTS (id, time) VALUES ('$user_id', '$now')");
+               return false;
             }
             }
        } else {
@@ -70,37 +69,30 @@ function login($email, $password, $mysqli) {
       $username = $_SESSION['username'];     
       $user_browser = $_SERVER['HTTP_USER_AGENT'];
       if ($stmt = $mysqli->prepare("SELECT Password FROM UTENTI WHERE Email = ? LIMIT 1")) { 
-         $stmt->bind_param('i', $user_id);
+         $stmt->bind_param('s', $user_id);
          $stmt->execute();
          $stmt->store_result();
-  
+
          if($stmt->num_rows == 1) {
             $stmt->bind_result($password);
             $stmt->fetch();
             $login_check = hash('sha512', $password.$user_browser);
-            echo $login_check."<br/>";
-            echo $login_string;
             if($login_check == $login_string) {
-               echo "ehi";
                // Login eseguito!!!!
                return true;
             } else {
-               echo "ehi1";
                //  Login non eseguito
                return false;
             }
          } else {
-            echo "ehi2";
              // Login non eseguito
              return false;
          }
       } else {
-         echo "ehi3";
          // Login non eseguito
          return false;
       }
     } else {
-      echo "ehi4";
       // Login non eseguito
       return false;
     }

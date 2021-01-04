@@ -4,9 +4,8 @@ require("utils/functions.php");
 
 sec_session_start();
 if(login_check($dbh->getDb()) == true) {
- 
+    $templateParams["utente"] = $dbh->getUserByEmail($_SESSION['user_id']);
     $templateParams["nome"] = "user_page.php";
-    echo "dai sono dentro";
  } else {
     //echo 'You are not authorized to access this page, please login. <br/>';
     if(isset($_POST['email'], $_POST['password'])) { 
