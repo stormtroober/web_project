@@ -53,7 +53,7 @@ create table PRODOTTI_CARRELLO (
      Prodotto int(11) not null,
      Quantità int(10) not null,
      constraint FKInserimento_ID primary key (IdCarrello,Prodotto),
-     constraint FKInserito_ID unique (Prodotto));
+     constraint FKInserito_ID unique (Prodotto, IdCarrello));
 
 create table PRODOTTI_LISTA_DESIDERI (
      Prodotto int(11) not null,
