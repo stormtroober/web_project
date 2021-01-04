@@ -29,7 +29,7 @@ if($addToCart == true){
     $dbh->addToCart($userEmail, $articleID, $Quantità);
 }
 if($addToWishList == true){
-    $dbh->addToCart($userEmail, $articleID, $Quantità);
+    $dbh->addToWishList($userEmail, $articleID);
 }
 require("template/base.php");
 ?>

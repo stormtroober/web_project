@@ -11,12 +11,13 @@
             <th scope="col">Add to cart</th>
           </tr>
         </thead>
+        <tbody>
           <?php foreach($items as $articolo): ?>
             <tr>
-              <td><?php echo $articolo["Foto"]; ?></td>
+              <td><img src="<?php echo UPLOAD_DIR."img/".$articolo["Tipo"]."/".$articolo["Foto"]."/front.png" ?>" width="125px"></td>
               <td><?php echo $articolo["Nome"]; ?></td>
-              <td>x<?php echo $articolo["Quantità"]; ?></td>
               <td><?php echo $articolo["Prezzo"]; ?>$</td>
+              <td><button class="btn btn-dark">Add to cart</button></td>
             </tr>
           <?php endforeach; ?>
         </tbody>

@@ -11,9 +11,9 @@ $itemsInWishList = $dbh->getItemsFromWish($userEmail);
 
 $items = array();
 foreach($itemsInWishList as $item){
-  $items = $dbh->getArticleById($item["Prodotto"]);
+  array_push($items, $dbh->getArticleById($item["Prodotto"]));
 }
-var_dump($itemsInWishList);
+var_dump($items);
 
 $templateParams["nome"] = "wishlist_template.php";
 
