@@ -18,7 +18,7 @@
         <?php endforeach; ?>
       </div>
     </div>
-    <div class="col-12 col-lg-5 px-3 py-2 bg-light-gray rounded-3">
+    <div class="col-12 col-lg-5 px-3 py-2 bg-light-gray rounded-3 img-fluid">
       <h3 class="text-center">Carrello</h3>
       <table class="table table-striped table-hover pt-4">
         <thead>
