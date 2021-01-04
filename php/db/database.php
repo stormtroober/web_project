@@ -120,6 +120,14 @@ class DatabaseHelper{
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+        
+    public function removeItemsFromWish($userEmail, $articleId){
+        $stmt = $this->db->prepare("DELETE Prodotto FROM PRODOTTI_LISTA_DESIDERI WHERE Utente = ? AND Prodotto = ?");
+        $stmt->bind_param('ii', $userEmail, $articleId);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 }
 
 ?>
