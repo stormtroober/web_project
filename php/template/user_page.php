@@ -35,7 +35,9 @@
       </div>
     </div>
     <div class="col-md-1">
-      <button id="logout" class="btn btn-dark float-end m-1"><a class="text-decoration-none text-white" href="./login.php">Logout</a></button>
+      <form action="./logout.php" method="post">
+        <input type="submit" value="Logout" id="logout" class="btn btn-dark float-end m-1">
+      </form>
     </div>
   </div>
   <div class="row">

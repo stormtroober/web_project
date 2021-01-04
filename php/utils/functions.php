@@ -19,8 +19,6 @@ function login($email, $password, $mysqli) {
         $stmt->bind_result($user_id, $username, $db_password, $salt);
         $stmt->fetch();
         $password = hash('sha512', $password.$salt);
-        echo $password."<br>";
-        echo $db_password;
         if($stmt->num_rows == 1) {
             if(checkbrute($user_id, $mysqli) == true) { 
                 // Account disabilitato
@@ -71,7 +69,7 @@ function login($email, $password, $mysqli) {
       $login_string = $_SESSION['login_string'];
       $username = $_SESSION['username'];     
       $user_browser = $_SERVER['HTTP_USER_AGENT'];
-      if ($stmt = $mysqli->prepare("SELECT Password FROM UTENTI WHERE ID = ? LIMIT 1")) { 
+      if ($stmt = $mysqli->prepare("SELECT Password FROM UTENTI WHERE Email = ? LIMIT 1")) { 
          $stmt->bind_param('i', $user_id);
          $stmt->execute();
          $stmt->store_result();
@@ -80,22 +78,29 @@ function login($email, $password, $mysqli) {
             $stmt->bind_result($password);
             $stmt->fetch();
             $login_check = hash('sha512', $password.$user_browser);
+            echo $login_check."<br/>";
+            echo $login_string;
             if($login_check == $login_string) {
+               echo "ehi";
                // Login eseguito!!!!
                return true;
             } else {
+               echo "ehi1";
                //  Login non eseguito
                return false;
             }
          } else {
+            echo "ehi2";
              // Login non eseguito
              return false;
          }
       } else {
+         echo "ehi3";
          // Login non eseguito
          return false;
       }
     } else {
+      echo "ehi4";
       // Login non eseguito
       return false;
     }

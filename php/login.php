@@ -3,23 +3,29 @@ require_once("db/include.php");
 require("utils/functions.php");
 
 sec_session_start();
-if(isset($_POST['email'], $_POST['password'])) { 
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    echo $email."<br/>";
-    echo $password."<br/>";
-    if(login($email, $password, $dbh->getDb()) == true) {
-        $templateParams["nome"] = "user_page.php";
-        $templateParams["utente"] = $dbh->getUserByEmail($email);
-        echo 'You have been logged in!';
-    } else {
-        $templateParams["errore"] = "Errore! Email o password non corretti";
-        $templateParams["nome"] = "user_login.php";
-    }
+if(login_check($dbh->getDb()) == true) {
+ 
+    $templateParams["nome"] = "user_page.php";
+    echo "dai sono dentro";
  } else {
-    //echo 'Invalid Request';
-    $templateParams["nome"] = "user_login.php";
+    //echo 'You are not authorized to access this page, please login. <br/>';
+    if(isset($_POST['email'], $_POST['password'])) { 
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        if(login($email, $password, $dbh->getDb()) == true) {
+            $templateParams["nome"] = "user_page.php";
+            $templateParams["utente"] = $dbh->getUserByEmail($email);
+        } else {
+            $templateParams["errore"] = "Errore! Email o password non corretti";
+            $templateParams["nome"] = "user_login.php";
+        }
+     } else {
+        //echo 'Invalid Request';
+        $templateParams["nome"] = "user_login.php";
+     }
  }
+
+ 
 /*
 if(isset($_COOKIE["login"])) {
     $templateParams["utente"] = $dbh->getUser($_COOKIE["login"]);
