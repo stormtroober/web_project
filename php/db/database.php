@@ -63,8 +63,8 @@ class DatabaseHelper{
         $stmt = $this->db->prepare("SELECT IdCarrello FROM CARRELLO WHERE Utente = ?");
         $stmt->bind_param('s', $userEmail);
         $stmt->execute();
-
-        return $result = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
     }
 
     private function itemInCartExist($articleId, $cartId){
@@ -89,6 +89,7 @@ class DatabaseHelper{
             $cartId = $this->getCartFromUser($userEmail);
             if($this->itemInCartExist($articleId, $cartId)){
                 $stmtInsert = $this->db->prepare("INSERT INTO PRODOTTI_CARRELLO (IdCarrello, Prodotto, Quantità) VALUES (?,?,?)");
+                print_r($this->db->error_list);
                 $stmtInsert->bind_param('iii', $cartId[0]["IdCarrello"], $articleId, $Quantità);
                 $stmtInsert->execute();
                 $stmtUpdate = $this->db->prepare("UPDATE PRODOTTI SET Quantità=Quantità-? WHERE id=?");
