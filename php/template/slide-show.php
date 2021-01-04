@@ -10,25 +10,25 @@
             </ol>
             <div class="carousel-inner">
             <div class="carousel-item active">
-                <a href="category_page.php?type=Guitar"><img src="../resources/guitarindex.jpg" class="carousel-width" alt="First slide"></a>
+                <a href="category_page.php?type=Guitar&search=no"><img src="../resources/guitarindex.jpg" class="carousel-width" alt="First slide"></a>
                 <div class="carousel-caption d-md-block">
                 <h2>Guitars</h2>
                 </div>
             </div>
             <div class="carousel-item">
-                <a href="category_page.php?type=Bass"><img src="../resources/bassindex.jpg" class="carousel-width" alt="Second slide"></a>
+                <a href="category_page.php?type=Bass&search=no"><img src="../resources/bassindex.jpg" class="carousel-width" alt="Second slide"></a>
                 <div class="carousel-caption d-md-block">
                 <h2>Bass Guitars</h2>
                 </div>
             </div>
             <div class="carousel-item">
-                <a href="category_page.php?type=Amp"><img src="../resources/ampsindex.jpg" class="carousel-width" alt="Third slide"></a>
+                <a href="category_page.php?type=Amp&search=no"><img src="../resources/ampsindex.jpg" class="carousel-width" alt="Third slide"></a>
                 <div class="carousel-caption d-md-block">
                 <h2>Amplifiers</h2>
                 </div>
             </div>
             <div class="carousel-item">
-                <a href="category_page.php?type=Accessories"><img src="../resources/accessoriesindex.jpg" class="carousel-width" alt="Fourth slide"></a>
+                <a href="category_page.php?type=Accessories&search=no"><img src="../resources/accessoriesindex.jpg" class="carousel-width" alt="Fourth slide"></a>
                 <div class="carousel-caption d-md-block">
                 <h2>Accessories</h2>
                 </div>

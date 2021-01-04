@@ -39,8 +39,8 @@
             <a class="nav-link active xs-text" aria-current="page" href="whishlist.php">Lista Desideri</a>
           </li>
         </ul>
-        <form id="search" class="d-flex px-3 px-sm-5 px-lg-0 i">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <form action="./category_page.php?type=<?php echo $idcategoria?>&search=yes" method="post" id="search" class="d-flex px-3 px-sm-5 px-lg-0 i">
+          <input class="form-control me-2" type="search" name="user_search" placeholder="Search" aria-label="Search">
           <button class="btn" type="submit"><img src="../resources/icons/lente.png" height="30" length="30"></button>
         </form>
       </div>

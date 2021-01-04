@@ -29,7 +29,17 @@ class DatabaseHelper{
     public function getPostByCategory($idcategory){
         $query = "SELECT ID, Nome, Marca, Foto, Caratteristiche, Prezzo, Quantità FROM PRODOTTI WHERE Tipo = ?";
         $stmt = $this->db->prepare($query);
-        $stmt->bind_param('s',$idcategory);
+        $stmt->bind_param('s', $idcategory);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function getPostByCategorySearch($idcategory, $user_search) {
+        $query = "SELECT ID, Nome, Marca, Foto, Caratteristiche, Prezzo, Quantità FROM PRODOTTI WHERE Tipo = ? AND Nome LIKE ?";
+        $stmt = $this->db->prepare($query);
+        $user_search = '%'.$user_search.'%';
+        $stmt->bind_param('ss', $idcategory, $user_search);
         $stmt->execute();
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
