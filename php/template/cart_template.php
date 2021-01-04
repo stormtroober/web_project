@@ -4,7 +4,9 @@
     <div class="col-12 col-lg-5 px-3 px-lg-0">
       <div class="list-group pe-lg-2 pe-xl-5">
         <a href="user_page.html" class="list-group-item list-group-item-action bg-dark text-white">Lista prodotti</a>
-        <?php foreach($templateParams["itemsInCart"] as $articolo): ?>
+        <?php foreach($items as $art_array): 
+          $articolo = $art_array[0];
+          ?>
           <div class="list-group-item">
             <img src="<?php echo UPLOAD_DIR."img/".$articolo["Tipo"]."/".$articolo["Foto"]."/front.png"?>"
             class="float-start m-2" width="75px">
@@ -27,7 +29,9 @@
           </tr>
         </thead>
         <tbody>
-          <?php foreach($items as $articolo): ?>
+          <?php foreach($items as $art_array): 
+          $articolo = $art_array[0];
+            ?>
             <tr>
               <td><?php echo $articolo["Nome"]; ?></td>
               <td>x<?php echo $articolo["Quantità"]; ?></td>

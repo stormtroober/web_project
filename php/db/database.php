@@ -67,14 +67,35 @@ class DatabaseHelper{
         return $result = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
     }
 
+    private function itemInCartExist($articleId){
+        $stmt = $this->db->prepare("SELECT * FROM PRODOTTI_CARRELLO WHERE Prodotto = ?");
+        $stmt->bind_param('i', $articleId);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return true;
+    }
+
     public function addToCart($userEmail, $articleId, $Quantità){
+        var_dump($userEmail);
         $cartId = $this->getCartFromUser($userEmail);
-        $stmtInsert = $this->db->prepare("INSERT INTO PRODOTTI_CARRELLO (IdCarrello, Prodotto, Quantità) VALUES (?,?,?)");
-        $stmtInsert->bind_param('iii', $cartId[0]["IdCarrello"], $articleId, $Quantità);
-        $stmtInsert->execute();
-        $stmtUpdate = $this->db->prepare("UPDATE PRODOTTI SET Quantità=Quantità-? WHERE id=?");
-        $stmtUpdate->bind_param('ii', $Quantità, $articleId);
-        $stmtUpdate->execute();
+        var_dump($cartId);
+        if(!$this->itemInCartExist($articleId)){
+            $stmtInsert = $this->db->prepare("INSERT INTO PRODOTTI_CARRELLO (IdCarrello, Prodotto, Quantità) VALUES (?,?,?)");
+            $stmtInsert->bind_param('iii', $cartId[0]["IdCarrello"], $articleId, $Quantità);
+            $stmtInsert->execute();
+            $stmtUpdate = $this->db->prepare("UPDATE PRODOTTI SET Quantità=Quantità-? WHERE id=?");
+            $stmtUpdate->bind_param('ii', $Quantità, $articleId);
+            $stmtUpdate->execute();
+        }
+        else{
+            $stmtUpdate = $this->db->prepare("UPDATE PRODOTTI_CARRELLO SET Quantità=Quantità+1 WHERE IdCarrello = ?");
+            print_r($this->db->error_list);
+            $stmtUpdate->bind_param('i', $cartId);
+            $stmtUpdate->execute();
+            $stmtUpdate = $this->db->prepare("UPDATE PRODOTTI SET Quantità=Quantità-? WHERE id=?");
+            $stmtUpdate->bind_param('ii', $Quantità, $articleId);
+            $stmtUpdate->execute();
+        }
     }
 
     public function addToWishList($userEmail, $articleId){
