@@ -1,5 +1,6 @@
 <main>
 <div class="col-12">
+<!--
         <div class="row m-2 m-md-5" style="border-radius: 25px; background-color: #e8e8e8">
             <div class="col-12 col-md-5 col-lg-4 col-xl-3 col-xxl-2 text-center">
                 <img src="<?php echo "ciauz"; ?>"
@@ -45,6 +46,7 @@
             <div class="col-md-1"></div>
         </div>
     </div>
+    -->
     <?php foreach($templateParams["articoli"] as $articolo): ?>
     <div class="col-12">
         <div class="row m-2 m-md-5 bg-light-gray" style="border-radius:25px">
