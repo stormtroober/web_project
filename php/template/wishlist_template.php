@@ -1,8 +1,13 @@
 <div class="row">
   <div class="col-lg-2"></div>
     <div class="col-12 col-lg-8 mt-5">
-    <h2 class="px-3">WhishList</h2>
+    <h2 class="p-3">WhishList</h2>
       <div class="table-responsive" >
+      <?php
+      if(empty($items)){
+        echo "<h3>The WhishList is empty!</h3>";
+      } else {
+      ?>
         <table class="table table-sm table-striped table-hover mt-4">
           <thead class="bg-dark text-white">
             <tr>
@@ -13,7 +18,8 @@
             </tr>
           </thead>
           <tbody>
-            <?php foreach($items as $artArray): 
+        <?php
+            foreach($items as $artArray): 
                     $articolo = $artArray[0]; ?>
               <tr>
                 <td class="text-center"><img src="<?php echo UPLOAD_DIR."img/".$articolo["Tipo"]."/".$articolo["Foto"]."/front.png" ?>" class="h-25" style="max-width:150px"></td>
@@ -25,7 +31,7 @@
                   </form>
                 </td>
               </tr>
-            <?php endforeach; ?>
+            <?php endforeach; }?>
           </tbody>
         </table>
       </div>
