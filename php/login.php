@@ -14,7 +14,9 @@ if(login_check($dbh->getDb()) == true) {
                 echo "seller";
             }
         } else if($info == "ordini") {
-            $templateParams["nome"] = "order_history.php";
+            $userEmail = $_SESSION['user_id'];
+            $templateParams["Ordini"] = $dbh->getOrdersFromUser($userEmail);
+            $templateParams["nome"] = "order_history-template.php";
         }
     } else {
         if ($templateParams["utente"][0]["Tipo"] == "consumer") {
