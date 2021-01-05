@@ -15,11 +15,11 @@
         <form method="post" action="add_product.php" enctype="multipart/form-data">
           <div class="form-group mb-3">
             <label for="name">Name</label>
-            <input name="name" class="form-control" placeholder="Name">
+            <input name="name" class="form-control" placeholder="Name" required>
           </div>
           <div class="form-group mb-3">
             <label for="brand">Brand</label>
-            <input name="brand" class="form-control" placeholder="Brand">
+            <input name="brand" class="form-control" placeholder="Brand" required>
           </div>
           <div class="form-group mb-3">
             <label for="type">Type</label>
@@ -32,37 +32,37 @@
           </div>
           <div class="form-group mb-3">
             <label for="description">Description</label>
-            <textarea name="description" class="form-control" rows="3"></textarea>
+            <textarea name="description" class="form-control" rows="3" required></textarea>
           </div>
           <label for="Features">Features</label>
           <ul class="list-group mb-3">
-              <li class="list-group-item"><input name="feature1" class="form-control" placeholder="Feature 1"></li>
-              <li class="list-group-item"><input name="feature2" class="form-control" placeholder="Feature 2"></li>
-              <li class="list-group-item"><input name="feature3" class="form-control" placeholder="Feature 3"></li>
+              <li class="list-group-item"><input name="feature1" class="form-control" placeholder="Feature 1" required></li>
+              <li class="list-group-item"><input name="feature2" class="form-control" placeholder="Feature 2" required></li>
+              <li class="list-group-item"><input name="feature3" class="form-control" placeholder="Feature 3" required></li>
           </ul>
           <div class="form-group mb-3">
             <label for="price">Price</label>
-            <input type="number" name="price" class="form-control" placeholder="Price">
+            <input type="number" name="price" class="form-control" placeholder="Price" required>
           </div>
           <div class="form-group mb-3">
             <label for="quantity">Quantity</label>
-            <input type="number" name="quantity" class="form-control" placeholder="Quantity">
+            <input type="number" name="quantity" class="form-control" placeholder="Quantity" required>
           </div>
           <div class="form-group mb-3">
             <label class="form-label" for="photoFront">Photo Front</label>
-            <input type="file" name="photoFront" class="form-control form-control-sm"/>
+            <input type="file" name="photoFront" class="form-control form-control-sm" required>
           </div>
           <div class="form-group mb-3">
             <label class="form-label" for="photoBack">Photo Back</label>
-            <input type="file" name="photoBack" class="form-control form-control-sm" enctype="multipart/form-data"/>
+            <input type="file" name="photoBack" class="form-control form-control-sm"required>
           </div>
           <div class="form-group mb-3">
             <label class="form-label" for="photoZoom">Photo Zoom</label>
-            <input type="file" name="photoZoom" class="form-control form-control-sm" enctype="multipart/form-data"/>
+            <input type="file" name="photoZoom" class="form-control form-control-sm" required>
           </div>
           <div class="form-group mb-3">
             <label class="form-label" for="photoHead">Photo Head</label>
-            <input type="file" name="photoHead" class="form-control form-control-sm" enctype="multipart/form-data"/>
+            <input type="file" name="photoHead" class="form-control form-control-sm" required>
           </div>
           <div class="form-group p4 float-end">
               <button class="btn btn-dark btn-lg" type="submit" name="submit" value="Upload">Add</button>
