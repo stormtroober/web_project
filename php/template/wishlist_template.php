@@ -21,7 +21,7 @@
                 <td class="align-middle"><?php echo $articolo["Prezzo"]; ?>$</td>
                 <td class="align-middle">
                   <form method="post" action="whishlist.php?remove=true&id=<?php echo $articolo["ID"]?>">
-                    <button class="btn btn-dark btn-sm"type="submit">Remove</button>
+                    <input type="image" src="../resources/icons/remove.png" height="30" width="25"></input>
                   </form>
                 </td>
               </tr>

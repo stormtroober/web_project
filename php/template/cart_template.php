@@ -40,15 +40,13 @@
                 <?php 
                   global $totale;
                   $subtot = $articolo["Quantità"] * $articolo["Prezzo"];
-                  echo $subtot;
+                  echo $subtot."$";
                   $totale = $subtot + $totale;
-                  ?>$
+                  ?>
               </td>
               <td>
               <form method="post" action="cart.php?remove=true&id=<?php echo $articolo["ID"]?>">
-                <input type="image" src="../resources/icons/remove.png" height="30" width="25"></>
-
-                <!-- <button class="btn btn-dark btn-sm"type="submit">Remove</button> -->
+                <input type="image" src="../resources/icons/remove.png" height="30" width="25"></input>
               </form>
               </td>
             </tr>
@@ -58,7 +56,14 @@
           <tr>
             <td>Total</td>
             <td></td>
-            <td><?php echo $totale; ?>$</td>
+            <td>
+            <?php
+            if(isset($totale)){
+              echo $totale."$"; 
+            } else {
+              echo "Cart empty";
+            }
+            ?></td>
           </tr>
         </tfoot>
       </table>

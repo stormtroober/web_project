@@ -12,22 +12,22 @@
     <div class="col-12 col-md-6 col-lg-7 p-5 py-md-1">
       <h3>Aggiungi un prodotto</h3>
       <div class="container px-0 py-3">
-        <form>
-          <div class="form-group">
-            <label for="exampleFormControlInput1">Title</label>
-            <input type="name" class="form-control" placeholder="Title">
+        <form action="add_product.php">
+          <div class="form-group mb-3">
+            <label for="name">Name</label>
+            <input name="name" class="form-control" placeholder="Name">
           </div>
-          <div class="form-group">
-            <label for="exampleFormControlInput1">Brand</label>
-            <input type="brand" class="form-control" placeholder="Brand">
+          <div class="form-group mb-3">
+            <label for="brand">Brand</label>
+            <input name="brand" class="form-control" placeholder="Brand">
           </div>
-          <div class="form-group">
-            <label for="exampleFormControlSelect1">Type</label>
-            <select class="form-control">
-              <option>Guitar</option>
-              <option>Bass</option>
-              <option>Amplifier</option>
-              <option>Accessories</option>
+          <div class="form-group mb-3">
+            <label for="type">Type</label>
+            <select class="form-control" name="type">
+              <option value="Guitar">Guitar</option>
+              <option value="Bass">Bass</option>
+              <option value="Amplifier">Amplifier</option>
+              <option value="Accessories">Accessories</option>
             </select>
           </div>
           <div class="form-group mb-3">
@@ -59,11 +59,12 @@
             <input type="file" class="form-control form-control-sm" id="customFile" />
           </div>
           <div class="form-group p4 float-end">
-            <button type="submit" class="btn btn-dark btn-lg">Update</button>
+            <form method="post" action="whishlist.php?remove=true&id=<?php echo $articolo["ID"]?>">
+              <button class="btn btn-dark btn-lg" type="submit">Add</button>
+            </form>
           </div>
         </form>
       </div>
-
     </div>
     <div class="row">
       <div class="col-12 container "></div>
