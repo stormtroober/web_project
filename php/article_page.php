@@ -25,8 +25,8 @@ if(login_check($dbh->getDb()) == true){
   $userEmail = $_SESSION['user_id'];
   if($add == "cart"){
     $notification = "Added ".$templateParams["articolo"][0]["Nome"]." to cart";
-    array_push($templateParams["notifiche"], $notification);
-    var_dump($templateParams["notifiche"]);
+    $dbh->addNotifications($notification);
+    $templateParams["notifiche"] = $dbh->getNotifications();
     $dbh->addToCart($userEmail, $articleID, $Quantità);
 } else if($add == "wish"){
     var_dump($userEmail);

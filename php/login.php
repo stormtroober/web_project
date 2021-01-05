@@ -47,7 +47,12 @@ if(login_check($dbh->getDb()) == true) {
         $email = $_POST['email'];
         $password = $_POST['password'];
         if(login($email, $password, $dbh->getDb()) == true) {
-            $templateParams["nome"] = "user_page.php";
+            $templateParams["utente"] = $dbh->getUserByEmail($email);
+            if ($templateParams["utente"][0]["Tipo"] == "consumer") {
+                $templateParams["nome"] = "user_page.php";
+            } else {
+                $templateParams["nome"] = "seller_page.php";
+            }
             $templateParams["utente"] = $dbh->getUserByEmail($email);
         } else {
             $templateParams["errore_login"] = "Error! Email or password are incorrect!";

@@ -231,6 +231,24 @@ class DatabaseHelper{
         $stmt->bind_param('ssssssiis', $name, $type, $brand, $photoFolder, $description, $features, $price, $quantity, $userEmail);
         $stmt->execute();
     }
+
+    public function addNotification($notification) {
+        $stmt = $this->db->prepare("INSERT INTO NOTIFICHE (Notifica) VALUES (?)");
+        $stmt->bind_param('s', $notification);
+        $stmt->execute();
+    }
+    
+    public function getNotifications() {
+        $stmt = $this->db->prepare("SELECT * FROM NOTIFICHE");
+        $stmt->bind_param('s', $notification);
+        $stmt->execute();
+    }
+
+    public function deleteNotifications() {
+        $stmt = $this->db->prepare("DELETE FROM NOTIFICHE");
+        $stmt->bind_param('s', $notification);
+        $stmt->execute();
+    }
 }
 
 ?>
