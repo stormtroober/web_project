@@ -15,7 +15,19 @@ if(login_check($dbh->getDb()) == true) {
             }
         } else if($info == "ordini") {
             $userEmail = $_SESSION['user_id'];
-            $templateParams["Ordini"] = $dbh->getOrdersFromUser($userEmail);
+            $templateParams["ordini"] = $dbh->getOrdersFromUser($userEmail);
+            $itemsInCart = array(); 
+            foreach($templateParams["ordini"] as $ordine){
+                array_push($itemsInCart, $dbh->getProdFromCart($ordine["IdCarrello"]));
+            }
+            $itemsDetail = array(); $arr = array();
+            foreach($itemsInCart as $itemsInOrder){
+                foreach($itemsInOrder as $item){
+                    array_push($arr, $dbh->getArticleById($item["Prodotto"]));
+                }
+                array_push($itemsDetail, $arr);
+                $arr = array();
+            }
             $templateParams["nome"] = "order_history-template.php";
         } else if($info == "addp") {
             $templateParams["nome"] = "add_product_template.php";
@@ -35,12 +47,7 @@ if(login_check($dbh->getDb()) == true) {
         $email = $_POST['email'];
         $password = $_POST['password'];
         if(login($email, $password, $dbh->getDb()) == true) {
-            $templateParams["utente"] = $dbh->getUserByEmail($email);
-            if ($templateParams["utente"][0]["Tipo"] == "consumer") {
-                $templateParams["nome"] = "user_page.php";
-            } else {
-                $templateParams["nome"] = "seller_page.php";
-            }
+            $templateParams["nome"] = "user_page.php";
             $templateParams["utente"] = $dbh->getUserByEmail($email);
         } else {
             $templateParams["errore_login"] = "Error! Email or password are incorrect!";

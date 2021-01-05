@@ -12,19 +12,24 @@
         <h3>Cronologia Ordini</h3> 
         <div class="container px-2 px-md-0 py-3">
         <?php
-        $i = 1;
-        foreach($templateParams["Ordini"] as $ordine): ?>
+        $i = 0;
+        foreach($templateParams["ordini"] as $ordine): ?>
             <ul class="list-group mb-3">
-                <li class="list-group-item bg-dark text-white">Ordine n. <?php echo $i; ?></li>
+                <li class="list-group-item bg-dark text-white">Ordine n. <?php echo ($i+1); ?></li>
                 <li class="list-group-item">Data: <?php $date = new DateTime($ordine["Data"]);
                 echo $date->format('Y-m-d'); ?></li>
                 <li class="list-group-item fw-bold">Prodotti:</li>
                 <li class="list-group-item">
-                <!-- foreach -->
                     <ul class="list-group">
-                        <li class="list-group-item"><?php echo ""; ?></li>
-                        <li class="list-group-item">Quantità</li>
-                        <li class="list-group-item">Prezzo</li>
+                        <?php
+                        $k = 0;
+                        foreach($itemsDetail[$i] as $item): ?>
+                        <li class="list-group-item fw-bold"><?php echo $item[0]["Nome"]; ?></li>
+                        <li class="list-group-item"><?php echo($itemsInCart[$i][$k]["Quantità"]); ?></li>
+                        <li class="list-group-item"><?php echo $item[0]["Prezzo"]; ?></li>
+                        <?php
+                        $k++;
+                        endforeach; ?>
                     </ul>
                 </li>
             </ul>
