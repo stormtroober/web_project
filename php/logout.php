@@ -1,4 +1,5 @@
 <?php 
+require_once("db/include.php");
 require("utils/functions.php");
 
 sec_session_start();
