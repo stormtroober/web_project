@@ -36,6 +36,7 @@ if(login_check($dbh->getDb()) == true){
   }
   if($remove == true){
     $dbh->removeItemFromCart($userEmail, $articleToRemove);
+    header("Refresh:0; url=cart.php");
   }
   $buy = false;
   if(isset($_GET["buy"])){

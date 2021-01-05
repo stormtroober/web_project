@@ -23,6 +23,7 @@ if(login_check($dbh->getDb()) == true){
   }
   if($remove == true){
     $dbh->removeItemFromWish($userEmail, $articleToRemove);
+    header("Refresh:0; url=whishlist.php");
   }
 }
 else{
