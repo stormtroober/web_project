@@ -10,6 +10,7 @@ if(isset($_POST["name"], $_POST["surname"], $_POST["email"], $_POST["password"],
     $insert_stmt->bind_param('sssssss', $_POST["name"], $_POST["surname"], $_POST["email"], $password, $random_salt, $_POST["account_type"], $_POST["address"]);
     $insert_stmt->execute();
     $dbh->addCartToUser($_POST["email"]);
+    $templateParams["errore_reg"] = "";
     $templateParams["nome"] = "slide-show.php";
     }
 } else {

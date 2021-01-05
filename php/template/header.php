@@ -14,16 +14,12 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown px-2">
+          <li class="nav-item px-2">
             <div class="container-fluid text-center px-0">
               <a class="nav-link" href="./login.php"><img src="../resources/icons/profilo.png" height="30" length="30"></a>
-              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link active" href="./login.php" role="button">
                 User Page
               </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="./login.php?info=account">Profile</a></li>
-                <li><a class="dropdown-item" href="./login.php?info=ordini">Order History</a></li>
-              </ul>
             </div>
             </li>
             <li class="nav-item text-center px-2">
@@ -36,7 +32,7 @@
           </li>
           <li class="nav-item text-center px-2">
             <a class="nav-link" href="whishlist.php"><img src="../resources/icons/desideri.png" height="30" length="30"></a>
-            <a class="nav-link active xs-text" aria-current="page" href="whishlist.php">WhishList</a>
+            <a class="nav-link active xs-text" aria-current="page" href="whishlist.php">WishList</a>
           </li>
         </ul>
         <div id="order" class="dropdown">
