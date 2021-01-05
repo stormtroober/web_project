@@ -85,19 +85,23 @@ create table NOTIFICHE (
 
 alter table CARRELLO add constraint FKPossiede_FK
      foreign key (Utente)
-     references UTENTI (Email);
+     references UTENTI (Email)
+     ON DELETE CASCADE;
 
 alter table ORDINE add constraint FKGenerato_FK
      foreign key (Utente)
-     references UTENTI (Email);
+     references UTENTI (Email)
+     ON DELETE CASCADE;
 
 alter table ORDINE add constraint FKGenera_FK
      foreign key (IdCarrello)
-     references PRODOTTI_CARRELLO (IdCarrello);
+     references PRODOTTI_CARRELLO (IdCarrello)
+     ON DELETE CASCADE;
 
 alter table PRODOTTI add constraint FKInserisce
      foreign key (Utente)
-     references UTENTI (Email);
+     references UTENTI (Email)
+     ON DELETE CASCADE;
 
 
 -- Not implemented
@@ -107,19 +111,23 @@ alter table PRODOTTI add constraint FKInserisce
 
 alter table PRODOTTI_CARRELLO add constraint FKInserimento_FK
      foreign key (IdCarrello)
-     references CARRELLO (IdCarrello);
+     references CARRELLO (IdCarrello)
+     ON DELETE CASCADE;
 
 alter table PRODOTTI_CARRELLO add constraint FKInserito_FK
      foreign key (Prodotto)
-     references PRODOTTI (ID);
+     references PRODOTTI (ID)
+     ON DELETE CASCADE;
 
 alter table PRODOTTI_LISTA_DESIDERI add constraint FKAggiunge_FK
      foreign key (Utente)
-     references UTENTI (Email);
+     references UTENTI (Email)
+     ON DELETE CASCADE;
 
 alter table PRODOTTI_LISTA_DESIDERI add constraint FKAggiunto_FK
      foreign key (Prodotto)
-     references PRODOTTI (ID);
+     references PRODOTTI (ID)
+     ON DELETE CASCADE;
 
 ALTER TABLE PRODOTTI_LISTA_DESIDERI
 DROP INDEX FKAggiunge_ID;
