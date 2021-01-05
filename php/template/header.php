@@ -22,15 +22,15 @@
               </a>
             </div>
           </li>
-          <li class="nav-item text-center px-2">  
+          <li class="nav-item dropdown">
             <a class="nav-link" href="#"><img src="../resources/icons/notifica.png" height="30" length="30">
-            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Notifications</a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <?php
-                foreach($templateParams["notifiche"] as $notifica): 
-                  echo "<li>".$notifica."</li>";
-                endforeach;
-               ?>
+            <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Notifications</a>
+            <ul class="dropdown-menu">
+            <?php
+              foreach($templateParams["notifiche"] as $notifica): 
+                echo "<li class=\"dropdown-item\">".$notifica."</li>";
+              endforeach;
+            ?>
             </ul>
           </li>
           <li class="nav-item text-center px-2">
@@ -43,7 +43,7 @@
           </li>
         </ul>
         <div id="order" class="dropdown">
-            <button id="ddbt" class="btn btn-secondary dropdown-toggle m-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button id="ddbt" class="btn btn-secondary dropdown-toggle m-2" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Order by:
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
