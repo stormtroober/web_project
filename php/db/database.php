@@ -183,10 +183,15 @@ class DatabaseHelper{
                 $stmtInsert->execute();
             }
             else{
+                //controlla che la quantità nuova non sia > di quella in prodotti
                 $stmtUpdate = $this->db->prepare("UPDATE PRODOTTI_CARRELLO SET Quantità=Quantità+1 WHERE (IdCarrello = ? && Prodotto = ?)");
                 $stmtUpdate->bind_param('ii', $cartId[0]["IdCarrello"], $articleId);
                 $stmtUpdate->execute();
             }
+            return 0;
+        }
+        else{
+            return -1;
         }
     }
 
