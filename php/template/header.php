@@ -21,11 +21,18 @@
                 User Page
               </a>
             </div>
-            </li>
-            <li class="nav-item text-center px-2">
-              <a class="nav-link" href="#"><img src="../resources/icons/notifica.png" height="30" length="30"></a>
-              <a class="nav-link active xs-text" aria-current="page" href="#">Notifications</a>
-            </li>
+          </li>
+          <li class="nav-item text-center px-2">  
+            <a class="nav-link" href="#"><img src="../resources/icons/notifica.png" height="30" length="30">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Notifications</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <?php
+                foreach($templateParams["notifiche"] as $notifica): 
+                  echo "<li>".$notifica."</li>";
+                endforeach;
+               ?>
+            </ul>
+          </li>
           <li class="nav-item text-center px-2">
             <a class="nav-link" href="cart.php"><img src="../resources/icons/carrello.png" height="30" length="30"></a>
             <a class="nav-link active xs-text" aria-current="page" href="cart.php">Shoppping Cart</a>
