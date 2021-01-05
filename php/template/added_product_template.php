@@ -5,7 +5,7 @@
             <div class="col-12 col-md-5 col-lg-4 col-xl-3 col-xxl-2 text-center">
                 <img src="<?php echo UPLOAD_DIR."img/".$templateParams["categoria"]."/".$articolo["Foto"]."/front.png"; ?>"
                     class="img-fluid p-3 w-50" style="border-radius: 30px; max-width:225px; min-width: 175px;"
-                    alt="<?php echo $articolo["Nome"];?>">
+                    alt="porcodio">
             </div>
             <div class="col-12 col-md-7 col-lg-5 pt-3">
                 <a class="text-decoration-none text-dark h3"

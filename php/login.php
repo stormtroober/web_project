@@ -32,7 +32,8 @@ if(login_check($dbh->getDb()) == true) {
         } else if($info == "addp") {
             $templateParams["nome"] = "add_product_template.php";
         } else if($info == "prodotti") {
-            $templateParams["nome"] = ""; //PAGINA PRODOTTI INSERITI
+            
+            $templateParams["nome"] = "added_product_template.php"; //PAGINA PRODOTTI INSERITI
         }
     } else {
         if ($templateParams["utente"][0]["Tipo"] == "consumer") {
