@@ -74,6 +74,11 @@ create table LOGIN_ATTEMPTS (
      time varchar(30) not null
 );
 
+create table NOTIFICHE (
+     IdNotifica int(11) not null AUTO_INCREMENT,
+     Notifica char(100) not null,
+     constraint IDNOTIFICHE_ID primary key (IdNotifica));
+
 
 -- Constraints Section
 -- ___________________ 
