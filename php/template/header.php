@@ -21,8 +21,8 @@
                 User Page
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="./login.php">Profile</a></li>
-                <li><a class="dropdown-item" href="#">Order History</a></li>
+                <li><a class="dropdown-item" href="./login.php?info=account">Profile</a></li>
+                <li><a class="dropdown-item" href="./login.php?info=ordini">Order History</a></li>
               </ul>
             </div>
             </li>
