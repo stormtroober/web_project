@@ -37,6 +37,13 @@ if(login_check($dbh->getDb()) == true){
   if($remove == true){
     $dbh->removeItemFromCart($userEmail, $articleToRemove);
   }
+  $buy = false;
+  if(isset($_GET["buy"])){
+    $buy = $_GET["buy"];
+  }
+  if($buy == true){
+    $dbh->buyCart($userEmail);
+  }
   
   $templateParams["nome"] = "cart_template.php";
 }

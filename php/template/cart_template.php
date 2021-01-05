@@ -68,7 +68,9 @@
         </tfoot>
       </table>
       <div class="container-fluid">
-        <button type="button" class="btn btn-dark float-end mt-4 mb-2">Buy now</button>
+      <form method="post" action="cart.php?buy=true">
+        <button type="submit" class="btn btn-dark float-end mt-4 mb-2">Buy now</button>
+      </form>
       </div>
     </div>
     <div class="col-lg-1"></div>

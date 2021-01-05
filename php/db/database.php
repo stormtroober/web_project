@@ -88,7 +88,7 @@ class DatabaseHelper{
     }
 
     private function getCartFromUser($userEmail){
-        $stmt = $this->db->prepare("SELECT IdCarrello FROM CARRELLO WHERE Utente = ?");
+        $stmt = $this->db->prepare("SELECT MAX(IdCarrello) AS IdCarrello FROM CARRELLO WHERE Utente=?");
         $stmt->bind_param('s', $userEmail);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -112,29 +112,59 @@ class DatabaseHelper{
         return $amount;
     }
 
+    private function decQuantityProduct($articleId, $Quantità){
+        $stmtUpdate = $this->db->prepare("UPDATE PRODOTTI SET Quantità=Quantità-? WHERE id=?");
+        $stmtUpdate->bind_param('ii', $Quantità, $articleId);
+        $stmtUpdate->execute();
+    }
+
+    private function addOrder($userEmail, $date){
+        $cartId = $this->getCartFromUser($userEmail)[0]["IdCarrello"];
+        $stmt = $this->db->prepare("INSERT INTO ORDINE VALUE (?,?,?)");
+        $stmt->bind_param('ssi', $userEmail, $date, $cartId);
+        $stmt->execute();
+    }
+
+    private function productsAvailableForBuy($products){
+        //return true if all are available, false if it is not
+        $available = true;
+        foreach($products as $prod){
+            $quantityAvailable = $this->getAmountFromProduct($prod["Prodotto"]);
+            if($quantityAvailable < $prod["Quantità"]){
+                $available = false;
+            }
+        }
+        return $available;
+    }
+
+    public function buyCart($userEmail){
+        echo "ok";
+        $oldCartId = $this->getCartFromUser($userEmail)[0]["IdCarrello"];
+        $products = $this->getArticlesFromCart($userEmail);
+
+        if($this->productsAvailableForBuy($products)){
+            foreach($products as $prod){
+                $this->decQuantityProduct($prod["Prodotto"],$prod["Quantità"]);
+            }
+            $this->addOrder($userEmail,date('Y-m-d H:i:s'));
+            $this->addCartToUser($userEmail);
+        }
+        else{
+            echo "products not available.";
+        }
+    }
+
     public function addToCart($userEmail, $articleId, $Quantità){
         if($this->getAmountFromProduct($articleId) - $Quantità >= 0){
-
             $cartId = $this->getCartFromUser($userEmail);
             if(!$this->itemInCartExist($articleId, $cartId)){
-
                 $stmtInsert = $this->db->prepare("INSERT INTO PRODOTTI_CARRELLO (IdCarrello, Prodotto, Quantità) VALUES (?,?,?)");
-                var_dump($cartId[0]["IdCarrello"], $articleId, $Quantità);
                 $stmtInsert->bind_param('iii', $cartId[0]["IdCarrello"], $articleId, $Quantità);
                 $stmtInsert->execute();
-                /* Da spostare nell'ordine */
-                $stmtUpdate = $this->db->prepare("UPDATE PRODOTTI SET Quantità=Quantità-? WHERE id=?");
-                $stmtUpdate->bind_param('ii', $Quantità, $articleId);
-                $stmtUpdate->execute();
             }
             else{
-
                 $stmtUpdate = $this->db->prepare("UPDATE PRODOTTI_CARRELLO SET Quantità=Quantità+1 WHERE (IdCarrello = ? && Prodotto = ?)");
                 $stmtUpdate->bind_param('ii', $cartId[0]["IdCarrello"], $articleId);
-                $stmtUpdate->execute();
-                /* Da spostare nell'ordine */
-                $stmtUpdate = $this->db->prepare("UPDATE PRODOTTI SET Quantità=Quantità-? WHERE id=?");
-                $stmtUpdate->bind_param('ii', $Quantità, $articleId);
                 $stmtUpdate->execute();
             }
         }
