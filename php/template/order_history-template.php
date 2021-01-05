@@ -22,7 +22,7 @@
                 <li class="list-group-item">
                 <!-- foreach -->
                     <ul class="list-group">
-                        <li class="list-group-item"><?php echo ; ?></li>
+                        <li class="list-group-item"><?php echo ""; ?></li>
                         <li class="list-group-item">Quantità</li>
                         <li class="list-group-item">Prezzo</li>
                     </ul>
