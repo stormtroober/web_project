@@ -56,7 +56,7 @@ if(login_check($dbh->getDb()) == true){
   }
 }
 else{
-  $templateParams["nome"] = "cart_template.php";
+  $templateParams["nome"] = "slide-show.php";
 }
 
 

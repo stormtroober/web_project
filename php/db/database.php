@@ -154,6 +154,15 @@ class DatabaseHelper{
         }
     }
 
+    public function getOrdersFromUser($userEmail){
+        $stmt = $this->db->prepare("SELECT * FROM ORDINE WHERE Utente = ?");
+        $stmt->bind_param('s', $userEmail);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        var_dump($result->fetch_all(MYSQLI_ASSOC));
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
     public function addToCart($userEmail, $articleId, $Quantità){
         if($this->getAmountFromProduct($articleId) - $Quantità >= 0){
             $cartId = $this->getCartFromUser($userEmail);

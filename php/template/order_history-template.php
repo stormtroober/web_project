@@ -12,18 +12,12 @@
     <div class="col-12 col-md-6 col-lg-7 p-5 py-md-1">
         <h3>Cronologia Ordini</h3> 
         <div class="container px-2 px-md-0 py-3">
-        <div class="input-group mb-3">
-            <span class="form-control" id="basic-addon1">Ordine n. 234543</span>
-            <span class="input-group-text" id="basic-addon1">12/01/2020</span>
-        </div>
-        <div class="input-group mb-3">
-            <span class="form-control" id="basic-addon1">Ordine n. 234543</span>
-            <span class="input-group-text" id="basic-addon1">12/01/2020</span>
-        </div>
-        <div class="input-group mb-3">
-            <span class="form-control" id="basic-addon1">Ordine n. 234543</span>
-            <span class="input-group-text" id="basic-addon1">12/01/2020</span>
-        </div>
+        <?php foreach($templateParams["Ordini"] as $ordine): ?>
+            <div class="input-group mb-3">
+                <span class="form-control" id="basic-addon1">Ordine n. <?php echo $ordine["IdCarrello"]; ?></span>
+                <span class="input-group-text" id="basic-addon1">12/01/2020</span>
+            </div>
+        <?php endforeach; ?>
         </div>
     </div>
     <div class="col-md-1"></div>
