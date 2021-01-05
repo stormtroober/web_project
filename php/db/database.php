@@ -35,6 +35,24 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function getPostByCategoryASC($idcategory){
+        $query = "SELECT ID, Nome, Marca, Foto, Caratteristiche, Prezzo, Quantità FROM PRODOTTI WHERE Tipo = ? ORDER BY Nome ASC";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('s', $idcategory);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function getPostByCategoryDESC($idcategory){
+        $query = "SELECT ID, Nome, Marca, Foto, Caratteristiche, Prezzo, Quantità FROM PRODOTTI WHERE Tipo = ? ORDER BY Nome DESC";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('s', $idcategory);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
     public function getPostByCategorySearch($idcategory, $user_search) {
         $query = "SELECT ID, Nome, Marca, Foto, Caratteristiche, Prezzo, Quantità FROM PRODOTTI WHERE Tipo = ? AND Nome LIKE ?";
         $stmt = $this->db->prepare($query);

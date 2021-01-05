@@ -8,4 +8,5 @@ $(document).ready(function() {
         $("#search").removeClass("invisible");
         $('#order').removeClass("invisible");
     }
+
 });

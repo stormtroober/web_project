@@ -21,9 +21,9 @@ if(isset($_GET["search"])) {
 }
 if(isset($_GET["order"])) {
     if($_GET["order"] == "asc") {
-        
+        $templateParams["articoli"] = $dbh->getPostByCategoryASC($idcategoria);
     } else if($_GET["order"] == "desc") {
-        
+        $templateParams["articoli"] = $dbh->getPostByCategoryDESC($idcategoria);
     }
 }
 
