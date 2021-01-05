@@ -1,14 +1,14 @@
 <div class="row">
     <div class="col-12 p-0">
         <header class="py-3 text-white bg-dark">
-            <h1 class="text-monospace text-center"><a class="text-decoration-none text-white" href="index.php">Guitar Benter</a></h1>
+            <h1 class="text-monospace text-center">Guitar Benter</h1>
         </header>
     </div>
 </div>
 <div class="row">
   <nav class="navbar navbar-expand-lg navbar-light bg-light-gray">
     <div class="container-fluid text-center">
-      <a class="navbar-brand" href="#"><img src="../resources/icons/guitar.png" height="60" length="60"></a>
+      <a class="navbar-brand" href="index.php"><img src="../resources/icons/guitar.png" height="60" length="60"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
