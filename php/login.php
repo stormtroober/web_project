@@ -4,7 +4,8 @@ require("utils/functions.php");
 
 sec_session_start();
 if(login_check($dbh->getDb()) == true) {
-    $templateParams["utente"] = $dbh->getUserByEmail($_SESSION['user_id']);
+    $userEmail = $_SESSION['user_id'];
+    $templateParams["utente"] = $dbh->getUserByEmail($userEmail);
     if (isset($_GET["info"])) {
         $info = $_GET["info"];
         if ($info == "account") {
@@ -14,7 +15,6 @@ if(login_check($dbh->getDb()) == true) {
                 $templateParams["nome"] = "seller_page.php";
             }
         } else if($info == "ordini") {
-            $userEmail = $_SESSION['user_id'];
             $templateParams["ordini"] = $dbh->getOrdersFromUser($userEmail);
             $itemsInCart = array(); 
             foreach($templateParams["ordini"] as $ordine){
@@ -32,7 +32,7 @@ if(login_check($dbh->getDb()) == true) {
         } else if($info == "addp") {
             $templateParams["nome"] = "add_product_template.php";
         } else if($info == "prodotti") {
-            
+            $templateParams["articoli"] = $dbh->getPostByUser($userEmail);
             $templateParams["nome"] = "added_product_template.php"; //PAGINA PRODOTTI INSERITI
         }
     } else {

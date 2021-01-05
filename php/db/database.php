@@ -35,6 +35,15 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function getPostByUser($userId){
+        $query = "SELECT ID, Nome, Marca, Foto, Caratteristiche, Prezzo, Quantità FROM PRODOTTI WHERE Utente = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('s', $userId);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
     public function getPostByCategoryASC($idcategory){
         $query = "SELECT ID, Nome, Marca, Foto, Caratteristiche, Prezzo, Quantità FROM PRODOTTI WHERE Tipo = ? ORDER BY Nome ASC";
         $stmt = $this->db->prepare($query);
