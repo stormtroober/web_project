@@ -240,13 +240,11 @@ class DatabaseHelper{
     
     public function getNotifications() {
         $stmt = $this->db->prepare("SELECT * FROM NOTIFICHE");
-        $stmt->bind_param('s', $notification);
         $stmt->execute();
     }
 
     public function deleteNotifications() {
         $stmt = $this->db->prepare("DELETE FROM NOTIFICHE");
-        $stmt->bind_param('s', $notification);
         $stmt->execute();
     }
 }
