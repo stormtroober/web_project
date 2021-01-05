@@ -118,10 +118,10 @@ class DatabaseHelper{
         $stmtUpdate->execute();
     }
 
-    private function addOrder($userEmail, $date){
+    private function addOrder($userEmail, $date, $total){
         $cartId = $this->getCartFromUser($userEmail)[0]["IdCarrello"];
-        $stmt = $this->db->prepare("INSERT INTO ORDINE VALUE (?,?,?)");
-        $stmt->bind_param('ssi', $userEmail, $date, $cartId);
+        $stmt = $this->db->prepare("INSERT INTO ORDINE VALUE (?,?,?,?)");
+        $stmt->bind_param('ssii', $userEmail, $date, $cartId,$total);
         $stmt->execute();
     }
 
@@ -142,10 +142,13 @@ class DatabaseHelper{
         $products = $this->getArticlesFromCart($userEmail);
 
         if($this->productsAvailableForBuy($products)){
+            $total = 0;
             foreach($products as $prod){
+                $productInfo = $this->getArticleById($prod["Prodotto"]);
+                $total = $total + ($productInfo[0]["Prezzo"] * $prod["Quantità"]);
                 $this->decQuantityProduct($prod["Prodotto"],$prod["Quantità"]);
             }
-            $this->addOrder($userEmail,date('Y-m-d H:i:s'));
+            $this->addOrder($userEmail,date('Y-m-d H:i:s'),$total);
             $this->addCartToUser($userEmail);
             return 0;
         }

@@ -29,6 +29,7 @@ create table ORDINE (
      Utente char(40) not null,
      Data datetime not null,
      IdCarrello int(11) not null,
+     Totale int(10) not null,
      constraint IDORDINE primary key (Utente, Data),
      constraint FKGenera_ID unique (IdCarrello,Utente));
 
