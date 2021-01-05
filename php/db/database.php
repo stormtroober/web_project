@@ -138,7 +138,6 @@ class DatabaseHelper{
     }
 
     public function buyCart($userEmail){
-        echo "ok";
         $oldCartId = $this->getCartFromUser($userEmail)[0]["IdCarrello"];
         $products = $this->getArticlesFromCart($userEmail);
 
