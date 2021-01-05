@@ -27,11 +27,10 @@
             <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Notifications</a>
             <ul class="dropdown-menu">
             <?php
-              if(isset($templateParams["notifiche"])) {
-                foreach($templateParams["notifiche"] as $notifica): 
-                  echo "<li class=\"dropdown-item\">".$notifica["Notifica"]."</li>";
-                endforeach;
-              }
+              $templateParams["notifiche"] = $dbh->getNotifications();
+              foreach($templateParams["notifiche"]  as $notifica): 
+                echo "<liclass=\"dropdown-item\">".$notifica["Notifica"]."</li>";
+              endforeach;
             ?>
             </ul>
           </li>
