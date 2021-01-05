@@ -10,16 +10,16 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="<?php echo UPLOAD_DIR."img/".$articolo["Tipo"]."/".$articolo["Foto"]."/front.png"; ?>" class="h-100 mw-100" alt="First slide">
+          <img src="<?php echo UPLOAD_DIR."img/".$articolo["Tipo"]."/".$articolo["Foto"]."/front.png"; ?>" class="h-100 mw-100" style="max-height:600px;" alt="First slide">
         </div>
         <div class="carousel-item">
-          <img src="<?php echo UPLOAD_DIR."img/".$articolo["Tipo"]."/".$articolo["Foto"]."/back.png"; ?>" class="h-100 mw-100" alt="Second slide">
+          <img src="<?php echo UPLOAD_DIR."img/".$articolo["Tipo"]."/".$articolo["Foto"]."/back.png"; ?>" class="h-100 mw-100" style="max-height:600px;" alt="Second slide">
         </div>
         <div class="carousel-item">
-          <img src="<?php echo UPLOAD_DIR."img/".$articolo["Tipo"]."/".$articolo["Foto"]."/zoom.png"; ?>" class="h-100 mw-100" alt="Third slide">
+          <img src="<?php echo UPLOAD_DIR."img/".$articolo["Tipo"]."/".$articolo["Foto"]."/zoom.png"; ?>" class="h-100 mw-100" style="max-height:600px;" alt="Third slide">
         </div>
         <div class="carousel-item">
-          <img src="<?php echo UPLOAD_DIR."img/".$articolo["Tipo"]."/".$articolo["Foto"]."/head.png"; ?>" class="h-100 mw-100" alt="Fourth slide">
+          <img src="<?php echo UPLOAD_DIR."img/".$articolo["Tipo"]."/".$articolo["Foto"]."/head.png"; ?>" class="h-100 mw-100" style="max-height:600px;" alt="Fourth slide">
         </div>
       </div>
       <a class="carousel-control-prev" href="#articleCarousel" role="button" data-bs-slide="prev">
@@ -60,15 +60,6 @@
       <div class="text-center fs-5 p-4">
         <p>Items available: <?php echo $articolo["Quantità"]; ?></p>
       </div>
-      <div class="container">
-  <h2>Simple Collapsible</h2>
-  <a href="#demo" class="btn btn-primary" data-toggle="collapse">Simple collapsible</a>
-  <div id="demo" class="collapse">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </div>
-</div>
     </div>
   </div>
 </div>                                                              
