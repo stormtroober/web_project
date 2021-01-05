@@ -16,8 +16,11 @@
         foreach($templateParams["ordini"] as $ordine): ?>
             <ul class="list-group mb-3">
                 <li class="list-group-item bg-dark text-white">Ordine n. <?php echo ($i+1); ?></li>
-                <li class="list-group-item">Data: <?php $date = new DateTime($ordine["Data"]);
-                echo $date->format('Y-m-d'); ?></li>
+                <li class="list-group-item">
+                Data: <?php $date = new DateTime($ordine["Data"]);
+                echo $date->format('Y-m-d').", "; ?>
+                Totale: <?php echo $ordine["Totale"]; ?>
+                </li>
                 <li class="list-group-item fw-bold">Prodotti:</li>
                 <li class="list-group-item">
                     <ul class="list-group">
@@ -26,7 +29,7 @@
                         foreach($itemsDetail[$i] as $item): ?>
                         <li class="list-group-item fw-bold"><?php echo $item[0]["Nome"]; ?></li>
                         <li class="list-group-item"><?php echo($itemsInCart[$i][$k]["Quantità"]); ?></li>
-                        <li class="list-group-item"><?php echo $item[0]["Prezzo"]; ?></li>
+                        <li class="list-group-item"><?php echo $item[0]["Prezzo"]." $"; ?></li>
                         <?php
                         $k++;
                         endforeach; ?>
