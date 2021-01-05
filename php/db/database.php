@@ -147,9 +147,10 @@ class DatabaseHelper{
             }
             $this->addOrder($userEmail,date('Y-m-d H:i:s'));
             $this->addCartToUser($userEmail);
+            return 0;
         }
         else{
-            echo "products not available.";
+            return 1;
         }
     }
 

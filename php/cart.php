@@ -42,13 +42,21 @@ if(login_check($dbh->getDb()) == true){
     $buy = $_GET["buy"];
   }
   if($buy == true){
-    $dbh->buyCart($userEmail);
+    $returnValue = $dbh->buyCart($userEmail);
+    if($returnValue == -1){
+      echo "prodotti non disponibili";
+      $templateParams["nome"] = "cart_template.php";
+    }
+    else{
+      $templateParams["nome"] = "slide-show.php";
+    }
   }
-  
-  $templateParams["nome"] = "cart_template.php";
+  else{
+    $templateParams["nome"] = "cart_template.php";
+  }
 }
 else{
-  $templateParams["nome"] = "slide-show.php";
+  $templateParams["nome"] = "cart_template.php";
 }
 
 
