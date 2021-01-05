@@ -11,18 +11,22 @@ if(login_check($dbh->getDb()) == true) {
             if ($templateParams["utente"][0]["Tipo"] == "consumer") {
                 $templateParams["nome"] = "user_page.php";
             } else {
-                echo "seller";
+                $templateParams["nome"] = "seller_page.php";
             }
         } else if($info == "ordini") {
             $userEmail = $_SESSION['user_id'];
             $templateParams["Ordini"] = $dbh->getOrdersFromUser($userEmail);
             $templateParams["nome"] = "order_history-template.php";
+        } else if($info == "addp") {
+            $templateParams["nome"] = "add_product_template.php";
+        } else if($info == "prodotti") {
+            $templateParams["nome"] = ""; //PAGINA PRODOTTI INSERITI
         }
     } else {
         if ($templateParams["utente"][0]["Tipo"] == "consumer") {
             $templateParams["nome"] = "user_page.php";
         } else {
-            echo "seller";
+            $templateParams["nome"] = "seller_page.php";
         }
     }
  } else {

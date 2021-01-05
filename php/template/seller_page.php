@@ -5,8 +5,8 @@
       <div class="list-group px-5 px-md-0">
         <a href="./login.php?info=account" class="list-group-item list-group-item-action bg-dark text-white">Account</a>
         <a href="./login.php?info=account" class="list-group-item list-group-item-action bg-light-gray fw-bold">Info</a>
-        <a href="./login.php?info=ordini" class="list-group-item list-group-item-action">Added products(broken)</a>
-        <a href="add_product.php" class="list-group-item list-group-item-action">Add a product</a>
+        <a href="./login.php?info=prodotti" class="list-group-item list-group-item-action">Added products(broken)</a>
+        <a href="./login.php?info=addp" class="list-group-item list-group-item-action">Add a product</a>
       </div>
     </div>
     <div class="col-12 col-md-6 col-lg-7 p-5 py-md-1">
