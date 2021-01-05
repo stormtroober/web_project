@@ -13,10 +13,19 @@
         <h3>Cronologia Ordini</h3> 
         <div class="container px-2 px-md-0 py-3">
         <?php foreach($templateParams["Ordini"] as $ordine): ?>
-            <div class="input-group mb-3">
-                <span class="form-control" id="basic-addon1">Ordine n. <?php echo $ordine["IdCarrello"]; ?></span>
-                <span class="input-group-text" id="basic-addon1">12/01/2020</span>
-            </div>
+            <ul class="list-group mb-3">
+                <li class="list-group-item bg-dark text-white">Ordine n. <?php echo $ordine["IdCarrello"]; ?></li>
+                <li class="list-group-item">Data: 12/01/2020</li>
+                <li class="list-group-item fw-bold">Prodotti:</li>
+                <li class="list-group-item">
+                <!-- foreach -->
+                    <ul class="list-group">
+                        <li class="list-group-item">Nome</li>
+                        <li class="list-group-item">Quantità</li>
+                        <li class="list-group-item">Prezzo</li>
+                    </ul>
+                </li>
+            </ul>
         <?php endforeach; ?>
         </div>
     </div>
