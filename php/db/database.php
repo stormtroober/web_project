@@ -213,6 +213,14 @@ class DatabaseHelper{
         $stmt->bind_param('si', $userEmail, $articleId);
         $stmt->execute();
     }
+
+    public function addProduct($name, $brand, $type, $description, $price, $quantity, $photoFolder, $userEmail) {
+        $features = "TODO";
+        $stmt = $this->db->prepare("INSERT INTO PRODOTTI (Nome, Tipo, Marca, Foto, Descrizione, Caratteristiche, Prezzo, Quantità, Utente) 
+        VALUES(?,?,?,?,?,?,?,?,?)");
+        $stmt->bind_param('ssssssiis', $name, $type, $brand, $photoFolder, $description, $features, $price, $quantity, $userEmail);
+        $stmt->execute();
+    }
 }
 
 ?>

@@ -12,7 +12,7 @@
     <div class="col-12 col-md-6 col-lg-7 p-5 py-md-1">
       <h3>Aggiungi un prodotto</h3>
       <div class="container px-0 py-3">
-        <form action="add_product.php">
+        <form method="post" action="add_product.php">
           <div class="form-group mb-3">
             <label for="name">Name</label>
             <input name="name" class="form-control" placeholder="Name">
@@ -31,37 +31,35 @@
             </select>
           </div>
           <div class="form-group mb-3">
-            <label for="exampleFormControlTextarea1">Description</label>
-            <textarea class="form-control" rows="3"></textarea>
+            <label for="description">Description</label>
+            <textarea name="description" class="form-control" rows="3"></textarea>
           </div>
           <div class="form-group mb-3">
-            <label for="exampleFormControlInput1">Price</label>
-            <input type="brand" class="form-control" placeholder="Price">
+            <label for="price">Price</label>
+            <input type="number" name="price" class="form-control" placeholder="Price">
           </div>
           <div class="form-group mb-3">
-            <label for="exampleFormControlInput1">Quantity</label>
-            <input type="brand" class="form-control" placeholder="Quantity">
+            <label for="quantity">Quantity</label>
+            <input type="number" name="quantity" class="form-control" placeholder="Quantity">
           </div>
           <div class="form-group mb-3">
-            <label class="form-label" for="customFile">Photo Front</label>
-            <input type="file" class="form-control form-control-sm" id="customFile" />
+            <label class="form-label" for="photoFront">Photo Front</label>
+            <input type="file" name="photoFront" id="photoFront" class="form-control form-control-sm" enctype="multipart/form-data"/>
           </div>
           <div class="form-group mb-3">
-            <label class="form-label" for="customFile">Photo Back</label>
-            <input type="file" class="form-control form-control-sm" id="customFile" />
+            <label class="form-label" for="photoBack">Photo Back</label>
+            <input type="file" name="photoBack" class="form-control form-control-sm" enctype="multipart/form-data"/>
           </div>
           <div class="form-group mb-3">
-            <label class="form-label" for="customFile">Photo Zoom</label>
-            <input type="file" class="form-control form-control-sm" id="customFile" />
+            <label class="form-label" for="photoZoom">Photo Zoom</label>
+            <input type="file" name="photoZoom" class="form-control form-control-sm" enctype="multipart/form-data"/>
           </div>
           <div class="form-group mb-3">
-            <label class="form-label" for="customFile">Photo Head</label>
-            <input type="file" class="form-control form-control-sm" id="customFile" />
+            <label class="form-label" for="photoHead">Photo Head</label>
+            <input type="file" name="photoHead" class="form-control form-control-sm" enctype="multipart/form-data"/>
           </div>
           <div class="form-group p4 float-end">
-            <form method="post" action="whishlist.php?remove=true&id=<?php echo $articolo["ID"]?>">
               <button class="btn btn-dark btn-lg" type="submit">Add</button>
-            </form>
           </div>
         </form>
       </div>
