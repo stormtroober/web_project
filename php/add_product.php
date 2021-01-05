@@ -10,6 +10,7 @@ if(login_check($dbh->getDb()) == true){
 
 
   if(isset($_POST["name"], $_POST["brand"], $_POST["type"], $_POST["description"], 
+  $_POST["feature1"], $_POST["feature2"], $_POST["feature3"],
   $_POST["price"], $_POST["quantity"]
   // $_POST["photoFront"], $_POST["photoBack"], 
   // $_POST["photoZoom"], $_POST["photoHead"]
@@ -21,15 +22,8 @@ if(login_check($dbh->getDb()) == true){
       mkdir($path); 
     }
 
-    echo $_POST["name"];
-    echo $_POST["brand"];
-    echo $_POST["type"];
-    echo $_POST["description"];
-    echo $_POST["price"];
-    echo $_POST["quantity"];
-    echo $path;
-    echo $userEmail;
-    $dbh->addProduct($_POST["name"], $_POST["brand"], $_POST["type"], $_POST["description"], 
+    $features = $_POST["feature1"]."-".$_POST["feature2"]."-".$_POST["feature3"];
+    $dbh->addProduct($_POST["name"], $_POST["brand"], $_POST["type"], $_POST["description"], $features,
     $_POST["price"], $_POST["quantity"], $path, $userEmail);
 
 
