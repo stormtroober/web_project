@@ -29,9 +29,12 @@
             <?php
               if(!isset($templateParams["notifiche"])) {
                 $templateParams["notifiche"] = $dbh->getNotifications();
+              } else {
+                //$notification = "ciao";
+                //echo "<script type='text/javascript'>alert('$notification');</script>";
               }
               foreach($templateParams["notifiche"]  as $notifica): 
-                echo "<liclass=\"dropdown-item\">".$notifica["Notifica"]."</li>";
+                echo "<li class=\"dropdown-item\">".$notifica["Notifica"]."</li>";
               endforeach;
             ?>
             </ul>

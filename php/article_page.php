@@ -29,6 +29,9 @@ if(login_check($dbh->getDb()) == true){
     $templateParams["notifiche"] = $dbh->getNotifications();
     $dbh->addToCart($userEmail, $articleID, $Quantità);
 } else if($add == "wish"){
+    $notification = "Added ".$templateParams["articolo"][0]["Nome"]." to wish list";
+    $dbh->addNotification($notification);
+    $templateParams["notifiche"] = $dbh->getNotifications();
     $dbh->addToWishList($userEmail, $articleID);
     }
 }   

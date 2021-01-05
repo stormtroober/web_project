@@ -46,9 +46,17 @@ if(login_check($dbh->getDb()) == true){
     $returnValue = $dbh->buyCart($userEmail);
     if($returnValue == -1){
       echo "prodotti non disponibili";
+      /*
       $templateParams["nome"] = "cart_template.php";
+      $notification = "Can't buy, remove items that aren't avaiable from cart";
+      $dbh->addNotification($notification);
+      $templateParams["notifiche"] = $dbh->getNotifications();
+      */
     }
     else{
+      $notification = "Order created successfully!";
+      $dbh->addNotification($notification);
+      $templateParams["notifiche"] = $dbh->getNotifications();
       $templateParams["nome"] = "slide-show.php";
     }
   }
