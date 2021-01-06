@@ -27,7 +27,7 @@ class DatabaseHelper{
     }
     
     public function getPostByCategory($idcategory){
-        $query = "SELECT ID, Nome, Marca, Foto, Caratteristiche, Prezzo, Quantità FROM PRODOTTI WHERE Tipo = ?";
+        $query = "SELECT * FROM PRODOTTI WHERE Tipo = ?";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('s', $idcategory);
         $stmt->execute();
@@ -36,7 +36,7 @@ class DatabaseHelper{
     }
 
     public function getPostByUser($userId){
-        $query = "SELECT ID, Nome, Marca, Foto, Caratteristiche, Prezzo, Quantità FROM PRODOTTI WHERE Utente = ?";
+        $query = "SELECT * FROM PRODOTTI WHERE Utente = ?";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('s', $userId);
         $stmt->execute();
@@ -45,7 +45,7 @@ class DatabaseHelper{
     }
 
     public function getPostByCategoryASC($idcategory){
-        $query = "SELECT ID, Nome, Marca, Foto, Caratteristiche, Prezzo, Quantità FROM PRODOTTI WHERE Tipo = ? ORDER BY Nome ASC";
+        $query = "SELECT * FROM PRODOTTI WHERE Tipo = ? ORDER BY Nome ASC";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('s', $idcategory);
         $stmt->execute();
@@ -54,7 +54,7 @@ class DatabaseHelper{
     }
 
     public function getPostByCategoryDESC($idcategory){
-        $query = "SELECT ID, Nome, Marca, Foto, Caratteristiche, Prezzo, Quantità FROM PRODOTTI WHERE Tipo = ? ORDER BY Nome DESC";
+        $query = "SELECT * FROM PRODOTTI WHERE Tipo = ? ORDER BY Nome DESC";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('s', $idcategory);
         $stmt->execute();
@@ -63,7 +63,7 @@ class DatabaseHelper{
     }
 
     public function getPostByCategorySearch($idcategory, $user_search) {
-        $query = "SELECT ID, Nome, Marca, Foto, Caratteristiche, Prezzo, Quantità FROM PRODOTTI WHERE Tipo = ? AND Nome LIKE ?";
+        $query = "SELECT * FROM PRODOTTI WHERE Tipo = ? AND Nome LIKE ?";
         $stmt = $this->db->prepare($query);
         $user_search = '%'.$user_search.'%';
         $stmt->bind_param('ss', $idcategory, $user_search);
