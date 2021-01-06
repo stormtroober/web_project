@@ -1,4 +1,15 @@
 <main>
+    <div class="row py-4">
+    <div class="col-md-1"></div>
+    <div class="col-12 col-md-4 col-lg-3">
+      <div class="list-group px-5 px-md-0">
+        <a href="./login.php?info=account" class="list-group-item list-group-item-action bg-dark text-white">Account</a>
+        <a href="./login.php?info=account" class="list-group-item list-group-item-action">Info</a>
+        <a href="./login.php?info=prodotti" class="list-group-item list-group-item-action bg-light-gray fw-bold">Added products</a>
+        <a href="./login.php?info=addp" class="list-group-item list-group-item-action">Add a product</a>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-7 p-5 py-md-1">
     <?php foreach($templateParams["articoli"] as $articolo): ?>
     <div class="col-12">
         <div class="row m-2 m-md-5 bg-light-gray" style="border-radius:25px">
@@ -43,4 +54,9 @@
         </div>
     </div>
     <?php endforeach; ?>
+    </div>
+    <div class="row">
+      <div class="col-12 container "></div>
+    </div>
+    </div>
 </main>
