@@ -23,7 +23,7 @@
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link" href="#"><img src="../resources/icons/notifica.png" height="30" length="30">
+            <a class="nav-link" href="notifications.php"><img src="../resources/icons/notifica.png" height="30" length="30">
               <span class="badge rounded-pill bg-primary">
                 <?php if(isset($templateParams["nnotifiche"])) {
                   echo $templateParams["nnotifiche"][0]["NNot"];
@@ -47,7 +47,7 @@
             ?>
             <li class="dropdown-item text-center">
               <form action="./clear_notifications.php?url=<?php echo $templateParams["nome"] ?>" method="post">
-                <button type="submit" class="btn text-primary">Clear All</button>
+                <button type="submit" class="btn text-primary">Clear</button>
               </form>
             </li>
             </ul>
