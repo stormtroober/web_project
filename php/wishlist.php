@@ -31,6 +31,9 @@ if(login_check($dbh->getDb()) == true){
     }
   }
   else {
+    $notification = "Access Denied to WhishList, this is a Seller account!";
+    $dbh->addNotification($notification);
+    $templateParams["notifiche"] = $dbh->getNotifications();
     $templateParams["nome"] = "slide-show.php";
   }
 }
