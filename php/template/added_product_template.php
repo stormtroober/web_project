@@ -28,7 +28,12 @@
               <td class="text-center"><img
                   src="<?php echo UPLOAD_DIR."img/".$articolo["Tipo"]."/".$articolo["Foto"]."/front.png" ?>"
                   class="h-25" style="max-width:150px; max-height: 150px;" alt="<?php echo $articolo["Nome"] ?>"></td>
-              <td class="align-middle"><?php echo $articolo["Nome"]; ?></td>
+              <td class="align-middle">
+              <a href = "article_page.php?add=false&id=<?php echo $articolo["ID"];?>"
+                 class = "text-decoration-none text-dark">
+                 <?php echo $articolo["Nome"]; ?>
+              </a> 
+              </td>
               <td class="align-middle"><?php echo $articolo["Prezzo"]; ?>$</td>
               <td class="align-middle">
                 <form method="post" action="login.php?info=prodotti&remove=true&id=<?php echo $articolo["ID"]?>">
