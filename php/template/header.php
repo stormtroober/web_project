@@ -43,7 +43,7 @@
               endforeach;
             ?>
             <li class="dropdown-item text-center">
-              <a class="text-decoration-none text-primary" href="./clear_notifications.php">Clear All</a>
+              <a class="text-decoration-none text-primary btn w-100" href="./clear_notifications.php">Clear All</a>
             </li>
             </ul>
           </li>
