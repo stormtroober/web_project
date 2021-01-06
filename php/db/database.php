@@ -367,6 +367,13 @@ class DatabaseHelper{
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+
+    public function addLastAccess($email) {
+        $data = date('Y-m-d H:i:s');
+        $stmt = $this->db->prepare("UPDATE UTENTI SET UltimoAccesso = ? WHERE Email = ?");
+        $stmt->bind_param('ss', $data, $email);
+        $stmt->execute();
+    }
 }
 
 ?>

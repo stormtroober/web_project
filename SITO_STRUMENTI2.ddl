@@ -67,6 +67,7 @@ create table UTENTI (
      Salt char(128) not null,
      Tipo char(20) not null,
      Indirizzo char(30) not null,
+     UltimoAccesso datetime,
      constraint IDUTENTI_ID primary key (Email));
 
 create table LOGIN_ATTEMPTS (
