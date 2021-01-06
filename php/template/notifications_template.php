@@ -2,15 +2,14 @@
   <div class="col-lg-2"></div>
     <div class="col-12 col-lg-8 mt-5">
     <h2 class="p-3">Notifications</h2>
-      <!-- foreach -->
       <ul class="list-group">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Morbi leo risus</li>
-        <li class="list-group-item">Porta ac consectetur ac</li>
-        <li class="list-group-item">Vestibulum at eros</li>
+        <?php
+          foreach($templateParams["notificheAll"]  as $notifica): 
+            echo "<li class=\"list-group-item\">".$notifica["Notifica"]."</li>";
+          endforeach;
+        ?>
       </ul>
-      <button class="btn btn-dark float-end m-3">Clear</button>
+      <a class="btn btn-dark float-end m-3 text-decoration-none text-white" href="clear_notifications.php">Clear</a>
     </div>
   <div class="col-lg-2"></div>
 </div>

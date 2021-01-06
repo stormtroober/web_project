@@ -7,8 +7,7 @@ $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
 sec_session_start();
 if(login_check($dbh->getDb()) == true){
   $templateParams["nome"] = "notifications_template.php";
-  $userEmail = $_SESSION['user_id'];
-
+  $templateParams["notificheAll"] = $dbh->getAllNotifications();
 }
 else{
   $templateParams["nome"] = "slide-show.php";  
