@@ -10,11 +10,11 @@ VALUES
 That would include a beautiful tiger flame maple top, body and headstock finished in orange stain, with a chambered spruce center block that enhances body resonance for more organic tone and comfortably lighter weight.
 
 Built to perform, its elegant features also include gold hardware, an ebony fingerboard and the classic Gretsch horseshoe headstock inlay. For the sonic muscle and finesse, two High-Sensitive Filter’Tron™ pickups deliver authentic Gretsch power and articulation.","Body: Flamed maple laminated-Neck: Maple-Neck profile: Standard U",
-2500, 1,"admin@admin.com"
+2500, 10,"admin@admin.com"
 ),
 ("Strandberg BODEN 7", "Guitar", "Strandberg", "Strandberg_BODEN_7", "This is the Boden model that started it all. Featuring Swamp Ash body mated with 4A Flame Maple top and roasted Maple neck with roasted Birdseye Maple fretboard, the acoustic character is lively and balanced with superb articulation for both rhythm and lead playing. 
 The Original models feature the highly-touted Suhr passive pickups and Fishman active pickups to faithfully transfer the natural sound of the woods and the unique .strandberg* hardware to your amplification systems.","Chambered Swamp Ash body-Solid AAAA maple top with maple beams-Roasted maple neck",
-2300, 1,"admin@admin.com"
+2300, 4,"admin@admin.com"
 ),
 ("Jackson King V", "Guitar", "Jackson", "Jackson-KingV", "From bridge to headstock, USA Select Series represent Jackson’s top-line best. Nowhere else will you find U.S.-built production-model shred machines of such stellar design, peerless performance and superior craftsmanship, brought to life by the best luthiers and builders in the business. 
 Of all Jackson’s most acclaimed and beloved instrument families, the USA Select Series puts the best of Jackson’s best in your hands.
@@ -22,78 +22,78 @@ Premium features include an alder body, quartersawn eastern hard rock maple neck
 ("Ibanez JSM20-BKL", "Guitar", "Ibanez", "JSM20-BKL", "The JSM20 is a hollow body electric guitar model introduced by Ibanez in 2018. It is a signature model for American jazz-rock guitarist John Scofield. It was initially made in China, but production moved to Indonesia in mid-2018.
 The JSM20 features a thin, double cutaway, semi-hollow body design with a maple top with ƒ holes and multi-layer binding and maple back and sides mated to a set-in sapele neck with a 22-fret ebony fingerboard with binding and aged white acrylic and abalone split block position markers. 
 Components include dual Ibanez Super 58 humbucking pickups with gold covers and individual volume and tone controls and a tri-sound switch for the neck pickup, a Tune-o-matic style bridge with Quik Change III tailpiece, a bone nut and a black pickguard.",
-"Body: Basswood-3 Piece neck: Maple/Nyatoh-Fretboard: Ebony", 1090, 1,"admin@admin.com"),
+"Body: Basswood-3 Piece neck: Maple/Nyatoh-Fretboard: Ebony", 1090, 3,"admin@admin.com"),
 ("Gibson Les Paul Classic HCS", "Guitar", "Gibson", "Les_Paul_HCS", "The Gibson Les Paul™ Classic combines the early 60's style Les Paul model with some functional and time-tested modifications. 
 As expected, the LP Classic is crafted with a mahogany back and maple top coupled with a slim taper mahogany neck and bound, rosewood fingerboard. BurstBucker™ 61R & 61T zebra, open-coil pickups provide classic Gibson tones from the era with a bit of extra punch thanks to the open coils. 
 The control assembly features 4 push-pull pots which provide choices of coil tapping, phase switching, and pure bypassing for functional and versatile sonic variety.",
-"Body: Mahogany-Cream colored body binding-Top: Maple", 1829, 1,"admin@admin.com"),
+"Body: Mahogany-Cream colored body binding-Top: Maple", 1829, 14,"admin@admin.com"),
 ("PRS Custom 24", "Guitar", "PRS", "PRS_Custom24", "The 2016 Custom 24 model is equipped with a PRS Tremolo bridge, 85/15 pickup and Volume and Tone configuration with 5-position Blade switch. 
 The 85/15 pickups were designed by Paul Reed Smith himself for the 30th Anniversary model and are characterized by remarkable clarity, with exceptional high-end and low-end, perfect for more modern styles.",
-"Mahogany body-Maple top-Mapleneck", 4299, 1,"admin@admin.com"),
+"Mahogany body-Maple top-Mapleneck", 4299, 15,"admin@admin.com"),
 ("Gibson S Standard HC", "Guitar", "Gibson", "Gibson_S_Standard_HC", "The Gibson SG Standard rocks the classic looks and features associated with the late 60's style SG models sought after by many. 
 A rounded profile mahogany neck, bound rosewood fingerboard, long tenon 19th fret neck joint, and a solid mahogany body provide the backbone for singing sustain. 
 The 490R and 490T Alnico II pickups provide the power to drive. A black, 5-ply, full-face pickguard set this SG Standard apart from others... a truly versatile classic.",
-"Body: Mahogany-Neck: Mahogany-Fretboard: Rosewood", 1390, 1,"admin@admin.com"),
+"Body: Mahogany-Neck: Mahogany-Fretboard: Rosewood", 1390, 12,"admin@admin.com"),
 ("Guild Starfire V", "Guitar", "Guild", "StarfireV", "Semi-hollow body. A deluxe double cutaway loaded with features that give a fully expressive voice to your individual playing style. The classic Guild Starfire V is a semi-hollow beauty with a graceful 16 3/8inches thinline body and twin Guild LB-1 -Little Bucker- pickups that make it an outstanding choice with an authentic Guild voice perfect for rock, blues, roots and more. 
 The Starfire V his all-mahogany body features an arched top and back, with dual f holes, elegant ivory white body binding, black/white purfling and center-block construction. Other premium features include bound three-piece mahogany/maple/mahogany neck with vintage-style -soft U- profile, 22-fret rosewood fingerboard with 9 1/2inches radius and pearloid block inlays, 
 three-way pickup selector switch, individual volume and tone controls for each pickup and master volume, Tune-O-Matic bridge with rosewood base, Guild vibrato tailpiece, Grover Sta-Tite tuning machines, nickel hardware and a gorgeous Cherry Red finish. Includes plush-lined hardshell case.",
-"Body: Laminated mahogany-Body depth (lower bout): 45 mm-3 Piece mahogany / maple neck", 1159, 1,"admin@admin.com"),
+"Body: Laminated mahogany-Body depth (lower bout): 45 mm-3 Piece mahogany / maple neck", 1159, 11,"admin@admin.com"),
 ("Fender Clapton Strat Signature BLK", "Guitar", "Fender", "Fender_StratBLK", "Built to Clapton’s specs, the Custom Shop Eric Clapton Signature Stratocaster® guitar features an alder body, special soft V-shaped maple neck, 
 three Vintage Noiseless™ pickups, blocked tremolo and Clapton’s signature on the headstock.",
-"Maple fretboard-22 Vintage frets-3 Vintage noiseless pickups", 2199, 1,"admin@admin.com"),
+"Maple fretboard-22 Vintage frets-3 Vintage noiseless pickups", 2199, 12,"admin@admin.com"),
 ("Fender 61 Telecaster AAG Relic", "Guitar", "Fender", "Fender_61_Telecaster", "Fender Telecaster is a guitar with two single coil pickups controlled by a 3-position switch, a volume pot and a tone control. The body, in solid wood without a soundbox (solid body), completely cancels unwanted resonances and increases the sustain of the strings. 
 The bridge is fixed, with the strings inserted under it. 
 The neck, usually maple with a maple or rosewood fingerboard, is screwed to the body.
 The Telecaster is a versatile guitar: it can go from the sounds of a steel guitar to the warm tones of a blues guitar, while maintaining its own, recognizable sound that sets it apart in every situation. Even today the simplicity of the instrument makes it a preference for many country, blues and rock musicians.",
-"Body: Ash-Neck: Maple-Neck with nitro lacquer finish", 3990, 1,"admin@admin.com"),
+"Body: Ash-Neck: Maple-Neck with nitro lacquer finish", 3990, 19,"admin@admin.com"),
 ("Danelectro 58 Longhorn", "Bass", "Danelectro", "Danelectro_58", "The Longhorn is one of the most unusual-looking guitar/bass designs ever, but it has still earned a place in rock history. Championed by the likes of The Who's John Entwistle and Jack Bruce during Cream's Disraeli Gears sessions, its sounds and looks can't easily be forgotten.",
 "Body: Frame and centre block are made from plywood-Neck: Maple bolt on-Fretboard: Pau Ferro",535, 1,"admin@admin.com"),
 ("Dean Guitars Custom Zone", "Bass", "Dean", "Dean_Custom", "The Dean Zone Bass Guitar is an unruly axe with shocking colors and a sensuous basswood body. The maple fingerboard color matches the body and has black block markers and 20 frets. Split pickups and black hardware. No one can say you have -just another bass-.",
-"Basswood body-Bolted on maple neck-Maple fretboard",199, 1,"admin@admin.com"),
+"Basswood body-Bolted on maple neck-Maple fretboard",199, 11,"admin@admin.com"),
 ("Fender Flea Sig Bass", "Bass", "Fender", "Fender_Flea", "A pair of vintage-style, American-made Pure Vintage 64 Jazz Bass single-coil pickups provides classic, original-era Fender tone with clear articulation, clear low end definition, up-front midrange punch and singing high end. The vintage-accurate stacked concentric controls shape the pickups volume and tone, as well as allowing the pickups voice to be blended in any ratio to craft a unique sound. The vintage-style bridge sports four threaded steel barrel saddles, adding a touch of crispness that enhances the attack for tone that can power through a busy mix.",
-"Flea signature model-Type: Offset-Body: Alder",1285, 1,"admin@admin.com"),
+"Flea signature model-Type: Offset-Body: Alder",1285, 12,"admin@admin.com"),
 ("Fender SQ 60s Jazz Bass", "Bass", "Fender", "Fender_SQ_LRL_3TS", "A tribute to the decade of its birth, the Classic Vibe ‘60s Jazz Bass® combines the luxurious playability that made it famous with the versatility and massive tone of its dual Fender-Designed alnico single-coil pickups. Player-friendly features include a slim, comfortable “C”-shaped neck profile with an easy-playing 9.5”-radius fingerboard and narrow-tall frets, as well as a vintage-style bridge with threaded saddles. This throwback Squier model also features 1960s-inspired headstock markings, rich-looking nickel-plated hardware and a slick vintage-tint gloss neck finish for an old-school vibe.",
-"Classic Vibe series-Body: Poplar-Bolt on neck: Maple", 398, 1,"admin@admin.com"),
+"Classic Vibe series-Body: Poplar-Bolt on neck: Maple", 398, 13,"admin@admin.com"),
 ("Harley Benton HBZ-2004", "Bass", "Harley Benton", "Harley_Benton_HBZ-2004", "The HBZ-2004 from the Harley Benton Deluxe series pairs a ovangkol neck-through body with a five-stripe neck made of maple, nato and mahogany loaded with a black, 24-fret walnut fretboard. The harmonious design and construction give you a sustain that goes on for days! Two ceramic pickups are fine-tuned using the active electronics for endless tonal possibilities, while the high-quality clear matte finish exudes a simple elegance that shouts -premium!-",
-"Fretboard: Black walnut-Nut width: 40 mm-Oval abalone inlays", 269, 1,"admin@admin.com"),
+"Fretboard: Black walnut-Nut width: 40 mm-Oval abalone inlays", 269, 14,"admin@admin.com"),
 ("Höfner Ignition TBK SE", "Bass", "Hofner", "Hofner_Ignition", "The instruments of the Höfner Ignition Special Edition (SE) are based on the Höfner violin basses from the 1970s. In contrast to the Contemporary series, the Ignition basses have a hollow resonance body. In addition to the classic control panel with tea cup pots, they are equipped with a wooden bridge and trapezoid tailpiece and have the traditional Höfner logo on the body. The new Cavern variant (HI-CA-SE-SB) of our Ignition Bass offers the famous Pick Up Spacing from 1961 in addition to the features already mentioned. All of our Ignitions (SE) come with a certificate of authenticity and the legendary BASSMAN sticker.",
-"Spruce top-Flamed maple back and sides-Maple one piece neck", 369, 1,"admin@admin.com"),
+"Spruce top-Flamed maple back and sides-Maple one piece neck", 369, 15,"admin@admin.com"),
 ("Ibanez SRF705-BBF", "Bass", "Ibanez", "Ibanez_SRF705", "The EQ section incorporates the controls of the Bartolini pickups with the AeroSilk Piezo system. Controls include a Master volume, balance and bass & treble controls for the Bartolini MK-1 pickups and a Master volume and a tone control for the Piezo system.
 The SR Portamento features an extended 30-fret Rosewood fretboard for playing upper register notes usually only accessible on an upright.
 On the back of the SR Portamento are recessed controls assigned to each individual string to control the volume of the Ibanez-exclusive AeroSilk Piezo pickup. Perfect string balance and response can be achieved by adjusting the volume to accommodate different string gauges.",
-"Body: Okoume-5 Part neck through SRF5 maple/walnut-Fretboard: Panga Panga", 925, 1,"admin@admin.com"),
+"Body: Okoume-5 Part neck through SRF5 maple/walnut-Fretboard: Panga Panga", 925, 16,"admin@admin.com"),
 ("Marcus Miller V3 5 TS", "Bass", "Marcus Miller", "Marcus_Miller_V3_5_TS", "Marcus Miller and Sire want to see everyone have fun and play music. To make this happen, Marcus Miller and Sire have been on a mission for several years to build the best quality bass guitar at a price never heard of, and make it accessible to everyone. The result is a new line of great sounding, great looking and high quality Marcus Miller bass models at an extraordinarily low price. The body of the V3 is crafted from Indonesian mahogany, known for its warm, clean and full-bodied sound. The neck is crafted from Canadian maple for a premium look and feel. A premium 3-band EQ preamp recently developed for this series to meet Marcus Miller's versatility needs and to cover various musical styles.",
-"Body: Mahogany-Neck: Maple-Fretboard: Rosewood", 375, 1,"admin@admin.com"),
+"Body: Mahogany-Neck: Maple-Fretboard: Rosewood", 375, 17,"admin@admin.com"),
 ("Rickenbacker 4003 Walnut", "Bass", "Rickenbacker", "Rickenbacker_4003", "The Classic Rickenbacker bass - famous for its ringing sustain, treble punch and solid underlying bass. A subtle strip of binding graces the elegantly curved body and the Rosewood fingerboard. Deluxe triangular inlays and stereo capability are standard features.",
-"Body: Walnut-Neck through body-Fretboard: Maple", 2490, 1,"admin@admin.com"),
+"Body: Walnut-Neck through body-Fretboard: Maple", 2490, 18,"admin@admin.com"),
 ("Warwick Spacebass", "Bass", "Warwick", "Warwick_Space", "The body, in its purple burst finish with matching tortoiseshell pickguard, is made of mahogany and has a screwed maple neck with Ekanga inserts, an exotic brown-colored wood already adopted by Warwick to reinforce the necks of its basses. The fingerboard is rosewood and has a 20-inch radius, for a flat, modern profile on all 24 frets interspersed with white star-shaped inlays. The scale measures 34 inches and culminates, on the body, in a two-piece Warwick bridge: saddles and open stoptail. The nut is a Just-A-Nut III, Warwick production adjustable in height without the need for files or invasive interventions.",
-"Bootsy Collins Signature Model-Mahogany body-Bolt on neck: Maple", 1222, 1,"admin@admin.com"),
+"Bootsy Collins Signature Model-Mahogany body-Bolt on neck: Maple", 1222, 19,"admin@admin.com"),
 ("Fender 64 Custom Princeton", "Amp", "Fender", "Fender", "The Fender Princeton needs no introduction. As guitar amplifiers go, it is widely regarded as the go-to choice of studio players and one of the best perfect compact combos for small gigs. 
 Anyone who is anyone has played a Princeton at some time. It's got the pristine clean tones, the musical splash of spring reverb, the lush warble of tremolo... Even the proportions seem just right, with its 12-watts a manageable amount of power to deal with in a variety of situations. It takes pedals well, too. There is a lot to like.",
-"American Hand-Wired Series-Channels: 1-Power: 12 W", 2250, 1,"admin@admin.com"),
+"American Hand-Wired Series-Channels: 1-Power: 12 W", 2250, 20,"admin@admin.com"),
 ("Marshall DSL40CR", "Amp", "Marshall", "Marshall", "Using the reverb, FX loop, tone shift controls and two footswitchable gain channels you can create a style that suits you and another to release your alter ego.The DSL40 has two master volumes for those loud solo moments.
 The DSL40 has five speaker outputs giving you plenty of flexibility and the ability to record, with a standby function for silent recording as well. It can be taken from the bedroom, to the studio and onto a gig.
 Power can be reduced from 40W to 20W without affecting the quality meaning the DSL40 can be used in multiple environments with confidence.
 The amps features can be controlled using any MIDI equipment, so for those technical players you can play this amp and different MIDI equipment at any one time.",
-"Reissue series: authentic DSL sound-Power: 40W-2 footswitchable channels with classic gain and ultra gain", 655, 1,"admin@admin.com"),
+"Reissue series: authentic DSL sound-Power: 40W-2 footswitchable channels with classic gain and ultra gain", 655, 23,"admin@admin.com"),
 ("NUX MightyLite BT", "Amp", "NUX", "NUX", "It's lightweight and literally small all-in-one portable guitar amplifier. 
 It's a low-watt practice amp that you can use in any room at your home, put on a desk or take it wherever you want and jam, via the battery-powered operation or USB to power bank connection.
 It features 3 channels, built-in digital reverb and delay, with NUX user-friendly interface design. 
 It also offers an Auxiliary line-in and Bluetooth connection for jamming along to your own music.
 You can improve your jamming skill along with built-in drums and metronome as well.", "3 Watt-3 Channels: Clean, Overdrive, Distortion-Equipment: 3 Custom voiced loudspeaker", 77, 1,"admin@admin.com"),
 ("Orange Rocker 15", "Amp", "Orange", "Orange", "With the Rocker 15 set wide open, smaller venues are comfortably taken care of despite the amp’s miniature footprint. Thanks to a custom Voice of the World Gold Label speaker and beefy transformers, the Rocker 15 has a remarkably potent delivery which takes full advantage of its EL84 output section. Even when scaling back the power, the amp’s tone stays fat and full, oozing warm valve compression and saturation without disturbing the neighbours.", 
-"Power: 15 W RMS-Clean channel control: Volume-Dirty channel controls: Gain, Bass, Mid, Treble, Volume", 749, 1,"admin@admin.com"),
+"Power: 15 W RMS-Clean channel control: Volume-Dirty channel controls: Gain, Bass, Mid, Treble, Volume", 749, 5,"admin@admin.com"),
 ("Roland Cube Street EX", "Amp", "Roland", "Roland", "With its compact size and battery-powered operation, Roland’s CUBE Street was a huge hit among traveling musicians. Now, the new CUBE Street EX infuses the popular mobile amp with a huge performance upgrade that delivers more projection, more channels, and more versatility. 50 big watts of power and a stereo speaker system with dual woofers and tweeters provide clean, punchy sound for larger crowds, while four independent channels offer abundant connections for a variety of mics and instruments. Detailed sound adjustment is available with separate EQ and reverb controls, and great guitar tones are dialed in easily with the onboard COSM amps. Selectable power modes provide up to 20 hours of operation with eight AA batteries, and two CUBE Street EX units can be linked together for more sound coverage if needed. And with i-CUBE LINK, you can even plug in your iPhone or iPad to play backing music and record your performances!", 
-"4 Channels-Power: switchable 50/25/10-Watt-Equipped with: 2 speakers and 2 tweeter", 544, 1,"admin@admin.com"),
+"4 Channels-Power: switchable 50/25/10-Watt-Equipped with: 2 speakers and 2 tweeter", 544, 20,"admin@admin.com"),
 ("Fender CLSC SRS Case Strat/Tele BLK", "Accessories", "Fender", "Case", "Classic Series wood cases are a stylish and dependable way to protect your Fender® electric guitar. Crafted with road-reliable materials, this 3-ply hardshell wood case boasts a vinyl wrapped steel carry handle and draw latches in addition to triple chrome-plated hardware throughout the case. A soft crushed acrylic plush interior lining ensures your guitar remains scratch and damage-free, while a spacious accessory compartment offers plenty of room for spare strings, picks, tuners—or whatever small items you wish to carry with you—with lasting style and peace of mind.", 
-"Original case for Telecaster and Stratocaster models-Lining made of black plush-Steel core carrying handle wrapped in vinyl", 133, 2,"admin@admin.com"),
+"Original case for Telecaster and Stratocaster models-Lining made of black plush-Steel core carrying handle wrapped in vinyl", 133, 21,"admin@admin.com"),
 ("Dunlop CryBaby GCB95", "Accessories", "Dunlop", "Pedal", "This Cry Baby Wah features the legendary Fasel® inductor, a focused high end, and an aggressive wah sound.
 This pedal can be powered by a Dunlop ECB003 9-volt adapter, or the DC Brick™, Iso-Brick™, and Mini Iso-Brick™ power supplies",
 "Equipped with the legendary red Fasel inductor-100 kOhm Hot Potz potentiometer guarantees fast response to the wah effect-Hardwire bypass", 95, 5,"admin@admin.com"),
-("Seymour Duncan SH-6", "Accessories", "Seymour Duncan", "Pickups", "Our original high-output passive humbucker pickup, the Duncan Distortion (SH-6) delivers tight and mean lows with searing top end—ideal for a wide variety of rock and metal styles.",
-"Comprising two SH-6 Distortion humbuckers-For neck and bridge positions-For aggressive and modern playing", 177, 3,"admin@admin.com"),
+("Seymour Duncan SH-6", "Accessories", "Seymour Duncan", "PickUps", "Our original high-output passive humbucker pickup, the Duncan Distortion (SH-6) delivers tight and mean lows with searing top end—ideal for a wide variety of rock and metal styles.",
+"Comprising two SH-6 Distortion humbuckers-For neck and bridge positions-For aggressive and modern playing", 177, 34,"admin@admin.com"),
 ("Thomastik JS 111", "Accessories", "Thomastik", "Strings", "Mellow timbre, good power.
 Thomastik-Infeld Light Flatwound Jazz Swing Electric Guitar Strings are designed specifically for semi-acoustic and acoustic jazz guitars.",
-"Gauges from 011 to 047-Flatwound-High resistance and great tone", 15.90, 6,"admin@admin.com"),
+"Gauges from 011 to 047-Flatwound-High resistance and great tone", 15.90, 64,"admin@admin.com"),
 ("BOSS TU-3", "Accessories", "BOSS", "Tuner", "The world’s top-selling stage tuner, the BOSS TU-2, evolves and improves with the debut of the new TU-3. Housed in a tank-tough BOSS stompbox body, the TU-3 features a smooth 21-segment LED meter with a High-Brightness mode that cuts through the harshest outdoor glare. Choose between Chromatic or Guitar/Bass tuning modes, and enjoy visual pinpoint tuning verification with the Accu-Pitch Sign function. The TU-3 incorporates a convenient Note Name Indicator that can display notes of 7-string guitars and 6-string basses, while the Flat-Tuning mode can support up to six half-steps. It’s the new-standard tuner that no guitarist or bass player should be without!",
-"21 Segment LED meter-Tuning range: C0 (16.35 Hz) up to C8 (4.186 Hz)-AccuPitch", 75, 3,"admin@admin.com");
+"21 Segment LED meter-Tuning range: C0 (16.35 Hz) up to C8 (4.186 Hz)-AccuPitch", 75, 32,"admin@admin.com");
