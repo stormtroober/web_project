@@ -9,7 +9,7 @@
         </div>
     </div>
     <div class="col-12 col-md-6 col-lg-7 p-5 py-md-1">
-        <h3>Order History</h3> 
+        <span class = "h2">Order History</span>
         <div class="container px-2 px-md-0 py-3">
         <?php
         $i = 0;
@@ -38,7 +38,11 @@
             </ul>
         <?php 
         $i++;
-        endforeach; ?>
+        endforeach; 
+        if($i == 0){
+            echo "Non hai ancora eseguito ordini !";
+        }
+        ?>
         </div>
     </div>
     <div class="col-md-1"></div>
