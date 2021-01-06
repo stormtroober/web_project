@@ -12,19 +12,19 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="<?php echo UPLOAD_DIR."img/".$articolo["Tipo"]."/".$articolo["Foto"]."/front.png"; ?>"
-              class="h-100 mw-100" style="max-height:600;" alt="Photo front">
+              class="h-100 mw-100" style="max-height:600px;" alt="Photo front">
           </div>
           <div class="carousel-item">
             <img src="<?php echo UPLOAD_DIR."img/".$articolo["Tipo"]."/".$articolo["Foto"]."/back.png"; ?>"
-              class="h-100 mw-100" style="max-height:600;" alt="Photo back">
+              class="h-100 mw-100" style="max-height:600px;" alt="Photo back">
           </div>
           <div class="carousel-item">
             <img src="<?php echo UPLOAD_DIR."img/".$articolo["Tipo"]."/".$articolo["Foto"]."/zoom.png"; ?>"
-              class="h-100 mw-100" style="max-height:600;" alt="Photo Zoom">
+              class="h-100 mw-100" style="max-height:600px;" alt="Photo Zoom">
           </div>
           <div class="carousel-item">
             <img src="<?php echo UPLOAD_DIR."img/".$articolo["Tipo"]."/".$articolo["Foto"]."/head.png"; ?>"
-              class="h-100 mw-100" style="max-height:600;" alt="Photo Head">
+              class="h-100 mw-100" style="max-height:600px;" alt="Photo Head">
           </div>
         </div>
         <a class="carousel-control-prev" href="#articleCarousel" role="button" data-bs-slide="prev">

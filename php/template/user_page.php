@@ -12,13 +12,13 @@
       <h3>Informazioni Account</h3>
       <div class="container px-0 py-3">
         <div class="input-group mb-3">
-          <label for="nome" class="form-control" ><?php echo $templateParams["utente"][0]["Nome"] ?></label>
+          <label for="nome" class="form-control"><?php echo $templateParams["utente"][0]["Nome"] ?></label>
         </div>
         <div class="input-group mb-3">
           <label for="cognome" class="form-control"><?php echo $templateParams["utente"][0]["Cognome"] ?></label>
         </div>
         <div class="input-group mb-3">
-        <label for="email" class="form-control"><?php echo $templateParams["utente"][0]["Email"] ?></label>
+          <label for="email" class="form-control"><?php echo $templateParams["utente"][0]["Email"] ?></label>
         </div>
         <div class="input-group mb-3">
           <label for="indirizzo" class="form-control"><?php echo $templateParams["utente"][0]["Indirizzo"] ?></label>
@@ -30,9 +30,5 @@
         <input type="submit" value="Logout" id="logout" class="btn btn-dark float-end m-1">
       </form>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-12 container "></div>
-  </div>
   </div>
 </main>
