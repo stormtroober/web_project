@@ -14,7 +14,6 @@ if(isset($_GET["type"])){
 if(isset($_POST["user_search"])) {
     $user_search = $_POST["user_search"];
 }
-$templateParams["categoria"] = $idcategoria;
 if(isset($_GET["search"])) {
     $templateParams["articoli"] = $dbh->getPostByCategorySearch($idcategoria, $user_search);
 } else {

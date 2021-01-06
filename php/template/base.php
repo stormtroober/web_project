@@ -21,8 +21,8 @@
     <script src="../JS/functions.js"></script>
     <script src="../JS/available.js"></script>
     <script src="../JS/show_elements.js"></script>
-    <script type="text/javascript" src="../JS/sha512.js"></script>
-    <script type="text/javascript" src="../JS/forms.js"></script>
+    <script src="../JS/sha512.js"></script>
+    <script src="../JS/forms.js"></script>
   </head>
   <body class="bg-light">
     <div class="d-flex flex-column min-vh-100 container-fluid">
