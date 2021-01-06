@@ -27,17 +27,21 @@
             <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Notifications</a>
             <ul class="dropdown-menu">
             <?php
-              if(isset($templateParams["notifiche"])) {
-                foreach($templateParams["notifiche"] as $notifica): 
-                  echo "<li class=\"dropdown-item\">".$notifica["Notifica"]."</li>";
-                endforeach;
+              if(!isset($templateParams["notifiche"])) {
+                $templateParams["notifiche"] = $dbh->getNotifications();
+              } else {
+                //$notification = "ciao";
+                //echo "<script type='text/javascript'>alert('$notification');</script>";
               }
+              foreach($templateParams["notifiche"]  as $notifica): 
+                echo "<li class=\"dropdown-item\">".$notifica["Notifica"]."</li>";
+              endforeach;
             ?>
             </ul>
           </li>
           <li class="nav-item text-center px-2">
             <a class="nav-link" href="cart.php"><img src="../resources/icons/carrello.png" height="30" length="30"></a>
-            <a class="nav-link active xs-text" aria-current="page" href="cart.php">Shoppping Cart</a>
+            <a class="nav-link active xs-text" aria-current="page" href="cart.php">Shopping Cart</a>
           </li>
           <li class="nav-item text-center px-2">
             <a class="nav-link" href="whishlist.php"><img src="../resources/icons/desideri.png" height="30" length="30"></a>
