@@ -8,10 +8,12 @@
                     alt="<?php echo $articolo["Nome"];?>">
             </div>
             <div class="col-12 col-md-7 col-lg-5 pt-3">
-                <a href="article_page.php?add=false&id=<?php echo $articolo["ID"]?>"
-                    class="fs-4 fs-md-3 fs-lg-2 fs-xl-1 px-2 text-decoration-none text-dark h3">
-                    <?php echo $articolo["Nome"]; ?>
-                </a>
+                <h2>
+                    <a href="article_page.php?add=false&id=<?php echo $articolo["ID"]?>"
+                        class="fs-4 fs-md-3 fs-lg-2 fs-xl-1 px-2 text-decoration-none text-dark">
+                        <?php echo $articolo["Nome"]; ?>
+                    </a>
+                </h2>
                 <div class="my-3 my-lg-4">
                     <div class="d-flex flex-column">
                         <div class="d-flex">
