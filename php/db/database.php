@@ -356,6 +356,14 @@ class DatabaseHelper{
         $stmt->bind_param('s', $email);
         $stmt->execute();
     }
+
+    public function getSelledProducts($email) {
+        $stmt = $this->db->prepare("SELECT ORDINE.Utente, ORDINE.Data, Prodotto, PRODOTTI_CARRELLO.Quantità FROM ORDINE, PRODOTTI_CARRELLO, PRODOTTI
+         WHERE ORDINE.IdCarrello = PRODOTTI_CARRELLO.IdCarrello AND PRODOTTI.ID = PRODOTTI_CARRELLO.Prodotto 
+         AND PRODOTTI.Utente = ?");
+        $stmt->bind_param('s', $email);
+        $stmt->execute();
+    }
 }
 
 ?>

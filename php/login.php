@@ -43,7 +43,7 @@ if(login_check($dbh->getDb()) == true) {
             $templateParams["nome"] = "added_product_template.php"; //PAGINA PRODOTTI INSERITI
         }
         else if($info == "storico"){
-            //TOMMI QUA
+            $templateParams["vendite"] = $dbh->getSelledProducts($userEmail);
             $templateParams["nome"] = "order_history_seller.php";
         }
     } else {
