@@ -14,7 +14,7 @@
         <span class = "h2">Order History</span>
         <div class="container px-2 px-md-0 py-3">
         <ul class="list-group mb-3">
-                <li class="list-group-item bg-dark text-white">Selled Products</li>
+                <li class="list-group-item bg-dark text-white">Sold Products</li>
                 <li class="list-group-item">
                     <?php foreach($templateParams["vendite"] as $sale): ?>
                     <ul class="list-group mb-2 px-2">
