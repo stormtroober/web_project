@@ -7,6 +7,7 @@
         <a href="./login.php?info=account" class="list-group-item list-group-item-action bg-light-gray fw-bold">Info</a>
         <a href="./login.php?info=prodotti" class="list-group-item list-group-item-action">Added products</a>
         <a href="./login.php?info=addp" class="list-group-item list-group-item-action">Add a product</a>
+        <a href="./login.php?info=storico" class="list-group-item list-group-item-action">Order History</a>
       </div>
     </div>
     <div class="col-12 col-md-6 col-lg-7 py-5 ps-4 py-md-1">
@@ -33,9 +34,6 @@
     <div class="col-md-1">
       <form action="./logout.php" method="post">
         <input type="submit" value="Logout" id="logout" class="btn btn-dark float-end m-1">
-      </form>
-      <form action="./delete_account.php" method="post">
-        <input type="submit" value="Delete Account" id="logout" class="btn btn-dark float-end m-1">
       </form>
     </div>
   </div>

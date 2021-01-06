@@ -42,6 +42,10 @@ if(login_check($dbh->getDb()) == true) {
             $templateParams["articoli"] = $dbh->getPostByUser($userEmail);
             $templateParams["nome"] = "added_product_template.php"; //PAGINA PRODOTTI INSERITI
         }
+        else if($info == "storico"){
+            //TOMMI QUA
+            $templateParams["nome"] = "order_history_seller.php";
+        }
     } else {
         if ($templateParams["utente"][0]["Tipo"] == "consumer") {
             $templateParams["nome"] = "user_page.php";

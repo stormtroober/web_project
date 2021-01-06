@@ -7,6 +7,7 @@
         <a href="./login.php?info=account" class="list-group-item list-group-item-action">Info</a>
         <a href="./login.php?info=prodotti" class="list-group-item list-group-item-action">Added products</a>
         <a href="./login.php?info=addp" class="list-group-item list-group-item-action bg-light-gray fw-bold">Add a product</a>
+        <a href="./login.php?info=storico" class="list-group-item list-group-item-action">Order History</a>
       </div>
     </div>
     <div class="col-12 col-md-6 col-lg-7 p-5 py-md-1">
