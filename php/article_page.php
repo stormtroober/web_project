@@ -26,12 +26,12 @@ if(login_check($dbh->getDb()) == true){
   $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
   if($add == "cart"){
     if ($dbh->addToCart($userEmail, $articleID, $Quantità) == -2) {
-        $notification = "Can't add".$templateParams["articolo"][0]["Nome"]." to cart, there are no more";
+        $notification = "Can't add ".$templateParams["articolo"][0]["Nome"]." to cart, there are no more";
         $dbh->addNotification($notification);
         $templateParams["notifiche"] = $dbh->getNotifications();
         $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
     } else if($dbh->addToCart($userEmail, $articleID, $Quantità) == -1) {
-        $notification = "Can't add".$templateParams["articolo"][0]["Nome"]." to cart, there are no more";
+        $notification = "Can't add ".$templateParams["articolo"][0]["Nome"]." to cart, there are no more";
         $dbh->addNotification($notification);
         $templateParams["notifiche"] = $dbh->getNotifications();
         $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
