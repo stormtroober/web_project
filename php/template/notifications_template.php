@@ -4,12 +4,19 @@
     <h2 class="p-3">Notifications</h2>
       <ul class="list-group">
         <?php
+        if(empty($templateParams["notificheAll"])){
+          echo "<h3>There are no notifications</h3>";
+        } else {
           foreach($templateParams["notificheAll"]  as $notifica): 
             echo "<li class=\"list-group-item\">".$notifica["Notifica"]."</li>";
-          endforeach;
+          endforeach; }
         ?>
       </ul>
-      <a class="btn btn-dark float-end m-3 text-decoration-none text-white" href="clear_notifications.php">Clear</a>
+      <?php
+        if(!empty($templateParams["notificheAll"])){
+          echo "<button class=\"btn btn-dark float-end m-3 text-decoration-none text-white\" href=\"clear_notifications.php\">Clear</button>";
+        } 
+        ?>
     </div>
   <div class="col-lg-2"></div>
 </div>
