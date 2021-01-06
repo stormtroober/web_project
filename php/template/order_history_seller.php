@@ -13,38 +13,20 @@
     <div class="col-12 col-md-6 col-lg-7 p-5 py-md-1">
         <span class = "h2">Order History</span>
         <div class="container px-2 px-md-0 py-3">
-        <?php
-        $i = 0;
-        foreach($templateParams["ordini"] as $ordine): ?>
-            <ul class="list-group mb-3">
-                <li class="list-group-item bg-dark text-white">Order n. <?php echo ($i+1); ?></li>
+        <ul class="list-group mb-3">
+                <li class="list-group-item bg-dark text-white">Selled Products</li>
                 <li class="list-group-item">
-                Date: <?php $date = new DateTime($ordine["Data"]);
-                echo $date->format('Y-m-d'); ?>
-                </li>
-                <li class="list-group-item fw-bold">Products:</li>
-                <li class="list-group-item">
-                        <?php
-                        $k = 0;
-                        foreach($itemsDetail[$i] as $item): ?>
+                        <?php foreach($templateParams["vendite"] as $sale): ?>
                         <ul class="list-group mb-2 px-2">
-                            <li class="list-group-item fw-bold bg-light-gray"><?php echo $item[0]["Nome"]; ?></li>
-                            <li class="list-group-item">Quantity: <?php echo($itemsInCart[$i][$k]["Quantità"]); ?></li>
-                            <li class="list-group-item"><?php echo $item[0]["Prezzo"]." $"; ?></li>
+                            <li class="list-group-item fw-bold bg-light-gray"><?php echo $sale["Prodotto"]; ?></li>
+                            <li class="list-group-item"><?php $date = new DateTime($sale["Data"]);
+                            echo $date->format('Y-m-d'); ?></li>
+                            <li class="list-group-item"><?php echo $sale["Quantità"]; ?></li>
+                            <li class="list-group-item"><?php echo $sale["Utente"]; ?></li>
                         </ul>
-                        <?php
-                        $k++;
-                    endforeach; ?>
+                        <?php endforeach; ?>
                 </li>
-                <li class="list-group-item fw-bold bg-light-gray">Total:<?php echo $ordine["Totale"]; ?>$</li>
             </ul>
-        <?php 
-        $i++;
-        endforeach; 
-        if($i == 0){
-            echo "Non hai ancora venduto nulla !";
-        }
-        ?>
         </div>
     </div>
     <div class="col-md-1"></div>
