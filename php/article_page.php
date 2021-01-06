@@ -28,10 +28,17 @@ if(login_check($dbh->getDb()) == true){
         $notification = "Can't add".$templateParams["articolo"][0]["Nome"]." to cart, there are no more";
         $dbh->addNotification($notification);
         $templateParams["notifiche"] = $dbh->getNotifications();
+        $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
+    } else if($dbh->addToCart($userEmail, $articleID, $Quantità) == -1) {
+        $notification = "Can't add".$templateParams["articolo"][0]["Nome"]." to cart, there are no more";
+        $dbh->addNotification($notification);
+        $templateParams["notifiche"] = $dbh->getNotifications();
+        $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
     } else {
         $notification = "Added ".$templateParams["articolo"][0]["Nome"]." to cart";
         $dbh->addNotification($notification);
         $templateParams["notifiche"] = $dbh->getNotifications();
+        $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
     }
 } else if($add == "wish"){
     $notification = "Added ".$templateParams["articolo"][0]["Nome"]." to wish list";

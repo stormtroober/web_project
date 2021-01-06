@@ -281,6 +281,12 @@ class DatabaseHelper{
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+    public function getNotificationsNumber() {
+        $stmt = $this->db->prepare("SELECT count(*) as NNot FROM NOTIFICHE ORDER BY IdNotifica DESC LIMIT 7");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 
     public function deleteNotifications() {
         $stmt = $this->db->prepare("DELETE FROM NOTIFICHE");

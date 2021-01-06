@@ -24,6 +24,14 @@
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link" href="#"><img src="../resources/icons/notifica.png" height="30" length="30">
+              <span class="badge badge-primary badge-pill text-primary">
+                <?php if(isset($templateParams["nnotifiche"])) {
+                  echo $templateParams["nnotifiche"][0]["NNot"];
+                } else {
+                  echo 0;
+                } ?>
+              </span>
+            </a>
             <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Notifications</a>
             <ul class="dropdown-menu">
             <?php

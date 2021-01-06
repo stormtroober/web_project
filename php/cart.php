@@ -49,18 +49,21 @@ if(login_check($dbh->getDb()) == true){
       $notification = "Can't buy, remove items that aren't avaiable from cart";
       $dbh->addNotification($notification);
       $templateParams["notifiche"] = $dbh->getNotifications();
+      $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
     }
     else{
       if($returnValue == -2){
         $notification = "Can't buy, error while buying";
         $dbh->addNotification($notification);
         $templateParams["notifiche"] = $dbh->getNotifications();
+        $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
         $templateParams["nome"] = "cart_template.php";
       }
       else{
         $notification = "Order created successfully!";
         $dbh->addNotification($notification);
         $templateParams["notifiche"] = $dbh->getNotifications();
+        $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
         $templateParams["nome"] = "slide-show.php";
       }
     }
