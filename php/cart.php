@@ -51,10 +51,18 @@ if(login_check($dbh->getDb()) == true){
       $templateParams["notifiche"] = $dbh->getNotifications();
     }
     else{
-      $notification = "Order created successfully!";
-      $dbh->addNotification($notification);
-      $templateParams["notifiche"] = $dbh->getNotifications();
-      $templateParams["nome"] = "slide-show.php";
+      if($returnValue == -2){
+        $notification = "Order not created, cart is empty!";
+        $dbh->addNotification($notification);
+        $templateParams["notifiche"] = $dbh->getNotifications();
+        $templateParams["nome"] = "slide-show.php";
+      }
+      else{
+        $notification = "Order created successfully!";
+        $dbh->addNotification($notification);
+        $templateParams["notifiche"] = $dbh->getNotifications();
+        $templateParams["nome"] = "slide-show.php";
+      }
     }
   }
   else{
