@@ -24,32 +24,37 @@ sec_session_start();
 if(login_check($dbh->getDb()) == true){
   $userEmail = $_SESSION['user_id'];
   $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
+  $utente = $dbh->getUserByEmail($userEmail);
   if($add == "cart"){
-    $addres = $dbh->addToCart($userEmail, $articleID, $Quantità);
-    header("Location: article_page.php?add=false&id=".$articleID);
-    if ($addres == -2) {
-        $notification = "Can't add ".$templateParams["articolo"][0]["Nome"]." to cart, already added";
-        $dbh->addNotification($notification);
-        $templateParams["notifiche"] = $dbh->getNotifications();
-        $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
-    } else if($addres == -1) {
-        $notification = "Can't add ".$templateParams["articolo"][0]["Nome"]." to cart, there are no more";
-        $dbh->addNotification($notification);
-        $templateParams["notifiche"] = $dbh->getNotifications();
-        $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
-    } else {
-        $notification = "Added ".$templateParams["articolo"][0]["Nome"]." to cart";
-        $dbh->addNotification($notification);
-        $templateParams["notifiche"] = $dbh->getNotifications();
-        $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
+    if($utente[0]["Tipo"] == "consumer"){
+        $addres = $dbh->addToCart($userEmail, $articleID, $Quantità);
+        header("Location: article_page.php?add=false&id=".$articleID);
+        if ($addres == -2) {
+            $notification = "Can't add ".$templateParams["articolo"][0]["Nome"]." to cart, already added";
+            $dbh->addNotification($notification);
+            $templateParams["notifiche"] = $dbh->getNotifications();
+            $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
+        } else if($addres == -1) {
+            $notification = "Can't add ".$templateParams["articolo"][0]["Nome"]." to cart, there are no more";
+            $dbh->addNotification($notification);
+            $templateParams["notifiche"] = $dbh->getNotifications();
+            $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
+        } else {
+            $notification = "Added ".$templateParams["articolo"][0]["Nome"]." to cart";
+            $dbh->addNotification($notification);
+            $templateParams["notifiche"] = $dbh->getNotifications();
+            $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
+        }
     }
 } else if($add == "wish"){
-    header("Location: article_page.php?add=false&id=".$articleID);
-    $notification = "Added ".$templateParams["articolo"][0]["Nome"]." to wish list";
-    $dbh->addNotification($notification);
-    $templateParams["notifiche"] = $dbh->getNotifications();
-    $dbh->addToWishList($userEmail, $articleID);
+    if($utente[0]["Tipo"] == "consumer"){
+        header("Location: article_page.php?add=false&id=".$articleID);
+        $notification = "Added ".$templateParams["articolo"][0]["Nome"]." to wish list";
+        $dbh->addNotification($notification);
+        $templateParams["notifiche"] = $dbh->getNotifications();
+        $dbh->addToWishList($userEmail, $articleID);
     }
+}
 }   
 
 //$userEmail = "admin@admin.com";
