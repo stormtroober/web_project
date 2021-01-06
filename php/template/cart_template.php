@@ -36,9 +36,13 @@
             <tr>
               <td><?php echo $articolo["Nome"]; ?></td>
               <td>
-              <img src="../resources/icons/minus.png" alt="minus" height="20px" width="20px"></img>
+              <form method="post" action="cart.php?minus=true&id=<?php echo $articolo["ID"]?>">
+                <input type="image" src="../resources/icons/minus.png" alt="minus" height="15" width="15"></input>
+              </form>
               x<?php echo $articolo["Quantità"]; ?>
-              <img src="../resources/icons/plus.png" alt="plus" height="15px" width="15px" class="mb-1"></img>
+              <form method="post" action="cart.php?plus=true&id=<?php echo $articolo["ID"]?>">
+                <input type="image" src="../resources/icons/plus.png" alt="plus" height="15" width="15" class="mb-1"></input>
+              </form>
               </td>
               <td>
                 <?php 

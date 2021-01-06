@@ -96,6 +96,43 @@ class DatabaseHelper{
         $stmt->execute();
     }
 
+    private function decQuantityCart($articleId,$cartId){
+        $stmtQuantity = $this->db->prepare("UPDATE PRODOTTI_CARRELLO SET Quantità=Quantità-1 WHERE (IdCarrello = ? && Prodotto = ?)");
+        var_dump($cartId[0]["IdCarrello"], $articleId);
+        $stmtQuantity->bind_param('ii', $cartId[0]["IdCarrello"], $articleId);
+        $stmtQuantity->execute();
+    }
+
+    private function plusQuantityCart($articleId,$cartId){
+        $stmtQuantity = $this->db->prepare("UPDATE PRODOTTI_CARRELLO SET Quantità=Quantità+1 WHERE (IdCarrello = ? && Prodotto = ?)");
+        $stmtQuantity->bind_param('ii', $cartId[0]["IdCarrello"], $articleId);
+        $stmtQuantity->execute();
+    }
+
+    public function minusItemCartFromId($articleId, $userEmail){
+        $cartId = $this->getCartFromUser($userEmail);
+        $actualAmount = $this->amountFromCart($articleId, $cartId);
+        if($actualAmount[0]["Quantità"] > 1){
+            echo "update";
+            $this->decQuantityCart($articleId, $cartId);
+        }
+        else{
+            echo "delete";
+        }
+    }
+
+    public function plusItemCartFromId($articleId, $userEmail){
+        $actualAmount = $this->getAmountFromProduct($articleId);
+        $cartAmount = $this->amountFromCart($articleId, $this->getCartFromUser($userEmail));
+        $cartAmount[0]["Quantità"]++;
+        if($cartAmount[0]["Quantità"] > $actualAmount){
+            echo "not ok";
+        }
+        else{
+            echo "ok";
+        }
+    }
+
     private function getCartFromUser($userEmail){
         $stmt = $this->db->prepare("SELECT MAX(IdCarrello) AS IdCarrello FROM CARRELLO WHERE Utente=?");
         $stmt->bind_param('s', $userEmail);
@@ -126,6 +163,8 @@ class DatabaseHelper{
         $stmtUpdate->bind_param('ii', $Quantità, $articleId);
         $stmtUpdate->execute();
     }
+
+    
 
     private function addOrder($userEmail, $date, $total){
         $cartId = $this->getCartFromUser($userEmail)[0]["IdCarrello"];

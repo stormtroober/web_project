@@ -40,6 +40,29 @@ if(login_check($dbh->getDb()) == true){
     $dbh->removeItemFromCart($userEmail, $articleToRemove);
     header("Refresh:0; url=cart.php");
   }
+
+  $minus = false; 
+  if(isset($_GET["minus"])){
+    $minus = $_GET["minus"];
+    $articleToModify = $_GET["id"];
+  }
+
+  $plus = false;
+  if(isset($_GET["plus"])){
+    $plus = $_GET["plus"];
+    $articleToModify = $_GET["id"];
+  }
+
+  if($minus == true){
+    $dbh->minusItemCartFromId($articleToModify, $userEmail);
+    header("Refresh:0; url=cart.php");
+  }
+
+  if($plus == true){
+    $dbh->plusItemCartFromId($articleToModify, $userEmail);
+    header("Refresh:0; url=cart.php");
+  }
+
   $buy = false;
   if(isset($_GET["buy"])){
     $buy = $_GET["buy"];
