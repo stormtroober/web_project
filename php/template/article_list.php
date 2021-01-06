@@ -27,7 +27,7 @@
                             <img src="../resources/icons/tick.png" height="35px" width="25px" class="me-2" alt="tick verify">
                             <span class="text_list"><?php echo explode("-", $articolo["Caratteristiche"])[2]; ?></span>
                         </div>
-                        <div class="d-flex mt-4"> <span id="available" class="text_list"><?php echo $articolo["Quantità"] ?></span>
+                        <div class="d-flex mt-4"> <span class="available text_list"><?php echo $articolo["Quantità"] ?></span>
                         </div>
                     </div>
                 </div>
