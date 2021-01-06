@@ -71,6 +71,9 @@
       <form method="post" action="cart.php?buy=true">
         <button type="submit" class="btn btn-dark float-end mt-4 mb-2">Buy now</button>
       </form>
+      <form method="post" action="cart.php?delete=true">
+        <button type="submit" class="btn btn-dark float-end mx-3 mt-4 mb-2">Delete cart</button>
+      </form>
       </div>
     </div>
     <div class="col-lg-1"></div>

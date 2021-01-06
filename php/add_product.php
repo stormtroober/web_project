@@ -1,5 +1,4 @@
 <?php
-
 require_once("db/include.php");
 require_once("utils/functions.php");
 
