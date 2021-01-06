@@ -1,7 +1,7 @@
 <main>
-  <div class="row p-5">
-    <div class="col-1 col-md-2 col-lg-3"></div>
-    <div class="col-10 col-md-8 col-lg-6">
+  <div class="row px-3 pt-5">
+    <div class="col-md-2 col-lg-3"></div>
+    <div class="col-12 col-md-8 col-lg-6">
       <form action="login.php?info=account" method="post" name="login_form">
         <div class="form-group">
           <label for="email">Email address</label>
@@ -24,6 +24,6 @@
       <button class="btn btn-dark float-end m-1"><a class="text-decoration-none text-white" href="./registration.php">Register</a></button>
       </form>
     </div>
-    <div class="col-1 col-md-2 col-lg-3"></div>
+    <div class="col-md-2 col-lg-3"></div>
   </div>
 </main>
