@@ -1,6 +1,6 @@
 # Guitar Benter
 
-Per utilizzare il sito, inserire il database attraverso la query "SITO_STRUMENTI2.ddl", e popolarla attraverso "populate.txt".
+Per utilizzare il sito, inserire il database attraverso la query "SITO_STRUMENTI2.ddl", e popolarlo attraverso "populate.txt".
 A questo punto, per accedere a tutte le funzioni del sito occorrerà registrarsi.
 
 ## Design
