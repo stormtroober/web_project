@@ -157,9 +157,14 @@ class DatabaseHelper{
                 $total = $total + ($productInfo[0]["Prezzo"] * $prod["Quantità"]);
                 $this->decQuantityProduct($prod["Prodotto"],$prod["Quantità"]);
             }
-            $this->addOrder($userEmail,date('Y-m-d H:i:s'),$total);
-            $this->addCartToUser($userEmail);
-            return 0;
+            if($total != 0){
+                $this->addOrder($userEmail,date('Y-m-d H:i:s'),$total);
+                $this->addCartToUser($userEmail);
+                return 0;
+            }
+            else{
+                return -2;
+            }
         }
         else{
             return -1;
