@@ -35,7 +35,11 @@
             ?>
             <tr>
               <td><?php echo $articolo["Nome"]; ?></td>
-              <td>x<?php echo $articolo["Quantità"]; ?></td>
+              <td>
+              <img src="../resources/icons/minus.png" alt="minus" height="20px" width="20px"></img>
+              x<?php echo $articolo["Quantità"]; ?>
+              <img src="../resources/icons/plus.png" alt="plus" height="15px" width="15px" class="mb-1"></img>
+              </td>
               <td>
                 <?php 
                   global $totale;
@@ -72,7 +76,7 @@
         <button type="submit" class="btn btn-dark float-end mt-4 mb-2">Buy now</button>
       </form>
       <form method="post" action="cart.php?delete=true">
-        <button type="submit" class="btn btn-dark float-end mx-3 mt-4 mb-2">Delete cart</button>
+        <button type="submit" class="btn btn-dark mt-4 mb-2">Delete cart</button>
       </form>
       </div>
     </div>
