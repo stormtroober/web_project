@@ -30,7 +30,7 @@
                   class="h-25" style="max-width:150px; max-height: 150px;" alt="<?php echo $articolo["Nome"] ?>"></td>
               <td class="align-middle">
               <a href = "article_page.php?add=false&id=<?php echo $articolo["ID"];?>"
-                 class = "text-decoration-none text-dark">
+                 class = "text-dark">
                  <?php echo $articolo["Nome"]; ?>
               </a> 
               </td>
