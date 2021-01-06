@@ -293,6 +293,13 @@ class DatabaseHelper{
         $stmt->execute();
     }
 
+    public function cleanCart($userEmail){
+        $cartId = $this->getCartFromUser($userEmail);
+        $stmt = $this->db->prepare("DELETE FROM PRODOTTI_CARRELLO WHERE IdCarrello = ?");
+        $stmt->bind_param('i', $cartId[0]["IdCarrello"]);
+        $stmt->execute();
+    }
+    
     public function removeItemFromWish($userEmail, $articleId){
         $stmt = $this->db->prepare("DELETE FROM PRODOTTI_LISTA_DESIDERI WHERE Utente = ? AND Prodotto = ?");
         $stmt->bind_param('si', $userEmail, $articleId);

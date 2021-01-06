@@ -48,10 +48,20 @@ if(login_check($dbh->getDb()) == true){
       $articleToModify = $_GET["id"];
     }
 
+    $delete = false;
+    if(isset($_GET["delete"])){
+      $delete = $_GET["delete"];
+    }
+
     $plus = false;
     if(isset($_GET["plus"])){
       $plus = $_GET["plus"];
       $articleToModify = $_GET["id"];
+    }
+
+    if($delete == true){
+      $dbh->cleanCart($userEmail);
+      header("Refresh:0; url=cart.php");
     }
 
     if($minus == true){
