@@ -29,12 +29,7 @@ if(login_check($dbh->getDb()) == true){
     if($utente[0]["Tipo"] == "consumer"){
         $addres = $dbh->addToCart($userEmail, $articleID, $Quantità);
         header("Location: article_page.php?add=false&id=".$articleID);
-        if ($addres == -2) {
-            $notification = "Can't add ".$templateParams["articolo"][0]["Nome"]." to cart, already added";
-            $dbh->addNotification($notification);
-            $templateParams["notifiche"] = $dbh->getNotifications();
-            $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
-        } else if($addres == -1) {
+        if ($addres < 0) {
             $notification = "Can't add ".$templateParams["articolo"][0]["Nome"]." to cart, there are no more";
             $dbh->addNotification($notification);
             $templateParams["notifiche"] = $dbh->getNotifications();
@@ -45,6 +40,11 @@ if(login_check($dbh->getDb()) == true){
             $templateParams["notifiche"] = $dbh->getNotifications();
             $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
         }
+    } else {
+        $notification = "Access denied to cart! This is a seller account";
+        $dbh->addNotification($notification);
+        $templateParams["notifiche"] = $dbh->getNotifications();
+        $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
     }
     } else if($add == "wish"){
         if($utente[0]["Tipo"] == "consumer"){
@@ -53,6 +53,11 @@ if(login_check($dbh->getDb()) == true){
             $dbh->addNotification($notification);
             $templateParams["notifiche"] = $dbh->getNotifications();
             $dbh->addToWishList($userEmail, $articleID);
+        } else {
+            $notification = "Access denied to wishlist! This is a seller account";
+            $dbh->addNotification($notification);
+            $templateParams["notifiche"] = $dbh->getNotifications();
+            $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
         }
     }
 }   
