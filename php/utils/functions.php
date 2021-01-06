@@ -22,7 +22,8 @@ function login($email, $password, $mysqli) {
         if($stmt->num_rows == 1) {
             if(checkbrute($user_id, $mysqli) == true) { 
                // Account disabilitato
-               // Invia un e-mail all'utente avvisandolo che il suo account è stato disabilitato.
+               $dbh->deleteNotifications();
+               $dbh->deleteAccount($email);
                return false;
             } else {
             if($db_password == $password) {

@@ -16,15 +16,15 @@
         <ul class="list-group mb-3">
                 <li class="list-group-item bg-dark text-white">Selled Products</li>
                 <li class="list-group-item">
-                        <?php foreach($templateParams["vendite"] as $sale): ?>
-                        <ul class="list-group mb-2 px-2">
-                            <li class="list-group-item fw-bold bg-light-gray">Prodotto: <?php echo $sale["Nome"]; ?></li>
-                            <li class="list-group-item">Data: <?php $date = new DateTime($sale["Data"]);
-                            echo $date->format('Y-m-d H:i:s'); ?></li>
-                            <li class="list-group-item">Quantità: <?php echo $sale["Quantità"]; ?></li>
-                            <li class="list-group-item">Utente: <?php echo $sale["Utente"]; ?></li>
-                        </ul>
-                        <?php endforeach; ?>
+                    <?php foreach($templateParams["vendite"] as $sale): ?>
+                    <ul class="list-group mb-2 px-2">
+                        <li class="list-group-item fw-bold bg-light-gray">Prodotto: <?php echo $sale["Nome"]; ?></li>
+                        <li class="list-group-item">Data: <?php $date = new DateTime($sale["Data"]);
+                        echo $date->format('Y-m-d H:i:s'); ?></li>
+                        <li class="list-group-item">Quantità: <?php echo $sale["Quantità"]; ?></li>
+                        <li class="list-group-item">Utente: <?php echo $sale["Utente"]; ?></li>
+                    </ul>
+                    <?php endforeach; ?>
                 </li>
             </ul>
         </div>
