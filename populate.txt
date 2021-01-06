@@ -23,7 +23,7 @@ Premium features include an alder body, quartersawn eastern hard rock maple neck
 The JSM20 features a thin, double cutaway, semi-hollow body design with a maple top with ƒ holes and multi-layer binding and maple back and sides mated to a set-in sapele neck with a 22-fret ebony fingerboard with binding and aged white acrylic and abalone split block position markers. 
 Components include dual Ibanez Super 58 humbucking pickups with gold covers and individual volume and tone controls and a tri-sound switch for the neck pickup, a Tune-o-matic style bridge with Quik Change III tailpiece, a bone nut and a black pickguard.",
 "Body: Basswood-3 Piece neck: Maple/Nyatoh-Fretboard: Ebony", 1090, 1,"admin@admin.com"),
-("Gibson Les Paul Classic HCS", "Guitar", "Gibson", "Les Paul_HCS", "The Gibson Les Paul™ Classic combines the early 60's style Les Paul model with some functional and time-tested modifications. 
+("Gibson Les Paul Classic HCS", "Guitar", "Gibson", "Les_Paul_HCS", "The Gibson Les Paul™ Classic combines the early 60's style Les Paul model with some functional and time-tested modifications. 
 As expected, the LP Classic is crafted with a mahogany back and maple top coupled with a slim taper mahogany neck and bound, rosewood fingerboard. BurstBucker™ 61R & 61T zebra, open-coil pickups provide classic Gibson tones from the era with a bit of extra punch thanks to the open coils. 
 The control assembly features 4 push-pull pots which provide choices of coil tapping, phase switching, and pure bypassing for functional and versatile sonic variety.",
 "Body: Mahogany-Cream colored body binding-Top: Maple", 1829, 1,"admin@admin.com"),

@@ -8,23 +8,22 @@
                     alt="<?php echo $articolo["Nome"];?>">
             </div>
             <div class="col-12 col-md-7 col-lg-5 pt-3">
-                <a class="text-decoration-none text-dark h3"
-                    href="article_page.php?add=false&id=<?php echo $articolo["ID"]?>"
-                    class="fs-4 fs-md-3 fs-lg-2 fs-xl-1 px-2">
+                <a href="article_page.php?add=false&id=<?php echo $articolo["ID"]?>"
+                    class="fs-4 fs-md-3 fs-lg-2 fs-xl-1 px-2 text-decoration-none text-dark h3">
                     <?php echo $articolo["Nome"]; ?>
                 </a>
                 <div class="my-3 my-lg-4">
                     <div class="d-flex flex-column">
                         <div class="d-flex">
-                            <img src="../resources/icons/tick.png" height="35px" width="25px" class="me-2" alt="tick verify">
+                            <img src="../resources/icons/tick.png" height="35" width="25" class="me-2" alt="tick verify">
                             <span class="fs-5 fs-xl-3"><?php echo explode("-", $articolo["Caratteristiche"])[0]; ?></span>
                         </div>
                         <div class="d-flex">
-                            <img src="../resources/icons/tick.png" height="35px" width="25px" class="me-2" alt="tick verify">
+                            <img src="../resources/icons/tick.png" height="35" width="25" class="me-2" alt="tick verify">
                             <span class="text_list"><?php echo explode("-", $articolo["Caratteristiche"])[1]; ?></span>
                         </div>
                         <div class="d-flex">
-                            <img src="../resources/icons/tick.png" height="35px" width="25px" class="me-2" alt="tick verify">
+                            <img src="../resources/icons/tick.png" height="35" width="25" class="me-2" alt="tick verify">
                             <span class="text_list"><?php echo explode("-", $articolo["Caratteristiche"])[2]; ?></span>
                         </div>
                         <div class="d-flex mt-4"> <span class="available text_list"><?php echo $articolo["Quantità"] ?></span>
