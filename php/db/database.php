@@ -174,8 +174,17 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    private function amountFromCart($articleId, $cartId){
+        $stmtQuantity = $this->db->prepare("SELECT Quantità FROM PRODOTTI_CARRELLO WHERE (IdCarrello = ? && Prodotto = ?)");
+        $stmtQuantity->bind_param('ii', $cartId[0]["IdCarrello"], $articleId);
+        $stmtQuantity->execute();
+        $result = $stmtQuantity->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
     public function addToCart($userEmail, $articleId, $Quantità){
-        if($this->getAmountFromProduct($articleId) - $Quantità >= 0){
+        $actualAmount = $this->getAmountFromProduct($articleId);
+        if($actualAmount - $Quantità >= 0){
             $cartId = $this->getCartFromUser($userEmail);
             if(!$this->itemInCartExist($articleId, $cartId)){
                 $stmtInsert = $this->db->prepare("INSERT INTO PRODOTTI_CARRELLO (IdCarrello, Prodotto, Quantità) VALUES (?,?,?)");
@@ -184,9 +193,16 @@ class DatabaseHelper{
             }
             else{
                 //controlla che la quantità nuova non sia > di quella in prodotti
-                $stmtUpdate = $this->db->prepare("UPDATE PRODOTTI_CARRELLO SET Quantità=Quantità+1 WHERE (IdCarrello = ? && Prodotto = ?)");
-                $stmtUpdate->bind_param('ii', $cartId[0]["IdCarrello"], $articleId);
-                $stmtUpdate->execute();
+                $amountCart = $this->amountFromCart($articleId,$cartId);
+                if($actualAmount > $amountCart[0]["Quantità"]){
+                    $stmtUpdate = $this->db->prepare("UPDATE PRODOTTI_CARRELLO SET Quantità=Quantità+1 WHERE (IdCarrello = ? && Prodotto = ?)");
+                    $stmtUpdate->bind_param('ii', $cartId[0]["IdCarrello"], $articleId);
+                    $stmtUpdate->execute();
+                }
+                else{
+                    return -2;
+                }
+                
             }
             return 0;
         }
@@ -194,6 +210,8 @@ class DatabaseHelper{
             return -1;
         }
     }
+
+
 
     public function addToWishList($userEmail, $articleId){
         $stmtInsert = $this->db->prepare("INSERT INTO PRODOTTI_LISTA_DESIDERI (Prodotto, Utente) VALUES (?,?)");
