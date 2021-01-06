@@ -7,8 +7,7 @@
             </div>
             <div class="col-md-3 col-6">
             <h6 class="text-monospace text-center">Contacts</h6>
-            <p>+39 347 812 4578</p>
-            <p>guitar.benter@studio.unibo.it</p>
+            <p>+39 347 812 4578<br>guitar.benter@studio.unibo.it</p>
             </div>
             <div class="col-md-3 col-6">
             <h6 class="text-monospace text-center">Infos</h6>
