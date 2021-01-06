@@ -5,6 +5,8 @@ error_reporting(E_ALL);
 require_once("db/include.php");
 require_once("utils/functions.php");
 
+$templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
+
 $userId = 1;
 if(isset($_GET["id"])){
   $userId = $_GET["id"];
