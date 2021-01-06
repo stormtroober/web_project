@@ -364,6 +364,7 @@ class DatabaseHelper{
          AND PRODOTTI.Utente = ?");
         $stmt->bind_param('s', $email);
         $stmt->execute();
+        return $result->fetch_all(MYSQLI_ASSOC);
     }
 }
 
