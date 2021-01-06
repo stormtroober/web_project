@@ -13,7 +13,7 @@ if(isset($_POST["name"], $_POST["surname"], $_POST["email"], $_POST["password"],
     if($_POST["account_type"] == "consumer"){
         $dbh->addCartToUser($_POST["email"]);
     }
-    $templateParams["nome"] = "slide-show.php";
+    header("Location: login.php");
     }
 } else {
     if(isset($_GET["prova"])) {
