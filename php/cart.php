@@ -52,10 +52,10 @@ if(login_check($dbh->getDb()) == true){
     }
     else{
       if($returnValue == -2){
-        $notification = "Order not created, cart is empty!";
+        $notification = "Can't buy, error while buying";
         $dbh->addNotification($notification);
         $templateParams["notifiche"] = $dbh->getNotifications();
-        $templateParams["nome"] = "slide-show.php";
+        $templateParams["nome"] = "cart_template.php";
       }
       else{
         $notification = "Order created successfully!";

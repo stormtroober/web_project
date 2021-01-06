@@ -24,10 +24,15 @@ sec_session_start();
 if(login_check($dbh->getDb()) == true){
   $userEmail = $_SESSION['user_id'];
   if($add == "cart"){
-    $notification = "Added ".$templateParams["articolo"][0]["Nome"]." to cart";
-    $dbh->addNotification($notification);
-    $templateParams["notifiche"] = $dbh->getNotifications();
-    $dbh->addToCart($userEmail, $articleID, $Quantità);
+    if ($dbh->addToCart($userEmail, $articleID, $Quantità) == -2) {
+        $notification = "Can't add".$templateParams["articolo"][0]["Nome"]." to cart, there are no more";
+        $dbh->addNotification($notification);
+        $templateParams["notifiche"] = $dbh->getNotifications();
+    } else {
+        $notification = "Added ".$templateParams["articolo"][0]["Nome"]." to cart";
+        $dbh->addNotification($notification);
+        $templateParams["notifiche"] = $dbh->getNotifications();
+    }
 } else if($add == "wish"){
     $notification = "Added ".$templateParams["articolo"][0]["Nome"]." to wish list";
     $dbh->addNotification($notification);

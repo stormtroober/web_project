@@ -37,7 +37,11 @@
                 echo "<li class=\"dropdown-item\">".$notifica["Notifica"]."</li>";
               endforeach;
             ?>
-            <li class="dropdown-item list-group-item-action list-group-item-primary text-center" id="clear">Clear all</li>
+            <li class="dropdown-item text-center">
+              <form action="./clear_notifications.php?url=<?php echo $templateParams["nome"] ?>" method="post">
+                <button type="submit" class="btn btn-primary">Clear All</button>
+              </form>
+            </li>
             </ul>
           </li>
           <li class="nav-item text-center px-2">

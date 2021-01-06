@@ -1,23 +1,23 @@
 -- *********************************************
--- * SQL MySQL generation                      
+-- * SQL MySQL generation
 -- *--------------------------------------------
--- * DB-MAIN version: 11.0.1              
--- * Generator date: Dec  4 2018              
--- * Generation date: Sun Jan  3 17:23:55 2021 
--- * LUN file: C:\Users\Thomas\Desktop\TecnologieWeb\SITO_STRUMENTI - Copia.lun 
--- * Schema: LOGICO3/1 
--- ********************************************* 
+-- * DB-MAIN version: 11.0.1
+-- * Generator date: Dec  4 2018
+-- * Generation date: Sun Jan  3 17:23:55 2021
+-- * LUN file: C:\Users\Thomas\Desktop\TecnologieWeb\SITO_STRUMENTI - Copia.lun
+-- * Schema: LOGICO3/1
+-- *********************************************
 
 
 -- Database Section
--- ________________ 
+-- ________________
 
 create database guitar_benter;
 use guitar_benter;
 
 
 -- Tables Section
--- _____________ 
+-- _____________
 
 create table CARRELLO (
      IdCarrello int(11) not null AUTO_INCREMENT,
@@ -68,7 +68,7 @@ create table UTENTI (
      Tipo char(20) not null,
      Indirizzo char(30) not null,
      constraint IDUTENTI_ID primary key (Email));
-     
+
 create table LOGIN_ATTEMPTS (
      Email char(40) not null,
      time varchar(30) not null
@@ -81,7 +81,7 @@ create table NOTIFICHE (
 
 
 -- Constraints Section
--- ___________________ 
+-- ___________________
 
 alter table CARRELLO add constraint FKPossiede_FK
      foreign key (Utente)
@@ -107,7 +107,7 @@ alter table PRODOTTI add constraint FKInserisce
 -- Not implemented
 -- alter table PRODOTTI_CARRELLO add constraint FKInserimento_CHK
 --     check(exists(select * from ORDINE
---                  where ORDINE.IdCarrello = IdCarrello)); 
+--                  where ORDINE.IdCarrello = IdCarrello));
 
 alter table PRODOTTI_CARRELLO add constraint FKInserimento_FK
      foreign key (IdCarrello)
@@ -135,13 +135,13 @@ DROP INDEX FKAggiunge_ID;
 -- Not implemented
 -- alter table UTENTI add constraint IDUTENTI_CHK
 --     check(exists(select * from PRODOTTI
---                  where PRODOTTI.Utente = Email)); 
+--                  where PRODOTTI.Utente = Email));
 
 -- Not implemented
 -- alter table UTENTI add constraint IDUTENTI_CHK
 --     check(exists(select * from CARRELLO
---                  where CARRELLO.Utente = Email)); 
+--                  where CARRELLO.Utente = Email));
 
 
 -- Index Section
--- _____________ 
+-- _____________
