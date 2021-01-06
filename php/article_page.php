@@ -23,6 +23,7 @@ $Quantità = 1;
 sec_session_start();
 if(login_check($dbh->getDb()) == true){
   $userEmail = $_SESSION['user_id'];
+  $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
   if($add == "cart"){
     if ($dbh->addToCart($userEmail, $articleID, $Quantità) == -2) {
         $notification = "Can't add".$templateParams["articolo"][0]["Nome"]." to cart, there are no more";

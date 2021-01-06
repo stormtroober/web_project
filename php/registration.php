@@ -1,6 +1,7 @@
 <?php
 require_once("./db/include.php");
 
+$templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
 
 if(isset($_POST["name"], $_POST["surname"], $_POST["email"], $_POST["password"], $_POST["address"], $_POST["account_type"])) {
     $password = $_POST["password"]; 

@@ -5,6 +5,7 @@ error_reporting(E_ALL);
 require_once("db/include.php");
 
 $templateParams["nome"] = "article_list.php";
+$templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
 
 $idcategoria = -1;
 if(isset($_GET["type"])){

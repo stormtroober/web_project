@@ -6,6 +6,7 @@ sec_session_start();
 if(login_check($dbh->getDb()) == true){
   $userEmail = $_SESSION['user_id'];
   $templateParams["nome"] = "add_product_template.php";
+  $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
   
   if(isset($_POST["name"], $_POST["brand"], $_POST["type"], $_POST["description"], 
   $_POST["feature1"], $_POST["feature2"], $_POST["feature3"], $_POST["price"], $_POST["quantity"]

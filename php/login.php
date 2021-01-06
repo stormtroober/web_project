@@ -2,6 +2,8 @@
 require_once("db/include.php");
 require("utils/functions.php");
 
+$templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
+
 sec_session_start();
 if(login_check($dbh->getDb()) == true) {
     $userEmail = $_SESSION['user_id'];
