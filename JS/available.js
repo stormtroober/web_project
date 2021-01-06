@@ -1,7 +1,8 @@
 $(document).ready(function() {
-    let spans = jQuery("[id=available]");
+    let spans = $('.available');
     let notAvailable = false;
     spans.each(function() {
+        console.log("a");
         if(parseInt($(this).text()) > 0){
             if(parseInt($(this).text()) == 1){
                 $(this).text("Only 1 left!");
