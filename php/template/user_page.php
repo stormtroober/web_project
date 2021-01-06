@@ -9,19 +9,19 @@
       </div>
     </div>
     <div class="col-12 col-md-6 col-lg-7 p-5 py-md-1">
-      <h3>Informazioni Account</h3>
+      <span class = "h3">Informazioni Account</span>
       <div class="container px-0 py-3">
         <div class="input-group mb-3">
-          <label for="nome" class="form-control"><?php echo $templateParams["utente"][0]["Nome"] ?></label>
+          <label class="form-control"><?php echo $templateParams["utente"][0]["Nome"] ?></label>
         </div>
         <div class="input-group mb-3">
-          <label for="cognome" class="form-control"><?php echo $templateParams["utente"][0]["Cognome"] ?></label>
+          <label class="form-control"><?php echo $templateParams["utente"][0]["Cognome"] ?></label>
         </div>
         <div class="input-group mb-3">
-          <label for="email" class="form-control"><?php echo $templateParams["utente"][0]["Email"] ?></label>
+          <label class="form-control"><?php echo $templateParams["utente"][0]["Email"] ?></label>
         </div>
         <div class="input-group mb-3">
-          <label for="indirizzo" class="form-control"><?php echo $templateParams["utente"][0]["Indirizzo"] ?></label>
+          <label class="form-control"><?php echo $templateParams["utente"][0]["Indirizzo"] ?></label>
         </div>
       </div>
     </div>
