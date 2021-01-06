@@ -31,7 +31,7 @@
               <td class="align-middle"><?php echo $articolo["Nome"]; ?></td>
               <td class="align-middle"><?php echo $articolo["Prezzo"]; ?>$</td>
               <td class="align-middle">
-                <form method="post" action="wishlist.php?remove=true&id=<?php echo $articolo["ID"]?>">
+                <form method="post" action="login.php?info=prodotti&remove=true&id=<?php echo $articolo["ID"]?>">
                   <input type="image" src="../resources/icons/remove.png" height="30" width="25" alt="remove_item">
                 </form>
               </td>
@@ -40,7 +40,7 @@
         </table>
         <?php } endforeach; 
         if (empty($templateParams["articoli"])){
-          echo "<h2>You haven't added any items yet!</h2>"; 
+          echo "<h2 class=\"ps-3\">You haven't added any items yet!</h2>"; 
         } ?>
       </div>
     </div>

@@ -34,6 +34,11 @@ if(login_check($dbh->getDb()) == true) {
         } else if($info == "addp") {
             $templateParams["nome"] = "add_product_template.php";
         } else if($info == "prodotti") {
+            if(isset($_GET["remove"], $_GET["id"] )){
+                if($_GET["remove"]){
+                    $dbh->removeProduct($userEmail, $_GET["id"]);
+                }
+            }
             $templateParams["articoli"] = $dbh->getPostByUser($userEmail);
             $templateParams["nome"] = "added_product_template.php"; //PAGINA PRODOTTI INSERITI
         }

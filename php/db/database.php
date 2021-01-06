@@ -306,6 +306,12 @@ class DatabaseHelper{
         $stmt->execute();
     }
 
+    public function removeProduct($userEmail, $articleId) {
+        $stmt = $this->db->prepare("DELETE FROM PRODOTTI WHERE Utente = ? AND ID = ?"); 
+        $stmt->bind_param('si', $userEmail, $articleId);
+        $stmt->execute();
+    }
+
     public function addNotification($notification) {
         $stmt = $this->db->prepare("INSERT INTO NOTIFICHE (Notifica) VALUES (?)");
         $stmt->bind_param('s', $notification);
