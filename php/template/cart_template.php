@@ -36,13 +36,9 @@
             <tr>
               <td><?php echo $articolo["Nome"]; ?></td>
               <td>
-              <form method="post" action="cart.php?minus=true&id=<?php echo $articolo["ID"]?>">
-                <input type="image" src="../resources/icons/minus.png" alt="minus" height="15" width="15"></input>
-              </form>
+              <a href="cart.php?minus=true&id=<?php echo $articolo["ID"]?>"><img src="../resources/icons/minus.png" alt="minus" height="15" width="15"></a>
               x<?php echo $articolo["Quantità"]; ?>
-              <form method="post" action="cart.php?plus=true&id=<?php echo $articolo["ID"]?>">
-                <input type="image" src="../resources/icons/plus.png" alt="plus" height="15" width="15" class="mb-1"></input>
-              </form>
+              <a href="cart.php?plus=true&id=<?php echo $articolo["ID"]?>"><img src="../resources/icons/plus.png" class="mb-1" alt="plus" height="12" width="12"></a>
               </td>
               <td>
                 <?php 
