@@ -350,6 +350,12 @@ class DatabaseHelper{
         $stmt = $this->db->prepare("DELETE FROM NOTIFICHE");
         $stmt->execute();
     }
+
+    public function deleteAccount($email) {
+        $stmt = $this->db->prepare("DELETE FROM UTENTI WHERE Email = ?");
+        $stmt->bind_param('s', $email);
+        $stmt->execute();
+    }
 }
 
 ?>

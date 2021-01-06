@@ -33,6 +33,9 @@
       <form action="./logout.php" method="post">
         <input type="submit" value="Logout" id="logout" class="btn btn-dark float-end m-1">
       </form>
+      <form action="./delete_account.php" method="post">
+        <input type="submit" value="Delete Account" id="logout" class="btn btn-dark float-end m-1">
+      </form>
     </div>
   </div>
 </main>

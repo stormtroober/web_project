@@ -49,7 +49,14 @@ if(login_check($dbh->getDb()) == true){
     if ($imgUploadOk){
         $dbh->addProduct($_POST["name"], $_POST["brand"], $_POST["type"], $_POST["description"], $features,
         $_POST["price"], $_POST["quantity"], $folderName, $userEmail);
+        $notification = "Added ".$_POST["name"]." to the shop";
+        $dbh->addNotification($notification);
+        $templateParams["notifiche"] = $dbh->getNotifications();
+        $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
     } else {
+        $notification = "Failed to add ".$_POST["name"]." in the shop";
+        $dbh->addNotification($notification);
+        $templateParams["notifiche"] = $dbh->getNotifications();
         echo "Product has not been added";
     }
     
