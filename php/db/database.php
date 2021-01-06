@@ -358,7 +358,7 @@ class DatabaseHelper{
     }
 
     public function getSelledProducts($email) {
-        $stmt = $this->db->prepare("SELECT CARRELLO.Utente, ORDINE.Data, Prodotto, PRODOTTI_CARRELLO.Quantità FROM ORDINE, PRODOTTI_CARRELLO, PRODOTTI, CARRELLO
+        $stmt = $this->db->prepare("SELECT CARRELLO.Utente, ORDINE.Data, PRODOTTI.Nome, PRODOTTI_CARRELLO.Quantità FROM ORDINE, PRODOTTI_CARRELLO, PRODOTTI, CARRELLO
         WHERE ORDINE.IdCarrello = PRODOTTI_CARRELLO.IdCarrello
          AND PRODOTTI.ID = PRODOTTI_CARRELLO.Prodotto AND CARRELLO.IdCarrello = PRODOTTI_CARRELLO.IdCarrello 
          AND PRODOTTI.Utente = ?");
