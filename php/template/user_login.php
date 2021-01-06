@@ -5,9 +5,9 @@
       <form action="login.php?info=account" method="post" name="login_form">
         <div class="form-group">
           <label for="email">Email address</label>
-          <input type="email" class="form-control" name="email" aria-describedby="email"
+          <input id="email" name="email" type="email" class="form-control" aria-describedby="email"
             placeholder="Enter email">
-          <small id="email" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          <small class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
           <label for="password">Password</label>
@@ -21,7 +21,7 @@
           echo $templateParams["errore_login"];
         } ?>
         <input type="submit" value="Login" class="btn btn-dark float-end m-1">
-      <button class="btn btn-dark float-end m-1"><a class="text-decoration-none text-white" href="./registration.php">Register</a></button>
+      <a class="btn btn-dark float-end m-1 text-decoration-none text-white" href="./registration.php">Register</a>
       </form>
     </div>
     <div class="col-md-2 col-lg-3"></div>
