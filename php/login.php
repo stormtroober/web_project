@@ -14,6 +14,15 @@ if(login_check($dbh->getDb()) == true) {
             if ($templateParams["utente"][0]["Tipo"] == "consumer") {
                 $templateParams["nome"] = "user_page.php";
             } else {
+                $templateParams["sales"] = $dbh->getSales($userEmail);
+                if(!empty($templateParams["sales"])) {
+                    foreach($templateParams["sales"] as $sale) {
+                        $notification = $sale["Utente"]." bought ".$sale["Nome"].", amount: ".$sale["Quantità"];
+                        $dbh->addNotification($notification);
+                    }
+                }
+                $templateParams["notifiche"] = $dbh->getNotifications();
+                $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
                 $templateParams["nome"] = "seller_page.php";
             }
         } else if($info == "ordini") {

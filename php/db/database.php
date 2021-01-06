@@ -374,6 +374,16 @@ class DatabaseHelper{
         $stmt->bind_param('ss', $data, $email);
         $stmt->execute();
     }
+
+    public function getSales($userEmail) {
+        $stmt = $this->db->prepare("SELECT CARRELLO.Utente, PRODOTTI.Nome, PRODOTTI_CARRELLO.Quantità 
+        FROM ORDINE, PRODOTTI_CARRELLO, PRODOTTI, CARRELLO WHERE ORDINE.IdCarrello = PRODOTTI_CARRELLO.IdCarrello AND PRODOTTI.ID = PRODOTTI_CARRELLO.Prodotto AND CARRELLO.IdCarrello = PRODOTTI_CARRELLO.IdCarrello 
+        AND PRODOTTI.Utente = ? AND ORDINE.Data > (SELECT UltimoAccesso FROM UTENTI WHERE Email = ?)");
+        $stmt->bind_param('ss', $userEmail, $userEmail);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 }
 
 ?>
