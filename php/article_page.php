@@ -44,6 +44,7 @@ if(login_check($dbh->getDb()) == true){
         $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
     }
 } else if($add == "wish"){
+    header("Location: article_page.php?add=false&id=".$articleID);
     $notification = "Added ".$templateParams["articolo"][0]["Nome"]." to wish list";
     $dbh->addNotification($notification);
     $templateParams["notifiche"] = $dbh->getNotifications();
