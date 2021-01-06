@@ -43,7 +43,7 @@
               endforeach;
             ?>
             <li class="dropdown-item text-center">
-              <a class="text-decoration-none text-primary" href="./clear_notifications.php?url=<?php echo basename($_SERVER['PHP_SELF']) . "?" . $_SERVER['QUERY_STRING']; ?>">Clear All</a>
+              <a class="btn text-decoration-none text-primary w-100" href="./clear_notifications.php?url=<?php echo basename($_SERVER['REQUEST_URI']); ?>">Clear All</a>
             </li>
             </ul>
           </li>
