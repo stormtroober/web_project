@@ -9,20 +9,24 @@
         <a href="./login.php?info=addp" class="list-group-item list-group-item-action">Add a product</a>
       </div>
     </div>
-    <div class="col-12 col-md-6 col-lg-7 p-5 py-md-1">
+    <div class="col-12 col-md-6 col-lg-7 py-5 ps-4 py-md-1">
       <h3>Informazioni Account</h3>
-      <div class="container px-0 py-3">
+      <div class="container ps-2 py-3">
         <div class="input-group mb-3">
-          <label for="nome" class="form-control" ><?php echo $templateParams["utente"][0]["Nome"] ?></label>
+          <label for="nome" class="col-form-control">First Name</label>
+          <input type="text" readonly class="form-control-plaintext fs-5 ps-3" id="nome" value="<?php echo $templateParams["utente"][0]["Nome"] ?>">
         </div>
         <div class="input-group mb-3">
-          <label for="cognome" class="form-control"><?php echo $templateParams["utente"][0]["Cognome"] ?></label>
+          <label for="cognome" class="col-form-control">Second Name</label>
+          <input type="text" readonly class="form-control-plaintext fs-5 ps-3" id="cognome" value="<?php echo $templateParams["utente"][0]["Cognome"] ?>">
         </div>
         <div class="input-group mb-3">
-        <label for="email" class="form-control"><?php echo $templateParams["utente"][0]["Email"] ?></label>
+        <label for="email" class="col-form-control">Email</label>
+          <input type="text" readonly class="form-control-plaintext fs-5 ps-3" id="email" value="<?php echo $templateParams["utente"][0]["Email"] ?>">
         </div>
         <div class="input-group mb-3">
-          <label for="indirizzo" class="form-control"><?php echo $templateParams["utente"][0]["Indirizzo"] ?></label>
+          <label for="indirizzo" class="col-form-control">Address</label>
+          <input type="text" readonly class="form-control-plaintext fs-5 ps-3" id="indirizzo" value="<?php echo $templateParams["utente"][0]["Indirizzo"] ?>">
         </div>
       </div>
     </div>
@@ -31,9 +35,5 @@
         <input type="submit" value="Logout" id="logout" class="btn btn-dark float-end m-1">
       </form>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-12 container "></div>
-  </div>
   </div>
 </main>
