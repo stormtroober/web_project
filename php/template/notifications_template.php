@@ -14,7 +14,7 @@
       </ul>
       <?php
         if(!empty($templateParams["notificheAll"])){
-          echo "<button class=\"btn btn-dark float-end m-3 text-decoration-none text-white\" href=\"clear_notifications.php\">Clear</button>";
+          echo "<a class=\"btn btn-dark float-end m-3 text-decoration-none text-white\" href=\"clear_notifications.php\">Clear</a>";
         } 
         ?>
     </div>
