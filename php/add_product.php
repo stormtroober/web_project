@@ -23,7 +23,6 @@ if(login_check($dbh->getDb()) == true){
     
     $_FILES['photoFront']['name'] = "front.png";
     $uploadfile = $path."/".basename($_FILES['photoFront']['name']);
-    echo $uploadfile;
     if (!move_uploaded_file($_FILES['photoFront']['tmp_name'], $uploadfile)) {
         $imgUploadOk = false;
         echo "Error on uploading photo front\n";
