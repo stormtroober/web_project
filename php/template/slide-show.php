@@ -48,11 +48,9 @@
     <div class="row"> 
         <div class="col-md-2"></div>
         <div class="col-md-8 col-12 text-center">
-        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-        <p>Vivamus neque purus, euismod tristique interdum sed, volutpat ut lectus. Proin convallis consectetur dui vel luctus. Nunc et vulputate quam. 
-            Vestibulum vitae magna in arcu vehicula faucibus. 
-            Donec vestibulum finibus sapien, eu viverra nulla auctor eget. Donec congue dignissim orci non placerat. 
-            Suspendisse ante augue, euismod quis magna a, iaculis pretium tortor.</p>
+        <h4>Welcome to Guitar Benter Online Store!</h4>
+        <p>In this shop you will find all the instruments that you are searching, guitars, 
+        guitar basses, amplifiers and accessories. We have the best brands, Super low prices and much more!</p>
         </div>
     <div class="col-md-2"></div>
     </div>
