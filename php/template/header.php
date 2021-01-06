@@ -43,7 +43,7 @@
               endforeach;
             ?>
             <li class="dropdown-item text-center">
-              <a class="text-decoration-none text-primary" href="clear_notifications.php">Clear All</a>
+              <a class="text-decoration-none text-primary" href="./clear_notifications.php">Clear All</a>
             </li>
             </ul>
           </li>
@@ -52,8 +52,8 @@
             <a class="nav-link active xs-text" aria-current="page" href="cart.php">Shopping Cart</a>
           </li>
           <li class="nav-item text-center px-2">
-            <a class="nav-link" href="whishlist.php"><img src="../resources/icons/desideri.png" height="30" width="30" alt="wishlist_icon"></a>
-            <a class="nav-link active xs-text" aria-current="page" href="whishlist.php">WishList</a>
+            <a class="nav-link" href="wishlist.php"><img src="../resources/icons/desideri.png" height="30" width="30" alt="wishlist_icon"></a>
+            <a class="nav-link active xs-text" aria-current="page" href="wishlist.php">WishList</a>
           </li>
         </ul>
         <div id="order" class="dropdown">

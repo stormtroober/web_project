@@ -1,11 +1,11 @@
 <div class="row">
   <div class="col-lg-2"></div>
     <div class="col-12 col-lg-8 mt-5">
-    <h2 class="p-3">WhishList</h2>
+    <h2 class="p-3">WishList</h2>
       <div class="table-responsive" >
       <?php
       if(empty($items)){
-        echo "<h3>The WhishList is empty!</h3>";
+        echo "<h3>The WishList is empty!</h3>";
       } else {
       ?>
         <table class="table table-sm table-striped table-hover mt-4">
@@ -26,7 +26,7 @@
                 <td class="align-middle"><?php echo $articolo["Nome"]; ?></td>
                 <td class="align-middle"><?php echo $articolo["Prezzo"]; ?>$</td>
                 <td class="align-middle">
-                  <form method="post" action="whishlist.php?remove=true&id=<?php echo $articolo["ID"]?>">
+                  <form method="post" action="wishlist.php?remove=true&id=<?php echo $articolo["ID"]?>">
                     <input type="image" src="../resources/icons/remove.png" height="30" width="25"></input>
                   </form>
                 </td>

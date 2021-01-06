@@ -27,7 +27,7 @@ if(login_check($dbh->getDb()) == true){
   if($add == "cart"){
     $addres = $dbh->addToCart($userEmail, $articleID, $Quantità);
     if ($addres == -2) {
-        $notification = "Can't add ".$templateParams["articolo"][0]["Nome"]." to cart, there are no more";
+        $notification = "Can't add ".$templateParams["articolo"][0]["Nome"]." to cart, already added";
         $dbh->addNotification($notification);
         $templateParams["notifiche"] = $dbh->getNotifications();
         $templateParams["nnotifiche"] = $dbh->getNotificationsNumber();
