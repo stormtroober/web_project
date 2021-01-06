@@ -37,6 +37,7 @@
                 echo "<li class=\"dropdown-item\">".$notifica["Notifica"]."</li>";
               endforeach;
             ?>
+            <li class="dropdown-item list-group-item-action list-group-item-primary text-center" id="clear">Clear all</li>
             </ul>
           </li>
           <li class="nav-item text-center px-2">

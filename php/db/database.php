@@ -271,7 +271,7 @@ class DatabaseHelper{
     }
     
     public function getNotifications() {
-        $stmt = $this->db->prepare("SELECT * FROM NOTIFICHE");
+        $stmt = $this->db->prepare("SELECT * FROM NOTIFICHE ORDER BY IdNotifica DESC LIMIT 7");
         $stmt->execute();
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
