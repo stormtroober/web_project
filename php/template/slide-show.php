@@ -47,7 +47,7 @@
     </div>
     <div class="row">
         <div class="col-md-2"></div>
-        <div class="col-md-8 col-12 text-center">
+        <div class="col-md-8 col-12 text-center py-3">
             <h3>Welcome to Guitar Benter Online Store!</h3>
             <p>In this shop you will find all the instruments that you are searching, guitars, 
             guitar basses, amplifiers and accessories. We have the best brands, Super low prices and much more!</p>
