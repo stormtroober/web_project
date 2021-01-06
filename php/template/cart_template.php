@@ -9,7 +9,7 @@
           ?>
           <div class="list-group-item">
             <img src="<?php echo UPLOAD_DIR."img/".$articolo["Tipo"]."/".$articolo["Foto"]."/front.png"?>"
-            class="float-start m-2" width="75" alt="article_image">
+            class="float-start m-2" width="75" alt="<?php $articolo["Nome"] ?>">
             <a href="article_page.php?add=false&id=<?php echo $articolo["ID"]."&type=".$articolo["Tipo"]; ?>" 
             class="text-dark"><?php echo $articolo["Nome"]; ?></a>
             <p class="fs-4 text-decoration-none p-4 float-end"><?php echo $articolo["Prezzo"]; ?>$</p>
