@@ -15,15 +15,15 @@
         <form method="post" action="add_product.php" enctype="multipart/form-data">
           <div class="form-group mb-3">
             <label for="name">Name</label>
-            <input name="name" class="form-control" placeholder="Name" required>
+            <input name="name" class="form-control" id="name" placeholder="Name" required>
           </div>
           <div class="form-group mb-3">
             <label for="brand">Brand</label>
-            <input name="brand" class="form-control" placeholder="Brand" required>
+            <input name="brand" class="form-control" id="brand" placeholder="Brand" required>
           </div>
           <div class="form-group mb-3">
             <label for="type">Type</label>
-            <select class="form-control" name="type">
+            <select class="form-control" name="type" id="type">
               <option value="Guitar">Guitar</option>
               <option value="Bass">Bass</option>
               <option value="Amplifier">Amplifier</option>
@@ -32,37 +32,48 @@
           </div>
           <div class="form-group mb-3">
             <label for="description">Description</label>
-            <textarea name="description" class="form-control" rows="3" required></textarea>
+            <textarea name="description" class="form-control" id="description" rows="3" required></textarea>
           </div>
-          <label for="Features">Features</label>
+          <label>Features</label>
           <ul class="list-group mb-3">
-              <li class="list-group-item"><input name="feature1" class="form-control" placeholder="Feature 1" required></li>
-              <li class="list-group-item"><input name="feature2" class="form-control" placeholder="Feature 2" required></li>
-              <li class="list-group-item"><input name="feature3" class="form-control" placeholder="Feature 3" required></li>
+            <li class="list-group-item"><input name="feature1" class="form-control" placeholder="Feature 1">
+            </li>
+            <li class="list-group-item"><input name="feature2" class="form-control" placeholder="Feature 2">
+            </li>
+            <li class="list-group-item"><input name="feature3" class="form-control" placeholder="Feature 3">
+            </li>
           </ul>
           <div class="form-group mb-3">
             <label for="price">Price</label>
-            <input type="number" name="price" class="form-control" placeholder="Price" required>
+            <input type="number" name="price" class="form-control" id="price" placeholder="Price" required>
           </div>
           <div class="form-group mb-3">
             <label for="quantity">Quantity</label>
-            <input type="number" name="quantity" class="form-control" placeholder="Quantity" required>
+            <input type="number" name="quantity" class="form-control" id="quantity" placeholder="Quantity" required>
           </div>
-          <label for="Features">Photos <i>(.jpg or .png only)</i></label>
+          <label>Photos <i>(.jpg or .png only)</i></label>
           <ul class="list-group mb-3">
-              <li class="list-group-item"><label class="form-label" for="photoFront">Front</label><input type="file" name="photoFront" class="form-control form-control-sm" required></li>
-              <li class="list-group-item"><label class="form-label" for="photoFront">Back</label><input type="file" name="photoBack" class="form-control form-control-sm"required></li>
-              <li class="list-group-item"><label class="form-label" for="photoFront">Zoom</label><input type="file" name="photoZoom" class="form-control form-control-sm" required></li>
-              <li class="list-group-item"><label class="form-label" for="photoFront">Last</label><input type="file" name="photoHead" class="form-control form-control-sm" required></li>
+            <li class="list-group-item">
+              <label class="form-label" for="photoFront">Front</label>
+              <input type="file" name="photoFront" id="photoFront" class="form-control form-control-sm" required>
+            </li>
+            <li class="list-group-item">
+              <label class="form-label" for="photoBack">Back</label>
+              <input type="file" name="photoBack" id="photoBack" class="form-control form-control-sm" required>
+            </li>
+            <li class="list-group-item">
+              <label class="form-label" for="photoZoom">Zoom</label>
+              <input type="file" name="photoZoom" id="photoZoom" class="form-control form-control-sm" required>
+            </li>
+            <li class="list-group-item">
+              <label class="form-label" for="photoOther">Other</label>
+              <input type="file" name="photoHead" id="photoOther" class="form-control form-control-sm" required></li>
           </ul>
           <div class="form-group p4 float-end">
-              <button class="btn btn-dark btn-lg" type="submit" name="submit" value="Upload">Add</button>
+            <button class="btn btn-dark btn-lg" type="submit" name="submit" value="Upload">Add</button>
           </div>
         </form>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-12 container "></div>
     </div>
   </div>
 </main>

@@ -26,7 +26,4 @@ $(document).ready(function() {
             notAvailable = true;
         }
     })
-    if(notAvailable){
-        $("#addToCart").prop( "disabled", false );
-    }
 });
