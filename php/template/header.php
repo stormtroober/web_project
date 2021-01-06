@@ -37,19 +37,13 @@
             <?php
               if(!isset($templateParams["notifiche"])) {
                 $templateParams["notifiche"] = $dbh->getNotifications();
-              } else {
-                //$notification = "ciao";
-                //echo "<script type='text/javascript'>alert('$notification');</script>";
               }
               foreach($templateParams["notifiche"]  as $notifica): 
                 echo "<li class=\"dropdown-item\">".$notifica["Notifica"]."</li>";
               endforeach;
             ?>
             <li class="dropdown-item text-center">
-              <a class="text-decoration-none text-primary" href="clear_notifications.php?url=<?php echo $templateParams["nome"] ?>">Clear</a>
-              <!-- <form action="./clear_notifications.php?url=<?php echo $templateParams["nome"] ?>" method="post">
-                <button type="submit" class="btn text-primary">Clear</button>
-              </form> -->
+              <a class="text-decoration-none text-primary" href="clear_notifications.php">Clear All</a>
             </li>
             </ul>
           </li>
