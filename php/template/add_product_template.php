@@ -27,7 +27,7 @@
             <select class="form-control" name="type" id="type">
               <option value="Guitar">Guitar</option>
               <option value="Bass">Bass</option>
-              <option value="Amplifier">Amplifier</option>
+              <option value="Amp">Amplifier</option>
               <option value="Accessories">Accessories</option>
             </select>
           </div>
