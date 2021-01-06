@@ -48,22 +48,13 @@
             <label for="quantity">Quantity</label>
             <input type="number" name="quantity" class="form-control" placeholder="Quantity" required>
           </div>
-          <div class="form-group mb-3">
-            <label class="form-label" for="photoFront">Photo Front</label>
-            <input type="file" name="photoFront" class="form-control form-control-sm" required>
-          </div>
-          <div class="form-group mb-3">
-            <label class="form-label" for="photoBack">Photo Back</label>
-            <input type="file" name="photoBack" class="form-control form-control-sm"required>
-          </div>
-          <div class="form-group mb-3">
-            <label class="form-label" for="photoZoom">Photo Zoom</label>
-            <input type="file" name="photoZoom" class="form-control form-control-sm" required>
-          </div>
-          <div class="form-group mb-3">
-            <label class="form-label" for="photoHead">Photo Head</label>
-            <input type="file" name="photoHead" class="form-control form-control-sm" required>
-          </div>
+          <label for="Features">Photos <i>(.jpg or .png only)</i></label>
+          <ul class="list-group mb-3">
+              <li class="list-group-item"><label class="form-label" for="photoFront">Front</label><input type="file" name="photoFront" class="form-control form-control-sm" required></li>
+              <li class="list-group-item"><label class="form-label" for="photoFront">Back</label><input type="file" name="photoBack" class="form-control form-control-sm"required></li>
+              <li class="list-group-item"><label class="form-label" for="photoFront">Zoom</label><input type="file" name="photoZoom" class="form-control form-control-sm" required></li>
+              <li class="list-group-item"><label class="form-label" for="photoFront">Last</label><input type="file" name="photoHead" class="form-control form-control-sm" required></li>
+          </ul>
           <div class="form-group p4 float-end">
               <button class="btn btn-dark btn-lg" type="submit" name="submit" value="Upload">Add</button>
           </div>
