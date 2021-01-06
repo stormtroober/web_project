@@ -98,7 +98,6 @@ class DatabaseHelper{
 
     private function decQuantityCart($articleId,$cartId){
         $stmtQuantity = $this->db->prepare("UPDATE PRODOTTI_CARRELLO SET Quantità=Quantità-1 WHERE (IdCarrello = ? && Prodotto = ?)");
-        var_dump($cartId[0]["IdCarrello"], $articleId);
         $stmtQuantity->bind_param('ii', $cartId[0]["IdCarrello"], $articleId);
         $stmtQuantity->execute();
     }
@@ -113,23 +112,22 @@ class DatabaseHelper{
         $cartId = $this->getCartFromUser($userEmail);
         $actualAmount = $this->amountFromCart($articleId, $cartId);
         if($actualAmount[0]["Quantità"] > 1){
-            echo "update";
             $this->decQuantityCart($articleId, $cartId);
         }
         else{
-            echo "delete";
+            $this->removeItemFromCart($userEmail, $articleId);
         }
     }
 
     public function plusItemCartFromId($articleId, $userEmail){
+        $cartId = $this->getCartFromUser($userEmail);
         $actualAmount = $this->getAmountFromProduct($articleId);
         $cartAmount = $this->amountFromCart($articleId, $this->getCartFromUser($userEmail));
         $cartAmount[0]["Quantità"]++;
         if($cartAmount[0]["Quantità"] > $actualAmount){
-            echo "not ok";
         }
         else{
-            echo "ok";
+            $this->plusQuantityCart($articleId, $cartId);
         }
     }
 
