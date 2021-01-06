@@ -46,9 +46,10 @@
               endforeach;
             ?>
             <li class="dropdown-item text-center">
-              <form action="./clear_notifications.php?url=<?php echo $templateParams["nome"] ?>" method="post">
+              <a class="text-decoration-none text-primary" href="clear_notifications.php?url=<?php echo $templateParams["nome"] ?>">Clear</a>
+              <!-- <form action="./clear_notifications.php?url=<?php echo $templateParams["nome"] ?>" method="post">
                 <button type="submit" class="btn text-primary">Clear</button>
-              </form>
+              </form> -->
             </li>
             </ul>
           </li>
